@@ -16,17 +16,17 @@ January 2021
 
 ### Academy
 
-After completing this course participants will be able to
-•	Understand IoT Solutions through a hands-on experience.
-•	Understand connectivity protocols, analyze and visualize telemetry data to incorporate predictive maintenance among other algorithms.
-•	Understand Edge Intelligence: components, deployments and patterns.
-•	Understand PaaS services involved in IoT Architectures. 
-•	Understand Security and monitoring involved in IoT Implementations.
+After completing this course participants will be able to:
+- Understand IoT Solutions through a hands-on experience.
+- Understand connectivity protocols, analyze and visualize telemetry data to incorporate predictive maintenance among other algorithms.
+- Understand Edge Intelligence: components, deployments and patterns.
+- Understand PaaS services involved in IoT Architectures. 
+- Understand Security and monitoring involved in IoT Implementations.
 
 
-### Requiremnts to Attende the Academy
+### Requirements to attend the Academy
 
-- By invitation only.Limited seats.
+- By invitation only. Limited seats.
 - The academy is delivered remotely, and we expect participants to actively participate
 throughout the day.
 - Bring two IoT business cases that you want to work during the academy to support your organization.
@@ -60,10 +60,10 @@ If you have any questions, please contact: azureiotacademy@microsoft.com
 
 ## Azure IoT Academy Timeline
 
-   12-13-14 January/2021, 11am - 5pm CST 
-   16-17-18 February/2021, 11am - 5pm CST 
-   12-13-14 March/2021, 11am - 5pm CST 
+- 12-13-14 January/2021, 11am - 5pm CST
+- 16-17-18 February/2021, 11am - 5pm CST
+- 12-13-14 March/2021, 11am - 5pm CST 
 
 ## Azure IoT solution
 
-Internet of Things
+Internet of Things, Global Black Belt Team at Microsoft, USA.
