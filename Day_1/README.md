@@ -1,6 +1,26 @@
 # Internet of Things
 
-Fabrikam provides services and smart meters for enterprise energy (electrical power) management. Their **You-Left-The-Light-On** service enables the enterprise to understand their energy consumption. Fabrikam would like to become an authorized energy management solution provider. According to their Director of Analytics, Sam George, "We are investigating a move to the cloud to help our customers not only to meet data collection and reporting requirements, but also become the number one energy management solution provider." They are intending to enable their enterprise customers with a web-based dashboard where they can see historical trends of power consumption.
+1) Azure IoT Foundation, theory
+
+2) Getting familiar with Azure Portal
+https://ms.portal.azure.com/
+
+3) Creating an Iot Hub
+- Task 1: Portal
+- Taks 2: Through CLI
+    
+    https://shell.azure.com/
+
+    ![Bash access.](./media/bash.jpg 'Bash Access')
+ ```csharp  
+az iot hub create --name {your iot hub name} \
+   --resource-group {your resource group name} --sku S1
+
+```
+
+- Task 3: VS Code
+
+
 
 
 ## Target audience
