@@ -7,6 +7,7 @@ Fabrikam provides services and smart meters for enterprise energy (electrical po
 
 - Application Developer
 - IoT Developer
+- This is Manisha
 
 ## Abstracts
 
