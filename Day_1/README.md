@@ -46,7 +46,7 @@ Open cloud with the below link
     
     https://shell.azure.com/
 
-Change to Bash access
+Change to **Bash** access
 
    ![Screenshot of Bash access.](./media/bash.jpg 'Access Bash Link')
 
