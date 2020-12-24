@@ -59,6 +59,11 @@ az iot hub create --name {your iot hub name} \
 ```
 Verify your IoT Hub has been created in the Portal. 
 
+To delete the IoT Hub just created you can use a delete command:
+```csharp 
+az iot hub delete --name {your iot hub name}  --resource-group {your resource group name} 
+```
+
 ### Task 3: Provision IoT Hub through VS Code
 
 Last we will use another tool to also create an IoT Hub, in this case VS Code. For this task make sure you download VS Code in advance.
