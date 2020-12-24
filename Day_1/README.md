@@ -41,20 +41,40 @@ https://ms.portal.azure.com/
    ![Screenshot of the Deployment succeeded message, with the Go to resource button highlighted.](./media/iot-hub-deployment-succeeded.png 'Deployment succeeded message')
 
 ### Task 2: Provision IoT Hub through CLI
+
+Open cloud with the below link
     
     https://shell.azure.com/
 
-    ![Bash access.](./media/bash.jpg 'Bash Access')
+Change to Bash access
+
+   ![Screenshot of Bash access.](./media/bash.jpg 'Access Bash Link')
+
+Once you are login run the following command to create an IoT Hub.
+
  ```csharp  
 az iot hub create --name {your iot hub name} \
    --resource-group {your resource group name} --sku S1
 
 ```
+Verify your IoT Hub has been created in the Portal. 
 
-### Task 1: Provision IoT Hub through VS Code
+### Task 3: Provision IoT Hub through VS Code
 
+Last we will use another tool to also create an IoT Hub, in this case VS Code. For this task make sure you download VS Code in advance.
+Download link: 
+    https://code.visualstudio.com/Download
 
+1. Install IoT Tools extension for VS Code:
+https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.azure-iot-tools
 
+2. Go To View Explorer
+
+  ![VS Code IoT Hub Access.](./media/vscode-view-explorer.png 'IoT Hub access')
+
+  Now you should be able to see the **Azure IoT Hub**
+
+   ![VS Code IoT Hub Access.](./media/vscode-iothub.png 'IoT Hub access')
 
 ## Target audience
 
