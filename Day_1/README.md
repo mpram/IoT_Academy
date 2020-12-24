@@ -78,35 +78,22 @@ https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.azure-iot-tool
 
 ## Target audience
 
-- Application Developer
-- IoT Developer
-- This is Manisha
+IoT Academy Atendees
 
 ## Abstracts
 
-### Workshop
 
-This workshop will guide you through an implementation of an end-to-end IoT solution simulating high velocity data emitted from smart meters and analyzed in Azure. You will design a lambda architecture, filtering a subset of the telemetry data for real-time visualization on the hot path, and storing all the data in long-term storage for the cold path.
-
-At the end of this workshop, you will be better able to construct an IoT solution implementing device registration with the IoT Hub Device Provisioning Service and visualizing hot data with Power BI.
 
 ### Hands-on lab
 
-In this hands-on lab, you will construct an end-to-end IoT solution simulating high velocity data emitted from smart meters and analyzed in Azure. You will design a lambda architecture, filtering a subset of the telemetry data for real-time visualization on the hot path, and storing all the data in long-term storage for the cold path.
-
-At the end of this hands-on lab, you will be better able to build an IoT solution implementing device registration with the IoT Hub Device Provisioning Service and visualizing hot data with Power BI.
+At the end of this hands-on lab, you will be better able to to understand core services when building an IoT Solution.
 
 ## Azure services and related products
 
-- Azure App Services
-- Azure Blob Storage
-- Azure Data Factory
-- Azure Databricks
-- Azure SQL Database
-- Azure Stream Analytics
-- IoT Hub
-- Power BI Desktop
-- Visual Studio
+- VS Code
+- Azure IoT Hub
+- CLI
+
 
 ## Azure solution
 
