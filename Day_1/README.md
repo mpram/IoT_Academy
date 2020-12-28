@@ -41,52 +41,64 @@ https://ms.portal.azure.com/
    ![Screenshot of the Deployment succeeded message, with the Go to resource button highlighted.](./media/iot-hub-deployment-succeeded.png 'Deployment succeeded message')
 
 ### Task 2: Provision IoT Hub through CLI
+
+Open cloud with the below link
     
     https://shell.azure.com/
 
-    ![Bash access.](./media/bash.jpg 'Bash Access')
+Change to **Bash** access
+
+   ![Screenshot of Bash access.](./media/bash.jpg 'Access Bash Link')
+
+Once you are login run the following command to create an IoT Hub.
+
  ```csharp  
 az iot hub create --name {your iot hub name} \
    --resource-group {your resource group name} --sku S1
 
 ```
+Verify your IoT Hub has been created in the Portal. 
 
-### Task 1: Provision IoT Hub through VS Code
+To delete the IoT Hub just created you can use a delete command:
+```csharp 
+az iot hub delete --name {your iot hub name}  --resource-group {your resource group name} 
+```
 
+### Task 3: Provision IoT Hub through VS Code
 
+Last we will use another tool to also create an IoT Hub, in this case VS Code. For this task make sure you download VS Code in advance.
+Download link: 
+    https://code.visualstudio.com/Download
 
+1. Install IoT Tools extension for VS Code:
+https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.azure-iot-tools
+
+2. Go To View Explorer
+
+  ![VS Code IoT Hub Access.](./media/vscode-view-explorer.png 'IoT Hub access')
+
+  Now you should be able to see the **Azure IoT Hub**
+
+   ![VS Code IoT Hub Access.](./media/vscode-iothub.png 'IoT Hub access')
 
 ## Target audience
 
-- Application Developer
-- IoT Developer
-- This is Manisha
+IoT Academy Atendees
 
 ## Abstracts
 
-### Workshop
 
-This workshop will guide you through an implementation of an end-to-end IoT solution simulating high velocity data emitted from smart meters and analyzed in Azure. You will design a lambda architecture, filtering a subset of the telemetry data for real-time visualization on the hot path, and storing all the data in long-term storage for the cold path.
-
-At the end of this workshop, you will be better able to construct an IoT solution implementing device registration with the IoT Hub Device Provisioning Service and visualizing hot data with Power BI.
 
 ### Hands-on lab
 
-In this hands-on lab, you will construct an end-to-end IoT solution simulating high velocity data emitted from smart meters and analyzed in Azure. You will design a lambda architecture, filtering a subset of the telemetry data for real-time visualization on the hot path, and storing all the data in long-term storage for the cold path.
-
-At the end of this hands-on lab, you will be better able to build an IoT solution implementing device registration with the IoT Hub Device Provisioning Service and visualizing hot data with Power BI.
+At the end of this hands-on lab, you will be better able to to understand core services when building an IoT Solution.
 
 ## Azure services and related products
 
-- Azure App Services
-- Azure Blob Storage
-- Azure Data Factory
-- Azure Databricks
-- Azure SQL Database
-- Azure Stream Analytics
-- IoT Hub
-- Power BI Desktop
-- Visual Studio
+- VS Code
+- Azure IoT Hub
+- CLI
+
 
 ## Azure solution
 
