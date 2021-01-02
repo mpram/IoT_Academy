@@ -67,3 +67,4 @@ If you have any questions, please contact: azureiotacademy@microsoft.com
 ## Azure IoT solution
 
 Internet of Things, Global Black Belt Team at Microsoft, USA.
+
