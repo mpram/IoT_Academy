@@ -81,6 +81,21 @@ https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.azure-iot-tool
 
    ![VS Code IoT Hub Access.](./media/vscode-iothub.png 'IoT Hub access')
 
+To create a new IoT Hub Go to the menu **View** on the top toolbar then select **Command Palette**
+
+   ![VS Code IoT Hub Create.](./media/vscode-command-palette.png 'IoT Hub Create')
+
+Type Azure IoT Hub in the new window,  then you will see the list of commands available select  **Azure IoT Hub: Create IoT Hub** and click Enter. Then you will need to select the following parameters:
+
+     - **Subscription**: Select the subscription you are using for this hands-on lab.
+   - **Resource group**: Use existing and select the resource group.
+   - **Location**: Select the location you are using for resources in this hands-on lab.
+   - **SKU**: Select **S1**.
+   - **Name**: Assign a name to the IoTHub `vscodeiotcreate` add suffix as needed.
+
+After the creation process you should be able to see the new IoT Hub in Azure Portal and in VS Code.
+
+
 ## Target audience
 
 IoT Academy Atendees
