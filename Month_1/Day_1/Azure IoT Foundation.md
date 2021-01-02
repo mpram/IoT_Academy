@@ -96,11 +96,117 @@ Type **Azure IoT Hub** in the new window,  then you will see the list of command
 After the creation process you should be able to see the new IoT Hub in Azure Portal and in VS Code.
 
 
+
+
+## Exercise 2: Devices
+
+Duration: 15 minutes
+
+In your architecture design session with Fabrikam, it was agreed that you would use an Azure IoT Hub to manage both the device registration and telemetry ingest from the Smart Meter Simulator. Your team also identified the Microsoft provided Device Explorer project that Fabrikam can use to view the list and status of devices in the IoT Hub registry.
+
+### Task 1: Setting up a Device
+
+TO BE COMPLETED
+
+
+### Task 2: Setting up an IoT Edge Device
+
+
+1. From Azure Portal selecte **Create resource** then from the most Popular list select **Ubuntu Server 18.04 LTS** if you dont see it type the same in the Search window.
+
+   ![Portal Ubuntu Create.](./media/create-resource-ubuntuserver.png 'Create Ubuntu Server')
+
+2. Then you will need to complete the following parameters in the **Basics** tab:
+
+   - **Subscription**: Select the subscription you are using for this hands-on lab.
+   - **Resource group**: Use existing and select the resource group.
+   - **Virtual Machine Name**: edgedevice+SUFFIX
+   - **Region**: Select the location you are using for resources in this hands-on lab.
+   - **Availability Options**: Select **No Infrastructure redundancy required**.
+   - **Image**: Default it is ok.
+   - **Size**: Keep the default selection
+   - **Authentication Type**: Select **Password**
+   - **Username**: TBD
+   - **Password**: TBD
+   - **Allow selected ports**: SSH 22
+
+   In **Management** Tab disable monitoring for this lab.
+
+   Last select **Review + Create** after successfull validation you should be able to click **Create**
+
+3. Once the resource is available clikc in the Virtual Machine, you should see in the Overview section the Public IP to connect, copy the IP.
+
+ ![Ubuntu IP.](./media/Ubuntu-server-ip.png 'Create Ubuntu Server IP')
+
+
+4. In your laptop open Putty, locally, to connect to the Virtual Machine just created and configure IoT Edge.
+
+Paste the IP in the following window: 
+ ![Putty Access.](./media/Putty-access.png 'Putty access')
+
+**Note**: If your laptop doesnt have putty installed, you can download it from here:
+https://www.putty.org/
+
+
+5. Once connected you will ask to enter user and password. After successfull login, let's start to install the Edge Runtime
+
+
+Install the repository configuration that matches your device operating system.
+
+ ```csharp
+curl https://packages.microsoft.com/config/ubuntu/18.04/multiarch/prod.list > ./microsoft-prod.list
+ ```
+Copy the generated list to the sources.list.d directory.
+
+ ```csharp
+sudo cp ./microsoft-prod.list /etc/apt/sources.list.d/
+ ```
+
+Install the Microsoft GPG public key.
+ ```csharp
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo cp ./microsoft.gpg /etc/apt/trusted.gpg.d/
+ ```
+
+Azure IoT Edge software packages are subject to the license terms located in each package (usr/share/doc/{package-name} or the LICENSE directory). Read the license terms prior to using a package. Your installation and use of a package constitutes your acceptance of these terms. If you do not agree with the license terms, do not use that package.
+
+**Install a Container Engine**
+Update package lists on your device.
+ ```csharp
+    sudo apt-get update
+ ```
+Install the Moby engine.
+   ```csharp
+   sudo apt-get install moby-engine
+  ```
+If you want to install the most recent version of the security daemon, use the following command that also installs the latest version of the libiothsm-std package:
+ ```csharp
+   sudo apt-get install iotedge
+ ```
+Configure the connection to IoT Hub
+First create an Edge Device in the portal, then copy the connection string in your device
+
+ ```csharp
+sudo nano /etc/iotedge/config.yaml
+ 
+  ```
+After configuring your connectivity, press **CrtL+X** to close the file and select  **Y** to save the changes
+
+Now restart your edge daemon
+ ```csharp
+sudo systemctl restart iotedge
+ ```
+
+In a few minutes you should receive a **Running** Status after running the following command:
+ ```csharp
+sudo iotedge list
+ ```
+
 ## Target audience
 
 IoT Academy Atendees
 
-## Abstracts
+
 
 
 
@@ -110,9 +216,11 @@ At the end of this hands-on lab, you will be better able to to understand core s
 
 ## Azure services and related products
 
-- VS Code
+- VS Code, installed locally
+- Putty, installed locally
 - Azure IoT Hub
 - CLI
+- Ubuntu Server
 
 
 ## Azure solution
