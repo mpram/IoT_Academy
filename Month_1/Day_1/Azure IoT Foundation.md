@@ -112,7 +112,7 @@ TO BE COMPLETED
 ### Task 2: Setting up an IoT Edge Device
 
 
-1. From Azure Portal selecte **Create resource** then from the most Popular list select **Ubuntu Server 18.04 LTS** if you dont see it type the same in the Search window.
+1. From Azure Portal select **Create resource** then from the most Popular list select **Ubuntu Server 18.04 LTS** if you don't see it type the same in the Search window.
 
    ![Portal Ubuntu Create.](./media/create-resource-ubuntuserver.png 'Create Ubuntu Server')
 
@@ -153,17 +153,17 @@ https://www.putty.org/
 
 Install the repository configuration that matches your device operating system.
 
- ```csharp
+  ```bash
 curl https://packages.microsoft.com/config/ubuntu/18.04/multiarch/prod.list > ./microsoft-prod.list
  ```
 Copy the generated list to the sources.list.d directory.
 
- ```csharp
+ ```bash
 sudo cp ./microsoft-prod.list /etc/apt/sources.list.d/
  ```
 
 Install the Microsoft GPG public key.
- ```csharp
+ ```bash
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo cp ./microsoft.gpg /etc/apt/trusted.gpg.d/
  ```
@@ -172,33 +172,33 @@ Azure IoT Edge software packages are subject to the license terms located in eac
 
 **Install a Container Engine**
 Update package lists on your device.
- ```csharp
+ ```bash
     sudo apt-get update
  ```
 Install the Moby engine.
-   ```csharp
+   ```bash
    sudo apt-get install moby-engine
   ```
 If you want to install the most recent version of the security daemon, use the following command that also installs the latest version of the libiothsm-std package:
- ```csharp
+ ```bash
    sudo apt-get install iotedge
  ```
 Configure the connection to IoT Hub
 First create an Edge Device in the portal, then copy the connection string in your device
 
- ```csharp
+ ```bash
 sudo nano /etc/iotedge/config.yaml
  
   ```
 After configuring your connectivity, press **CrtL+X** to close the file and select  **Y** to save the changes
 
 Now restart your edge daemon
- ```csharp
+ ```bash
 sudo systemctl restart iotedge
  ```
 
 In a few minutes you should receive a **Running** Status after running the following command:
- ```csharp
+ ```bash
 sudo iotedge list
  ```
 
