@@ -198,13 +198,19 @@ If you want to install the most recent version of the security daemon, use the f
  ```bash
    sudo apt-get install iotedge
  ```
-Configure the connection to IoT Hub
-First create an Edge Device in the portal, then copy the connection string in your device
+Configure the connection to your IoT Hub, we will apply the connection string you copied in Task 1. Open the configuration file in your device to edit the connection string with the following command.
+
 
  ```bash
 sudo nano /etc/iotedge/config.yaml
  
   ```
+
+Once in the nano editor, scroll down to **Manual Provisioning configuration using a connection string** then replace the **device_connection-string** variable wit the connection string from the task 1.
+
+ ![Config File.](./media/config-yaml-file.png 'Config File')
+
+
 After configuring your connectivity, press **CrtL+X** to close the file and select  **Y** to save the changes
 
 Now restart your edge daemon
@@ -213,6 +219,7 @@ sudo systemctl restart iotedge
  ```
 
 In a few minutes you should receive a **Running** Status after running the following command:
+
  ```bash
 sudo iotedge list
  ```
