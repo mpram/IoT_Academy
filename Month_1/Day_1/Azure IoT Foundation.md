@@ -100,13 +100,28 @@ After the creation process you should be able to see the new IoT Hub in Azure Po
 
 ## Exercise 2: Devices
 
-Duration: 15 minutes
-
-In your architecture design session with Fabrikam, it was agreed that you would use an Azure IoT Hub to manage both the device registration and telemetry ingest from the Smart Meter Simulator. Your team also identified the Microsoft provided Device Explorer project that Fabrikam can use to view the list and status of devices in the IoT Hub registry.
+During this exercise you will learn how to set up and edge device and connect your device to IoT Hub to start streaming data.
 
 ### Task 1: Setting up a Device
 
-TO BE COMPLETED
+From Azure Portal select the IoT Hub created through VS Code previously, scroll down to **Automatic Device Management** then select **Add an IoT Edge device**
+
+  ![Portal Edge Device Create.](./media/iothub-create-edgedevice.png 'Create Edge Device')
+
+  In the new window select a name for your device **my-device-SUFFIX** and click **Save**
+
+   ![Portal Edge Create.](./media/edge-create.png 'Edge Device')
+
+
+After Creation your device will be available with new information, click on the device
+
+
+ ![Portal Edge Device.](./media/device.png 'Edge Device')
+
+Now, copy and paste in the a notepad the connection string of your device, you will need this to connect your device to IoT hub, we will use this connection string in the next task.
+
+![Portal Connection String.](./media/device-connectionstring.png 'Device Connection String')
+
 
 
 ### Task 2: Setting up an IoT Edge Device
