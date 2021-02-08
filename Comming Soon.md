@@ -60,9 +60,9 @@ If you have any questions, please contact: azureiotacademy@microsoft.com
 
 ## Azure IoT Academy Timeline
 
-- 12-13-14 January/2021, 11am - 5pm CST
-- 16-17-18 February/2021, 11am - 5pm CST
-- 12-13-14 March/2021, 11am - 5pm CST 
+- 02-03-04 March/2021, 10am - 4pm CST
+- 06-07-08 April/2021, 10am - 4pm CST
+- 04-05-06 May/2021, 10am - 4pm CST 
 
 ## Azure IoT solution
 
