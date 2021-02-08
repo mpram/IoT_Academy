@@ -224,12 +224,15 @@ In a few minutes you should receive a **Running** Status after running the follo
 sudo iotedge list
  ```
 
+
+
+## Exercise 3: Deploying a Simulated Module
+
+
+
 ## Target audience
 
 IoT Academy Atendees
-
-
-
 
 
 ### Hands-on lab
@@ -240,6 +243,7 @@ At the end of this hands-on lab, you will be better able to to understand core s
 
 - VS Code, installed locally
 - Putty, installed locally
+- Docker, installed locally
 - Azure IoT Hub
 - CLI
 - Ubuntu Server
