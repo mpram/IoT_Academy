@@ -226,7 +226,34 @@ sudo iotedge list
 
 
 
-## Exercise 3: Deploying a Simulated Module
+## Exercise 3: Deploying a Temperature Simulated Module
+
+In Azure Portal, click on your IoT Hub created in previous steps, under **Automatic Device Provisioning** select your Edge Device, then select **Set Modules**
+
+![set modules.](./media/set-module.png 'Set Modules')
+
+Then to add the temperature simulator, select **Add** then you will see multiple options, select  **+ Marketplace Module**
+
+
+The search bos will appear, type **Simulated Temperature Sensor** now the Microsoft IoT Edge Module will be available to select, click on it and now will be available for configuration and deployment.
+
+![Temperature Module.](./media/temperature-module.png 'Set Modules')
+
+Let's analyze the Routes(deck), then **Review + create**
+
+In a few minutes you will see 3 modules running in your Edge Device, you have two ways of verifying 
+- Check the modules running in your Edge Device:
+![Edge Modules.](./media/edge-device-modules.png 'Modules')
+
+- Other way go back to your Ubuntu VM, Open Putty and run again the following command
+```bash
+sudo iotedge list
+ ```
+Now you should see all the modules up and running in your Ubuntu Machine as shown below:
+
+ ![Edge Modules.](./media/edge-modules-running.png 'Modules Running')
+
+ ## Exercise 4: Telemetry Data
 
 
 
@@ -242,11 +269,12 @@ At the end of this hands-on lab, you will be better able to to understand core s
 ## Azure services and related products
 
 - VS Code, installed locally
-- Putty, installed locally
-- Docker, installed locally
+[Download here](https://code.visualstudio.com/Download).
+- Putty, installed locally, [Download here](https://www.putty.org/).
+
 - Azure IoT Hub
 - CLI
-- Ubuntu Server
+- Ubuntu Server, Virtual Machine
 
 
 ## Azure solution
