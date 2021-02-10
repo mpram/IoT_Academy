@@ -157,7 +157,7 @@ Now, copy and paste in the a notepad the connection string of your device, you w
 4. In your laptop open Putty, locally, to connect to the Virtual Machine just created and configure IoT Edge.
 
 Paste the IP in the following window: 
- ![Putty Access.](./media/Putty-access.png 'Putty access')
+ ![Putty Access.](./media/Putty-access02.png 'Putty access')
 
 **Note**: If your laptop doesnt have putty installed, you can download it from here:
 https://www.putty.org/
