@@ -60,10 +60,15 @@ If you have any questions, please contact: azureiotacademy@microsoft.com
 
 ## Azure IoT Academy Timeline
 
-- 02-03-04 March/2021, 10am - 4pm CST
-- 06-07-08 April/2021, 10am - 4pm CST
-- 04-05-06 May/2021, 10am - 4pm CST 
+- 02-03-04 March/2021, 10am - 5pm CST
+- 06-07-08 April/2021, 10am - 5pm CST
+- 04-05-06 May/2021, 10am - 5pm CST 
 
 ## Azure IoT solution
 
 Internet of Things, Global Black Belt Team at Microsoft, USA.
+
+
+## Office Hours
+
+TBD
