@@ -154,9 +154,7 @@ Now, copy and paste in the a notepad the connection string of your device, you w
  ![Ubuntu IP.](./media/Ubuntu-server-ip.png 'Create Ubuntu Server IP')
 
 
-4. In your laptop open Putty, locally, to connect to the Virtual Machine just created and configure IoT Edge.
-
-Paste the IP in the following window: 
+4. In your laptop open Putty, locally, to connect to the Virtual Machine just created and configure IoT Edge. Paste the IP in the following window: 
 
  ![Putty Access.](./media/Putty-access02.png 'Putty access')
 
@@ -220,7 +218,7 @@ Now restart your edge daemon
 sudo systemctl restart iotedge
  ```
 
-In a few minutes you should receive a **Running** Status after running the following command:
+In a few minutes you should receive a **Running** Status after executing the following command:
 
  ```bash
 sudo iotedge list
@@ -247,7 +245,8 @@ In a few minutes you will see 3 modules running in your Edge Device, you have tw
 - Check the modules running in your Edge Device:
 ![Edge Modules.](./media/edge-device-modules.png 'Modules')
 
-- Other way go back to your Ubuntu VM, Open Putty and run again the following command
+- Other way to visualize the modules is, go back to your Ubuntu VM, Open Putty and run again the following command
+
 ```bash
 sudo iotedge list
  ```
@@ -256,6 +255,47 @@ Now you should see all the modules up and running in your Ubuntu Machine as show
  ![Edge Modules.](./media/edge-modules-running.png 'Modules Running')
 
  ## Exercise 4: Telemetry Data
+
+### Task 1 ###
+First step it will be to validate IoT Hub is receiving data, open cloud shell, clicking in the following icon, top right in Azure Portal:
+
+
+![Cloud shell](./media/cloud-shell.png 'Cloud Shell')
+
+Run the az extension add command to add the Microsoft Azure IoT Extension for Azure CLI to your CLI shell. The IOT Extension adds IoT Hub, IoT Edge, and IoT Device Provisioning Service (DPS) specific commands to Azure CLI.
+
+```bash
+az extension add --name azure-iot
+
+```
+After you install the Azure IOT extension, you don't need to install it again in any Cloud Shell session.
+
+```bash
+az iot hub monitor-events --hub-name {YourIoTHubName} --output table
+```
+After running the above command you should be able to see telemetry data sent from our device to IoT Hub as shown below:
+
+![Telemetry](./media/telemetry.png 'Telemetry Data')
+
+
+### Task 2 ###
+
+Create an Stream Analytics Job and the Storage Account 
+
+
+### Task 3 ###
+
+Connecting the services
+
+
+### Task 4 ###
+
+Invoke Direct Method
+
+
+### Excersice 5 ###
+
+Monitoring Devices, Eventgrid Integration.
 
 
 
