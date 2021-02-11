@@ -366,14 +366,99 @@ Click on **Save** query, in the **Overview** click **Start** to trigger the job.
 In a few minutes your Storage account should be receiving data in the container just created.
 
 
-### Task 4 ###
-
-Invoke Direct Method
-
-
 ### Excersice 5 ###
 
-Monitoring Devices, Eventgrid Integration.
+Monitoring remote Devices. 
+### Task 1 ###
+
+For this exercise will need a Logic App to orchestrate the process, click in **Create** buttom in Azure Portal, in the search box type **Logic App**, then **Create**.
+
+Fill in the fields in the form:
+
+![Logic App Form](./media/logicapp-form.png 'Logic App')
+
+Fill the fields in the form:
+- **Subscription**: Select The subscription you are using for this training
+- **Resource Group**: Select the Resource Group you are using for this training.
+- **Logic app name**: devicesalertSUFFIX
+- **Region**: Select the same region you are using during this training.
+
+Keep the remaining selections as default. Then select **Review + Create**, after succesfull validation click **Create**
+
+In the Logic Apps Designer, page down to see Templates. Choose **Blank Logic App** so that you can build your logic app from scratch.
+
+A trigger is a specific event that starts your logic app. For this tutorial, the trigger that sets off the workflow is receiving a request over HTTP.
+
+In the connectors and triggers search bar, type **HTTP**.
+
+Scroll through the results and select **Request - When a HTTP request is received**.
+
+
+![http-request](./media/http-request.png 'Http request')
+
+
+Select **Use sample payload to generate schema**
+
+![http-request](./media/payload-sample.png 'Http request')
+
+This event publishes when a device is connected to an IoT hub.
+
+Paste the Device connected event schema JSON into the text box, then select Done:
+
+```json
+
+[{  
+   "id": "f6bbf8f4-d365-520d-a878-17bf7238abd8",
+   "topic": "/SUBSCRIPTIONS/<subscription ID>/RESOURCEGROUPS/<resource group name>/PROVIDERS/MICROSOFT.DEVICES/IOTHUBS/<hub name>",
+   "subject": "devices/LogicAppTestDevice",
+   "eventType": "Microsoft.Devices.DeviceConnected",
+   "eventTime": "2018-06-02T19:17:44.4383997Z",
+   "data": {
+       "deviceConnectionStateEventInfo": {
+         "sequenceNumber":
+           "000000000000000001D4132452F67CE200000002000000000000000000000001"
+       },
+     "hubName": "egtesthub1",
+     "deviceId": "LogicAppTestDevice",
+     "moduleId" : "DeviceModuleID"
+   }, 
+   "dataVersion": "1",
+   "metadataVersion": "1"
+ }]
+
+```
+**Note**:You may receive a pop-up notification that says, Remember to include a Content-Type header set to application/json in your request. You can safely ignore this suggestion, and move on to the next section.
+
+### Task 2 ### 
+Create an Action
+
+Actions are any steps that occur after the trigger starts the logic app workflow. For this tutorial, the action is to send an email notification from your email provider.
+
+
+Select New step. This opens a window to Choose an action.
+
+Search for Outlook.
+![Outlook](./media/Outlook.png 'Outlook')
+
+Select the Send an email (V2) action.
+
+Select Sign in and sign in to your email account. Select Yes to let the app access your info.
+
+Build your email template.
+
+**To**: Enter the email address to receive the notification emails. For this tutorial, use an email account that you can access for testing.
+
+**Subject**: Fill in the text for the subject. When you click on the Subject text box, you can select dynamic content to include. For example, this tutorial uses IoT Hub alert: {eventType}. If you can't see Dynamic content, select the Add dynamic content hyperlink -- this toggles it on and off.
+
+**Body**: Write the text for your email. Select JSON properties from the selector tool to include dynamic content based on event data. If you can't see the Dynamic content, select the Add dynamic content hyperlink under the Body text box. If it doesn't show you the fields you want, click more in the Dynamic content screen to include the fields from the previous action.
+
+![Outlook Alert](./media/alert-body.png 'Alert-Body')
+
+Then click **Save** top left of the Logic App.
+
+### Task 3 ###
+
+Invoke Direct Method
 
 
 
