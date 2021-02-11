@@ -6,9 +6,9 @@
 https://ms.portal.azure.com/
 
 
-## Exercise 1: IoT Hub provisioning
+## **Exercise 1: IoT Hub provisioning** ##
 
-### Task 1: Provision IoT Hub through the Portal
+### **Task 1: Provision IoT Hub through the Portal** ###
 
 
 1. In your browser, navigate to the [Azure portal](https://portal.azure.com), select **+Create a resource** in the navigation pane, enter `iot` into the **Search the Marketplace** box.
@@ -64,7 +64,7 @@ To delete the IoT Hub just created you can use a delete command:
 az iot hub delete --name {your iot hub name}  --resource-group {your resource group name} 
 ```
 
-### Task 3: Provision IoT Hub through VS Code
+### **Task 3: Provision IoT Hub through VS Code** ###
 
 Last we will use another tool to also create an IoT Hub, in this case VS Code. For this task make sure you download VS Code in advance.
 Download link: 
@@ -98,11 +98,11 @@ After the creation process you should be able to see the new IoT Hub in Azure Po
 
 
 
-## Exercise 2: Devices
+## **Exercise 2: Devices** ##
 
 During this exercise you will learn how to set up and edge device and connect your device to IoT Hub to start streaming data.
 
-### Task 1: Setting up a Device
+### **Task 1: Setting up a Device** ###
 
 From Azure Portal select the IoT Hub created through VS Code previously, scroll down to **Automatic Device Management** then select **Add an IoT Edge device**
 
@@ -124,7 +124,7 @@ Now, copy and paste in the a notepad the connection string of your device, you w
 
 
 
-### Task 2: Setting up an IoT Edge Device
+### **Task 2: Setting up an IoT Edge Device**
 
 
 1. From Azure Portal select **Create resource** then from the most Popular list select **Ubuntu Server 18.04 LTS** if you don't see it type the same in the Search window.
@@ -187,6 +187,7 @@ Azure IoT Edge software packages are subject to the license terms located in eac
 
 **Install a Container Engine**
 Update package lists on your device.
+
  ```bash
     sudo apt-get update
  ```
@@ -195,6 +196,7 @@ Install the Moby engine.
    sudo apt-get install moby-engine
   ```
 If you want to install the most recent version of the security daemon, use the following command that also installs the latest version of the libiothsm-std package:
+
  ```bash
    sudo apt-get install iotedge
  ```
@@ -226,7 +228,8 @@ sudo iotedge list
 
 
 
-## Exercise 3: Deploying a Temperature Simulated Module
+## **Exercise 3: Deploying Modules** ##
+### **Task 1: Temperature Simulated Module** ###
 
 In Azure Portal, click on your IoT Hub created in previous steps, under **Automatic Device Provisioning** select your Edge Device, then select **Set Modules**
 
@@ -254,9 +257,9 @@ Now you should see all the modules up and running in your Ubuntu Machine as show
 
  ![Edge Modules.](./media/edge-modules-running.png 'Modules Running')
 
- ## Exercise 4: Telemetry Data
+ ## **Exercise 4: Telemetry Data** ##
 
-### Task 1 ###
+### **Task 1** ###
 First step it will be to validate IoT Hub is receiving data, open cloud shell, clicking in the following icon, top right in Azure Portal:
 
 
@@ -278,7 +281,7 @@ After running the above command you should be able to see telemetry data sent fr
 ![Telemetry](./media/telemetry.png 'Telemetry Data')
 
 
-### Task 2 ###
+### **Task 2: Setting up Services** ###
 
 Create an Stream Analytics Job and the Storage Account 
 After you validated IoT Hub is receiving data, next steps will be to create the services needed to analyze data further.
@@ -318,7 +321,7 @@ Fill the fields in the form:
 
 Then click **Review and Create** after succesfull validation, click on **Create**.
 
-### Task 3 ###
+### **Task 3: Connecting the services** ###
 
 Connecting the services.
 From your Resource Group select the Stream Analytics Job created above. In the section **Job Topology** Select **+ Add Stream input**, **IoT Hub**.
@@ -349,6 +352,7 @@ Keep the remaining options as default and click **Save**
 Next step should be to define the query, for this go back to **Job Topology** click on **Query** a new window will open wit the Input and Output defined in previous steps:
 
 Copy the following command in the window"
+
 ```sql
 SELECT
     *
@@ -366,10 +370,10 @@ Click on **Save** query, in the **Overview** click **Start** to trigger the job.
 In a few minutes your Storage account should be receiving data in the container just created.
 
 
-### Excersice 5 ###
+## **Excersice 5: Monitoring Remote Devices** ##
 
-Monitoring remote Devices. 
-### Task 1 ###
+
+### **Task 1: Setting up alerts** ###
 
 For this exercise will need a Logic App to orchestrate the process, click in **Create** buttom in Azure Portal, in the search box type **Logic App**, then **Create**.
 
@@ -429,7 +433,7 @@ Paste the Device connected event schema JSON into the text box, then select Done
 ```
 **Note**:You may receive a pop-up notification that says, Remember to include a Content-Type header set to application/json in your request. You can safely ignore this suggestion, and move on to the next section.
 
-### Task 2 ### 
+### **Task 2: Creating the Workflow** ### 
 Create an Action
 
 Actions are any steps that occur after the trigger starts the logic app workflow. For this tutorial, the action is to send an email notification from your email provider.
@@ -467,7 +471,7 @@ Copy the value of HTTP POST URL by selecting the copy button next to it.
 
 ![Outlook Alert](./media/http.png 'Http url')
 
-### Task 3 ###
+### **Task 3: Subscribe to the Events** ###
 
 **Configure subscription for IoT Hub events**
 
@@ -498,9 +502,9 @@ Select **Create**
 
 
 
-### Task 4 ###
+### Task 4: Invoke a Direct Method###
 
-Invoke Direct Method
+TBD
 
 
 
