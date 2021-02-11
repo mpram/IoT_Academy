@@ -359,7 +359,7 @@ FROM
 
 ```
 
-Click on **Save** query, in the **Overview** click **Start** to trigger the job.
+Click on **Save** query, in the **Overview** click **Start** to trigger the job. Select **Now** and then **Start** again.
 
 ![Start Job](./media/start-job.png 'Start Job')
 
