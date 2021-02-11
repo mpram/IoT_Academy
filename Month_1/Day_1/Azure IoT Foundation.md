@@ -281,7 +281,43 @@ After running the above command you should be able to see telemetry data sent fr
 ### Task 2 ###
 
 Create an Stream Analytics Job and the Storage Account 
+After you validated IoT Hub is receiving data, next steps will be to create the services needed to analyze data further.
 
+Click in **Create** buttom in Azure Portal, in the search box type **Stream Analytics Job**, then **Create** again.
+
+Fill the fields in the form:
+
+![Stream Analytics Job](./media/sa-form.png 'Telemetry Data')
+
+**Job name**: satrainingSUFFIX
+**Subscription**: Select The subscription you are using for this training
+**Resource Group**: Select the Resource Group you are using for this training.
+**Location**: Select the Location you are using for this training.
+**Hosting Environment**: Cloud
+**Streaming Units**: Default.
+
+Then click **Create**
+
+Next step you will create an Storage Account to use as an output for your data. 
+
+Again, click in **Create** buttom in Azure Portal, in the search box type **Storage Account**, then **Create** again.
+
+Fill the fields in the form:
+
+![Storage Account Form](./media/storage-account-form.png 'Storage Account')
+
+Fill the fields in the form:
+
+![Stream Analytics Job](./media/sa-form.png 'Telemetry Data')
+
+**Job name**: sadataoutputSUFFIX
+**Subscription**: Select The subscription you are using for this training
+**Resource Group**: Select the Resource Group you are using for this training.
+**Location**: Select the Location you are using for this training.
+**Hosting Environment**: Cloud
+**Streaming Units**: Default.
+
+Then click **Create**
 
 ### Task 3 ###
 
