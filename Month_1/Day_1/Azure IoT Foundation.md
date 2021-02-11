@@ -289,12 +289,12 @@ Fill the fields in the form:
 
 ![Stream Analytics Job](./media/sa-form.png 'Telemetry Data')
 
-**Job name**: satrainingSUFFIX
-**Subscription**: Select The subscription you are using for this training
-**Resource Group**: Select the Resource Group you are using for this training.
-**Location**: Select the Location you are using for this training.
-**Hosting Environment**: Cloud
-**Streaming Units**: Default.
+- **Job name**: satrainingSUFFIX
+- **Subscription**: Select The subscription you are using for this training
+- **Resource Group**: Select the Resource Group you are using for this training.
+- **Location**: Select the Location you are using for this training.
+- **Hosting Environment**: Cloud
+- **Streaming Units**: Default.
 
 Then click **Create**
 
@@ -310,12 +310,12 @@ Fill the fields in the form:
 
 ![Stream Analytics Job](./media/sa-form.png 'Telemetry Data')
 
-**Job name**: sadataoutputSUFFIX
-**Subscription**: Select The subscription you are using for this training
-**Resource Group**: Select the Resource Group you are using for this training.
-**Location**: Select the Location you are using for this training.
-**Hosting Environment**: Cloud
-**Streaming Units**: Default.
+- **Job name**: sadataoutputSUFFIX
+- **Subscription**: Select The subscription you are using for this training
+- **Resource Group**: Select the Resource Group you are using for this training.
+- **Location**: Select the Location you are using for this training.
+- **Hosting Environment**: Cloud
+- **Streaming Units**: Default.
 
 Then click **Create**
 
