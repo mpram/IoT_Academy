@@ -308,20 +308,62 @@ Fill the fields in the form:
 
 Fill the fields in the form:
 
-![Stream Analytics Job](./media/sa-form.png 'Telemetry Data')
-
-- **Job name**: sadataoutputSUFFIX
 - **Subscription**: Select The subscription you are using for this training
 - **Resource Group**: Select the Resource Group you are using for this training.
+- **Storage account name**: sadataoutputSUFFIX
 - **Location**: Select the Location you are using for this training.
-- **Hosting Environment**: Cloud
-- **Streaming Units**: Default.
+- **Performance**: Default
+- **Account kind**: Default.
+- **Replication**: Locally Redundant Storage(LRS)
 
-Then click **Create**
+Then click **Review and Create** after succesfull validation, click on **Create**.
 
 ### Task 3 ###
 
-Connecting the services
+Connecting the services.
+From your Resource Group select the Stream Analytics Job created above. In the section **Job Topology** Select **+ Add Stream input**, **IoT Hub**.
+
+![Input Form](./media/sa-input.png 'Input Form')
+
+- **Input Aalias**: inputhub
+- Make sure **Select IoT Hub from your subscription** it is selected.
+- **Subscription**: Select The subscription you are using for this training
+- **IoT Hub**: Select the IoT Hub created in Exercise #1, Task #1, **My-hub-SUFFIX**
+- **Consumer Group**: $Default
+- **Shared access policy name**: iothubowner
+Keep the rest of the fields as defaul and click **Save**
+
+Once the Input is created, we will need an output. Back to **Job Topology**, select **Outputs** then **+ Add**. From the menu select **Blob Storage/ADLS Gen2**
+
+![output Form](./media/output-job.png 'Output Form')
+
+- **Output alias**: storageaccountdata
+- Make sure **Select Blob storage/ADLS Gen2 from your subscriptions** it is selected
+- **Subscription**: Select The subscription you are using for this training
+- **Storage account**: Select the storage account created in previous step.
+- **Container**: Select **Create new** assign name as **data**
+- **Authentication Mode**: **Connection String**
+
+Keep the remaining options as default and click **Save**
+
+Next step should be to define the query, for this go back to **Job Topology** click on **Query** a new window will open wit the Input and Output defined in previous steps:
+
+Copy the following command in the window"
+```sql
+SELECT
+    *
+INTO
+    storageaccountdata
+FROM
+    inputhub
+
+```
+
+Click on **Save** query, in the **Overview** click **Start** to trigger the job.
+
+![Start Job](./media/start-job.png 'Start Job')
+
+In a few minutes your Storage account should be receiving data in the container just created.
 
 
 ### Task 4 ###
