@@ -456,7 +456,49 @@ Build your email template.
 
 Then click **Save** top left of the Logic App.
 
+
+**Copy the HTTP URL**
+
+Before you leave the Logic Apps Designer, copy the URL that your logic apps is listening to for a trigger. You use this URL to configure Event Grid.
+
+Expand the When a HTTP request is received trigger configuration box by clicking on it.
+
+Copy the value of HTTP POST URL by selecting the copy button next to it.
+
+![Outlook Alert](./media/http.png 'Http url')
+
 ### Task 3 ###
+
+**Configure subscription for IoT Hub events**
+
+In this section, you configure your IoT Hub to publish events as they occur.
+
+In the Azure portal, navigate to your IoT hub. You can do this by selecting Resource groups, then select the resource group for this tutorial, and then select your IoT hub from the list of resources.
+
+Select Events.
+
+![Events](./media/events.png 'Events')
+
+
+Select **+ Event subscription**
+
+Complete the following form:
+
+![Event Form](./media/event-form.png 'Events Form')
+
+- **Name**: devicestate
+- **Event Schema**: Event Grid Schema
+- **Topic Type**: Your Iot Hub created during this training should appears as default
+- **System topic Name**:EventsTopic
+- **Event Types** : Select **Device Connected** and **Device Disconnected**
+- **Endpoint Type**: Select **Webhook**
+- **Endpoint**: Select an Endpoint, in the new window paste the URL from the Logic App created in previous step. Then **Confirm Selection**.
+
+Select **Create**
+
+
+
+### Task 4 ###
 
 Invoke Direct Method
 
@@ -480,6 +522,10 @@ At the end of this hands-on lab, you will be better able to to understand core s
 - Azure IoT Hub
 - CLI
 - Ubuntu Server, Virtual Machine
+- Logic App
+- Event Grid
+- Stream Analytics
+- Storage Account
 
 
 ## Azure solution
