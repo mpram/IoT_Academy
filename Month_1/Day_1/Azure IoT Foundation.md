@@ -443,11 +443,11 @@ Actions are any steps that occur after the trigger starts the logic app workflow
 
 Select New step. This opens a window to Choose an action.
 
-Search for Outlook.
+Search for **Outlook**.
 
 ![Outlook](./media/outlook02.png 'Outlook')
 
-Select the Send an email (V2) action.
+Select the **Send an email (V2)** action.
 
 Select Sign in and sign in to your email account. Select Yes to let the app access your info.
 
@@ -540,10 +540,39 @@ Nex, in your IoT Hub open the Edge device, in **Modules** tab at the bottom look
 
 
 
-### **Task 1: Invoke a direct method, checking the logs** ###
+### **Task 2: Invoke a direct method, checking the logs** ###
 
 Once you run the module reboot, your telemetry data was stopped for a while, you should be able to see this pause while seeing the payload running in CLI. 
 
+Once you inbvoke a direct method to retrieve the logs, you should be able to see the reboot requested before
+
+Fill the form again requesting the logs as follow
+
+1) Method Name: **GetModuleLogs**
+
+2) Copy and Paste the following json the **Payload** section
+
+```json
+{
+       "schemaVersion": "1.0",
+       "items": [
+          {
+             "id": "edgeAgent",
+             "filter": {
+                "tail": 10
+             }
+          }
+       ],
+       "encoding": "none",
+       "contentType": "text"
+    }
+```
+
+3) Click **Invoke Method** to see the results 
+4) Check the results you should see the reboot you sent in previous task.
+
+
+![Direct Method Send ](./media/logs.png 'Direct Method Request')
 
 
 
