@@ -445,7 +445,7 @@ Select New step. This opens a window to Choose an action.
 
 Search for Outlook.
 
-![Outlook](./media/outlook.png 'Outlook')
+![Outlook](./media/outlook02.png 'Outlook')
 
 Select the Send an email (V2) action.
 
