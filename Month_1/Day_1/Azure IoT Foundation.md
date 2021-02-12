@@ -444,7 +444,8 @@ Actions are any steps that occur after the trigger starts the logic app workflow
 Select New step. This opens a window to Choose an action.
 
 Search for Outlook.
-![Outlook](./media/Outlook.png 'Outlook')
+
+![Outlook](./media/outlook.png 'Outlook')
 
 Select the Send an email (V2) action.
 
@@ -542,6 +543,7 @@ Nex, in your IoT Hub open the Edge device, in **Modules** tab at the bottom look
 ### **Task 1: Invoke a direct method, checking the logs** ###
 
 Once you run the module reboot, your telemetry data was stopped for a while, you should be able to see this pause while seeing the payload running in CLI. 
+
 
 
 
