@@ -228,7 +228,9 @@ sudo iotedge list
 
 
 
+
 ## **Exercise 3: Deploying Modules** ##
+
 ### **Task 1: Temperature Simulated Module** ###
 
 In Azure Portal, click on your IoT Hub created in previous steps, under **Automatic Device Provisioning** select your Edge Device, then select **Set Modules**
@@ -259,7 +261,7 @@ Now you should see all the modules up and running in your Ubuntu Machine as show
 
  ## **Exercise 4: Telemetry Data** ##
 
-### **Task 1** ###
+### **Task 1: Validating connectivity** ###
 First step it will be to validate IoT Hub is receiving data, open cloud shell, clicking in the following icon, top right in Azure Portal:
 
 
@@ -494,7 +496,7 @@ Complete the following form:
 - **Event Schema**: Event Grid Schema
 - **Topic Type**: Your Iot Hub created during this training should appears as default
 - **System topic Name**:EventsTopic
-- **Event Types** : Select **Device Connected** and **Device Disconnected**
+- **Event Types** : Select only **Device Disconnected**
 - **Endpoint Type**: Select **Webhook**
 - **Endpoint**: Select an Endpoint, in the new window paste the URL from the Logic App created in previous step. Then **Confirm Selection**.
 
