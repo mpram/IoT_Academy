@@ -504,9 +504,44 @@ Select **Create**
 
 
 
-### Task 4: Invoke a Direct Method###
+## **Exercise 6: Interacting with remote devices** ##
 
-TBD
+
+### **Task 1: Invoke a direct method** ###
+
+In the Azure portal, invoke the method with the method name RestartModule and the following JSON payload. 
+
+Open two tabs with Azure Portal, start monitoring your device payload so you can see when the device is receiving the reboot request, like you did in Exercise #4, Task #1.
+
+Nex, in your IoT Hub open the Edge device, in **Modules** tab at the bottom look for the **$edgeAgent** Module, click on it **</>Direct Method**
+
+![Direct Method](./media/direct-method.png 'Direct Method')
+
+
+
+ 1) Method Name: **SimulatedTemperatureSensor**
+ 2) Copy the following request in the **Payload** section
+
+```json
+
+{
+    "schemaVersion": "1.0",
+    "id": "SimulatedTemperatureSensor"
+}
+
+```
+3) Click on **Invoke Method**
+
+![Direct Method Send ](./media/direct-method-send.png 'Direct Method Request')
+
+
+4) Check the results, you should receive a **200** Status as a reboot successfully occurs.
+
+
+
+### **Task 1: Invoke a direct method, checking the logs** ###
+
+Once you run the module reboot, your telemetry data was stopped for a while, you should be able to see this pause while seeing the payload running in CLI. 
 
 
 
