@@ -7,11 +7,28 @@ https://ms.portal.azure.com/
 
 ## **Content:** ##
 - [Exercise 1: IoT Hub provisioning](#exercise-1-iot-hub-provisioning)
+   - [Task 1: Provision IoT Hub through the Portal](#task-1-Provision-IoT-Hub-through-the-Portal)
+   - [Task 2: Provision IoT Hub through CLI](#task-2-Provision-IoT-Hub-through-CLI)
+   - [Task 3: Provision IoT Hub through VS Code](#task-3-Provision-IoT-Hub-through-VS-Code)
 - [Exercise 2: Devices](#exercise-2-devices)
-- [Exercise 3: Deploying Moduless](#exercise-3-deploying-modules)
+   - [Task 1: Setting up a Device](#task-1-Setting-up-a-Device)
+   - [Task 2: Setting up an IoT Edge Device](#task-2-Setting-up-an-IoT-Edge-Device)
+- [Exercise 3: Deploying Modules](#exercise-3-Deploying-Modules)
+   - [Task 1: Temperature Simulated Module](#task-1-Temperature-Simulated-Module)
 - [Exercise 4: Telemetry Data](#exercise-4-Telemetry-Data)
+   - [Task 2: Setting up Services](#task-2-Setting-up-Services)
+   - [Task 2: Validating connectivity](#task-1-Validating-connectivity)
+   - [Task 3: Connecting the services](#task-3-Connecting-the-services)
 - [Exercise 5: Monitoring Remote Devices](#exercise-5-monitoring-remote-devices)
+   - [Task 1: Setting up alerts](#task-1-Setting-up-alerts)
+   - [Task 2: Creating the Workflow](#task-2-Creating-the-Workflow)
+   - [Task 3: Subscribe to the Events](#task-3-Subscribe-to-the-Events)
+
 - [Exercise 6: Interacting with remote devices](#exercise-6-interacting-with-remote-devices)
+   - [Task 1: Invoke a direct method](#task-1-Invoke-a-direct-method)
+   - [Task 2: Invoke a direct method, checking the logs](#task-2-Invoke-a-direct-method-checking-the-logs)
+- [Exercise 7: Clean up](#exercise-7-clean-up)
+   - [Task 1: Delete resources](#task-1-Delete-resources)
 
 
 ## **Exercise 1: IoT Hub provisioning** ##
@@ -49,6 +66,11 @@ https://ms.portal.azure.com/
    ![Screenshot of the Deployment succeeded message, with the Go to resource button highlighted.](./media/iot-hub-deployment-succeeded.png 'Deployment succeeded message')
 
 ### Task 2: Provision IoT Hub through CLI
+
+
+If you never used before you will be prompted to mount an storage account, click **Create Storage** to continue. If you used before, you will skip this step.
+
+   ![Mount Storage Account.](./media/mount-storage.png 'Mount Storage Account')
 
 Open cloud with the below link
     
@@ -134,6 +156,8 @@ Now, copy and paste in the a notepad the connection string of your device, you w
 
 ### **Task 2: Setting up an IoT Edge Device**
 
+    
+In this exercise we will set up an IoT Edge device, for that we will create VM using Ubuntu Server acting as one.
 
 1. From Azure Portal select **Create resource** then from the most Popular list select **Ubuntu Server 18.04 LTS** if you don't see it type the same in the Search window.
 
@@ -300,7 +324,7 @@ Click in **Create** buttom in Azure Portal, in the search box type **Stream Anal
 
 Fill the fields in the form:
 
-![Stream Analytics Job](./media/sa-form.png 'Telemetry Data')
+![Stream Analytics Job](./media/stream-form.png 'Telemetry Data')
 
 - **Job name**: satrainingSUFFIX
 - **Subscription**: Select The subscription you are using for this training
@@ -378,7 +402,13 @@ Click on **Save** query, in the **Overview** click **Start** to trigger the job.
 ![Start Job](./media/start-job.png 'Start Job')
 
 In a few minutes your Storage account should be receiving data in the container just created.
+1. Go to your Storage Account
+2. Click Storage Explorer(Preview)
+3. Click on the container just created.
+4. You should see the data already available in json format, dowloand to see it.
 
+
+![Data Output](./media/data-output.png 'Output')
 
 ## **Exercise 5: Monitoring Remote Devices** ##
 
@@ -583,6 +613,24 @@ Fill the form again requesting the logs as follow
 ![Direct Method Send ](./media/logs.png 'Direct Method Request')
 
 
+## **Exercise 7: Clean up** ##
+
+
+### **Task 1: Delete resources** ###
+After the hands-on lab
+
+
+In this exercise, you will delete any Azure resources that were created in support of the lab. You should follow all steps provided after attending the Hands-on lab to ensure your account does not continue to be charged for lab resources.
+
+Delete the resource group or all the resources within the resource group.
+
+Using the Azure portal, navigate to the Resource group you used throughout this hands-on lab by selecting Resource groups in the left menu.
+
+Search for the name of your research group and select it from the list.
+
+Select Delete in the command bar and confirm the deletion by re-typing the Resource group name, and selecting Delete.
+
+You should follow all steps provided after attending the Hands-on lab.
 
 ## Target audience
 
