@@ -35,6 +35,7 @@ https://ms.portal.azure.com/
 
 ### **Task 1: Provision IoT Hub through the Portal** ###
 
+During this exercise you will use 3 different tools to create three different IoT Hubs, after this exercise we will delete two and continue the rest of the workshop with the first IoT Hub created through the Portal.
 
 1. In your browser, navigate to the [Azure portal](https://portal.azure.com), select **+Create a resource** in the navigation pane, enter `iot` into the **Search the Marketplace** box.
 
