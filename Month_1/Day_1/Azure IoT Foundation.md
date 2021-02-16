@@ -5,6 +5,14 @@
 2) Getting familiar with Azure Portal
 https://ms.portal.azure.com/
 
+## **Content:** ##
+- [Exercise 1: IoT Hub provisioning](#exercise-1-iot-hub-provisioning)
+- [Exercise 2: Devices](#exercise-2-devices)
+- [Exercise 3: Deploying Moduless](#exercise-3-deploying-modules)
+- [Exercise 4: Telemetry Data](#exercise-4-Telemetry-Data)
+- [Exercise 5: Monitoring Remote Devices](#exercise-5-monitoring-remote-devices)
+- [Exercise 6: Interacting with remote devices](#exercise-6-interacting-with-remote-devices)
+
 
 ## **Exercise 1: IoT Hub provisioning** ##
 
@@ -372,7 +380,7 @@ Click on **Save** query, in the **Overview** click **Start** to trigger the job.
 In a few minutes your Storage account should be receiving data in the container just created.
 
 
-## **Excersice 5: Monitoring Remote Devices** ##
+## **Exercise 5: Monitoring Remote Devices** ##
 
 
 ### **Task 1: Setting up alerts** ###
