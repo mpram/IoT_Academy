@@ -118,6 +118,10 @@ In this task, you will provision a virtual machine running Visual Studio Communi
 
      ![Screenshot of the Create virtual machine blade, with fields set to the previously mentioned settings.](media/virtual-machine.png 'Create virtual machine blade')
 
+   - **License Type**: Select **Windows Server** from the drop down.
+
+   - Go to the **Management** tab in **Monitoring** section click on **Disable** for **Boot Diagnostics**
+
    - Select **Review + create** to move to the next step.
 
 5. Select **Create** on the Create blade to provision the virtual machine.
@@ -266,7 +270,11 @@ Fabrikam has provided a Smart Meter Simulator that they use to simulate device r
 
 4. Right-click the downloaded zip, select the **Unblock** checkbox, select **OK**.
 
-5. Unzip the contents to the folder **C:\SmartMeter**.
+5. Unzip the contents to the folder directly in the **Downloads** Folder, Navigate to **...\Downloads\Iot_Academy-master\Iot_Academy-master\Month_1\Day_2** you will find the folder **MCW-Internet-of-Things-master** copy and paste this folder in a new folder directly in the C drive exactly like this **C:\SmartMeter**.
+
+   ![Solution](media/smartmeter-solution.png 'Solution folder structure')
+
+
 
 6. Navigate to the `SmartMeterSimulator.sln` file within the `Hands-on lab\lab-files\starter-project` folder and open it with **Visual Studio 2019**.
 

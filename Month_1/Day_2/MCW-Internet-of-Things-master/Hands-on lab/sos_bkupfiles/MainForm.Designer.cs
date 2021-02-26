@@ -257,8 +257,8 @@
             this.txtIotHubCnString.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtIotHubCnString.Size = new System.Drawing.Size(530, 40);
             this.txtIotHubCnString.TabIndex = 0;
-            this.txtIotHubCnString.Text = "HostName=smartmeter-hub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedA" +
-    "ccessKey=iabULPufc1TutTVY1KXArcvxoiVuZWb/GnTy+WZitDc=";
+            this.txtIotHubCnString.Text = "HostName=smartmeter-hubmpr.azure-devices.net;SharedAccessKeyName=iothubowner;Shar" +
+    "edAccessKey=7pcSd0ymzw2H3btZlT26bSecB4NeBuDD+u59u/w1CZ4=";
             // 
             // lvSensorData
             // 
@@ -266,6 +266,7 @@
             this.colDeviceID,
             this.colSensorData,
             this.colDateTime});
+            this.lvSensorData.HideSelection = false;
             this.lvSensorData.Location = new System.Drawing.Point(35, 279);
             this.lvSensorData.Name = "lvSensorData";
             this.lvSensorData.ShowGroups = false;
