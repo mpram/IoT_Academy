@@ -528,7 +528,7 @@ You will want to avoid entering the IoT Hub connection string every time the pro
 **Note** If you face issues at this point and you are not able to move forward, close the solution go to the folder 
     **C:\SmartMeter\MCW-Internet-of-Things-master\Hands-on lab\sos_bkupfiles**  
 
-    Copy all the files and replace the five files in the directory below 
+Copy all the files and replace the five files in the directory below 
     
    **C:\SmartMeter\MCW-Internet-of-Things-master\Hands-on lab\lab-files\starter-project\SmartMeterSimulator**
 
