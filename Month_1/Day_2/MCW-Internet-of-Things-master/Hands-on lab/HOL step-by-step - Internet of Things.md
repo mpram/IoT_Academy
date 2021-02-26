@@ -201,7 +201,7 @@ Fabrikam has left you a partially completed sample in the form of the Smart Mete
            }
            catch (Exception ex)
            {
-               if (ex is DeviceAlreadyExistsException ||
+               if (ex is Microsoft.Azure.Devices.Common.Exceptions.DeviceAlreadyExistsException ||
                    ex.Message.Contains("DeviceAlreadyExists"))
                {
                    //TODO: 5.Device already exists, get the registered device
