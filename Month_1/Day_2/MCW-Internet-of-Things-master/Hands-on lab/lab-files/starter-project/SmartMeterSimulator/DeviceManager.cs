@@ -56,7 +56,7 @@ namespace SmartMeterSimulator
             }
             catch (Exception ex)
             {
-                if (ex is DeviceAlreadyExistsException ||
+                if (ex is Microsoft.Azure.Devices.Common.Exceptions.DeviceAlreadyExistsException ||
                     ex.Message.Contains("DeviceAlreadyExists"))
                 {
                     //TODO: 5.Device already exists, get the registered device
