@@ -262,7 +262,7 @@ Fabrikam has provided a Smart Meter Simulator that they use to simulate device r
 
 1. From your **LabVM**, download the starter project by downloading a .zip copy of the Internet of Things MCW GitHub repo.
 
-2. In your newly installed Chrome web browser, navigate to the Internet of Things MCW repo: <https://github.com/Microsoft/MCW-Internet-of-Things>.
+2. In your newly installed Chrome web browser, navigate to the Internet of Things MCW repo: <https://github.com/mpram/Iot_Academy>.
 
 3. On the repo page, select **Clone or download**, then select **Download ZIP**.
 
