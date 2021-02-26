@@ -525,6 +525,17 @@ You will want to avoid entering the IoT Hub connection string every time the pro
 
 3. Save **Sensor.cs**.
 
+**Note** If you face issues at this point and you are not able to move forward, close the solution go to the folder 
+    **C:\SmartMeter\MCW-Internet-of-Things-master\Hands-on lab\sos_bkupfiles**  
+
+    Copy all the files and replace the five files in the directory below 
+    
+   **C:\SmartMeter\MCW-Internet-of-Things-master\Hands-on lab\lab-files\starter-project\SmartMeterSimulator**
+
+After replacing the files, open the solution again, right click on **SmartMeterSimulator.sln**, select **Open With**, **Visual Studio 2019**, go to **Build** menu, **Build Solution**. Go back to the **Task 2** and modify the connection of you solution,
+to connect to your current IoT Hub. After this step you are ready to continue with **Task 4**.
+
+
 ### Task 4: Verify device registration and telemetry
 
 In this task, you will build and run the Smart Meter Simulator project.
