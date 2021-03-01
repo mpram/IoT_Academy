@@ -174,8 +174,8 @@ In this exercise we will set up an IoT Edge device, for that we will create VM u
    - **Image**: Default it is ok.
    - **Size**: Keep the default selection
    - **Authentication Type**: Select **Password**
-   - **Username**: TBD
-   - **Password**: TBD
+   - **Username**: iotacademy
+   - **Password**: MSFTacademy01!
    - **Allow selected ports**: SSH 22
 
    In **Management** Tab disable monitoring for this lab.
