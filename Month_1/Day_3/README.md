@@ -8,7 +8,8 @@ In this article, you will learn:
 - Azure Cost Calculator features
 - Using the calculator to price the below architecture 
 
-![](2020-12-24-11-56-45.png)
+ <img src= "C:\Users\makumari\Downloads\IOT Academy\IoT_Academy\Month_1\Day_3\Media\2020-12-24-11-56-45.png")
+
 
 ## What is Azure Pricing Calculator
 
