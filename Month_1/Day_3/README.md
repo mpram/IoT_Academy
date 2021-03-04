@@ -43,8 +43,10 @@ Using the Azure Cost Calculator is very straightforward. Below is a brief outlin
 
 1. As you add products, you can modify the configuration of each product in your estimate to optimize your costs. You can also see how resources overlap, for example if two Azure services use the same underlying storage or compute services.
 1. After you finish, you have the option to Export to Excel, Save, or Share your estimate report. Saved reports remain in the Saved Estimates tab. 
+![](2021-03-03-19-49-14.png)
 
-   ![](2021-03-03-19-29-30.png)
+
+ 
 
 
 # Monitor costs
@@ -62,7 +64,7 @@ Azure provides cost tools that can help track cloud spend and make recommendatio
 - <a href="https://docs.microsoft.com/en-us/azure/advisor/advisor-cost-recommendations">Azure Advisor</a>
 
 
-## Azure TCO Calculator
+## Exercise 1: Azure TCO Calculator
 
 When evaluating your usage of the Azure cloud, it’s important to consider the total cost of ownership (TCO). TCO is key to understanding the real cost of your projects and measuring your return on investment (ROI). Azure offers a TCO calculator, one of a set of Azure cost management tools, that lets you estimate the cost of migrating your server workloads to Azure and predict your potential savings for existing workloads.
 
@@ -75,49 +77,49 @@ For users wishing to adopt cloud services, Azure provides a web-based TCO Calcul
 
 #### How to use TCO Calculator
 
-- Navigate to https://azure.microsoft.com/en-us/pricing/tco/calculator/
+Step 1: Navigate to https://azure.microsoft.com/en-us/pricing/tco/calculator/
 
 ![](2020-12-24-13-19-54.png)
 
-- Add all your on-premise workloads here and adjust assumptions in the next step
+Step 2: Add all your on-premise workloads here and adjust assumptions in the next step
  ![](2020-12-24-13-22-53.png)
 
-- And your savings report is ready to view. Just 3 simple steps to calculate TCO. You can use the TCO calculator to measure ROI yourself or to make a convincing case to move to cloud from on-premises to your colleagues and leadership
+Step 3: And your savings report is ready to view. Just 3 simple steps to calculate TCO. You can use the TCO calculator to measure ROI yourself or to make a convincing case to move to cloud from on-premises to your colleagues and leadership
 
 ![](2020-12-24-13-24-30.png)
 
 
 
 
-## Cost analysis
+## Exercise 2: Cost analysis
 Cost analysis is a tool in Azure Cost Management that allows you to view aggregated costs over a period. This view can help you understand your spending trends.
 
 View costs at different scopes, such as for a resource group or specific resource tags. Cost Analysis provides built-in charts and custom views. You can also download the cost data in CSV format to analyze with other tools.
 
 
-- Sign in to the Azure portal at https://portal.azure.com
+Step 1: Sign in to the Azure portal at https://portal.azure.com
 -  Review costs in cost analysis
 To review your costs in cost analysis, go to cost management+ billing 
 
  ![](2020-12-24-12-44-28.png)
 
-- Open the scope in the Azure portal and select Cost analysis in the menu.
+Step 2: Open the scope in the Azure portal and select Cost analysis in the menu.
 
  ![](2020-12-24-12-45-54.png)
 
-- Click on Cost Management on the left side pane and then click on Cost Analysis
+Step 3: Click on Cost Management on the left side pane and then click on Cost Analysis
 
  ![](2020-12-24-12-48-49.png)
 
 Here, you can see your costs broken down by date, month, location and resource group so you have a variety of views to meet your needs.
 
-- To further leverage this, click on View and change it to cost by resource, daily costs etc. 
+Step 4: To further leverage this, click on View and change it to cost by resource, daily costs etc. 
 
 ![](2020-12-24-12-54-42.png)
 
 
 
-## Azure Advisor
+## Exercise 3: Azure Advisor
 
 #### What is Azure Advisor
 
@@ -125,12 +127,12 @@ Advisor is a personalized cloud consultant that helps you follow best practices 
 
 #### How to use Azure Advisor
 
-- To access your Azure Advisor, sign into Azure portal at https://portal.azure.com
+Step 1: To access your Azure Advisor, sign into Azure portal at https://portal.azure.com
 - Type Advisor in the Search bar and select Advisor from the drop-down menu. You will get a view of recommendations for cost optimizing, security, reliability, operational excellence, performance etc.
 
  ![](2020-12-24-13-01-03.png)
 
-- SInce, I have 9 recommendations in Security, I will click on it and see the recommendations
+Step 2: Since, I have 9 recommendations in Security, I will click on it and see the recommendations
 
 ![](2020-12-24-13-03-08.png)
 
