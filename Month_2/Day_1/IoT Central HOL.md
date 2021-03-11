@@ -1,8 +1,5 @@
 # IoT Central - Hands-on Lab #
 
-## **Content:** ##
-- [Exercise 1: Create a Custom IoT Central app](#exercise-1-create-a-custom-iot-central-app)
-   - [Task 1: Provision IoT Hub through the Portal](#task-1-Provision-IoT-Hub-through-the-Portal)
 
 **Scenario**
 
@@ -448,59 +445,59 @@ A command to recall the truck to base
 
 1. To add the commands, select **Add capability**. Then add the first command.
 
-<table>
-    <thead>
-      <tr>
-        <th>Entry Summary</th>
-        <th>Value</th>
-       </tr>
-    </thead>
-    <tbody>
+    <table>
+        <thead>
         <tr>
-            <td>Display Name</td>
-            <td>Go to customer</td>
-          </tr>
-          <tr>
-            <td>Name</code></td>
-            <td>GoToCustomer</td>
+            <th>Entry Summary</th>
+            <th>Value</th>
         </tr>
-        <tr>
-            <td>Capability type</td>
-            <td>Command</td>
-        </tr>
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Display Name</td>
+                <td>Go to customer</td>
+            </tr>
+            <tr>
+                <td>Name</code></td>
+                <td>GoToCustomer</td>
+            </tr>
+            <tr>
+                <td>Capability type</td>
+                <td>Command</td>
+            </tr>
+        </tbody>
+    </table>
 
 <br> 
 
 Turn on the **Request** option to enter more command details.
-
+<br> 
 
 <table>
-    <thead>
-      <tr>
-        <th>Entry Summary</th>
-        <th>Value</th>
-       </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Request</td>
-            <td>On</td>
-          </tr>
-          <tr>
-            <td>Display name</code></td>
-            <td>Customer ID</td>
-        </tr>
-        <tr>
-            <td>Name</td>
-            <td>CustomerID</td>
-        </tr>
-         <tr>
-            <td>Schema</td>
-            <td>Integer</td>
-        </tr>
-    </tbody>
+                <thead>
+                <tr>
+                    <th>Entry Summary</th>
+                    <th>Value</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Request</td>
+                        <td>On</td>
+                    </tr>
+                    <tr>
+                        <td>Display name</code></td>
+                        <td>Customer ID</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>CustomerID</td>
+                    </tr>
+                    <tr>
+                        <td>Schema</td>
+                        <td>Integer</td>
+                    </tr>
+                </tbody>
 </table>
 
 <br> 
@@ -511,27 +508,27 @@ Turn on the **Request** option to enter more command details.
 
 2. Create a command to recall the truck.
 
-<table>
-    <thead>
-      <tr>
-        <th>Entry Summary</th>
-        <th>Value</th>
-       </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Display Name</td>
-            <td>Recall</td>
-          </tr>
-          <tr>
-            <td>Name</code></td>
-            <td>Recall</td>
-        </tr>
-        <tr>
-            <td>Capability type</td>
-            <td>Command</td>
-        </tr>
-    </tbody>
+    <table>
+            <thead>
+            <tr>
+                <th>Entry Summary</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Display Name</td>
+                    <td>Recall</td>
+                </tr>
+                <tr>
+                    <td>Name</code></td>
+                    <td>Recall</td>
+                </tr>
+                <tr>
+                    <td>Capability type</td>
+                    <td>Command</td>
+                </tr>
+            </tbody>
 </table>
 
 <br> 
@@ -550,7 +547,7 @@ When you select the name of the device template, the menu that ends with the Vie
 
 
 **Resources Needed**
-- Azure Iot Central
+- Azure IoT Central
 - VS Code
 
 
