@@ -51,18 +51,18 @@ After selecting Custom apps, you should fill the fields in the Application Form:
 
  ![Create a Custom App](./media/iotc-new-app.png 'Create a Custom App')
 
-**Application Name:** Refrigerated Trucks
+- **Application Name:** Refrigerated Trucks
 
-**URL:** refrigerated-trucks-SUFFIX must be a unique URL
-**Application Template:** Custom application, default.
+- **URL:** refrigerated-trucks-SUFFIX must be a unique URL
+- **Application Template:** Custom application, default.
 
-**Pricing Plan:** Standard 1
+- **Pricing Plan:** Standard 1
 
-**Directory:** Your current company
+- **Directory:** Your current company
 
-**Azure Subscription:** Your current subscription
+- **Azure Subscription:** Your current subscription
 
-**Location** Select the region you are using for this training. 
+- **Location** Select the region you are using for this training. 
 
 Then select **Create**
 
@@ -270,7 +270,7 @@ Now add: **ready**, **enroute**, **delivering**, **returning**, **loading**, and
 
 Another event might just acknowledge and record the customer ID that a truck is to deliver to.
 
-To create an event, select Add capability. Then fill in the following information.
+To create an event, select **Add capability**. Then fill in the following information.
 
 <table>
     <thead>
@@ -310,7 +310,7 @@ To create an event, select Add capability. Then fill in the following informatio
 ![Truck State](./media/event.png 'Truck states')
 
 <br> 
-6. Add Location
+6. Add a Location capability following the below information:
 
 
 <table>
@@ -389,6 +389,8 @@ You'll define an optimal temperature for the truck contents as a property.
 </table>
 <br> 
 
+You should see your property set up as this one below:
+
 ![Truck State](./media/truckid-property.png 'Truck states')
 
 2. Add the optimal temperature property.
@@ -433,6 +435,8 @@ You'll define an optimal temperature for the truck contents as a property.
     </tbody>
 </table>
 <br> 
+
+Now, should look like the below image:
 
 ![Truck State](./media/optimal-temp.png 'Truck states')
 
@@ -501,6 +505,7 @@ Turn on the **Request** option to enter more command details.
 </table>
 
 <br> 
+Validate your inputs with the below image: 
 
 ![Command Go to Customer](./media/command-go-to-customer.png 'Command Go to Customer')
 
@@ -533,9 +538,11 @@ Turn on the **Request** option to enter more command details.
 
 <br> 
 
+Your recall property should look like the below one:
 
 ![Command Recall](./media/command-recall.png 'Command Recall')
 
+<br> 
 
 3. Select **Save**. Before you go any further, carefully double-check your interface. After an interface is published, editing options are limited. So you should get it right before publishing.
 
