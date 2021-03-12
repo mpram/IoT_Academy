@@ -26,7 +26,6 @@ The deck presented in this section it is available in the pdf files folder.
 ## **Content - Hands-on Lab:** ##
 - [Exercise 1: Create a Custom IoT Central app](#exercise-1-create-a-custom-iot-central-app)
   - [Task 1: Creating an Application](#task-1-creating-an-application)
-
    - [Task 2: Add Capabilities - Telemetry](#task-2-add-capabilities---telemetry)
     - [Task 3: Add Capabilities - Properties](#task-3-Add-capabilities---properties)
      - [Task 4: Add Capabilities - Commands](#task-4-add-capabilities---commands)
