@@ -32,10 +32,17 @@ The deck presented in this section it is available in the pdf files folder.
      - [Task 4: Add Capabilities - Commands](#task-4-add-capabilities---commands)
     - [Task 5: Creating an Application](#task-5-creating-an---application)
     - [Task 6: Creating an Application](#task-6-creating-an---application)
-- [Exercise 2: Create a Dashboard](#exercise-2)
-- [Exercise 3: Create a Device](#exercise-3-)
-- [Exercise 4: Set up Azure Maps](#exercise-4)
-- [Exercise 5: Visual Studio Code](#exercise-5)
+- [Exercise 2: Create a Dashboard](#exercise-2-create-a-dashboard)
+    - [Task 1: Visualizing the device](#task-1-Visualizing-the-device)
+    - [Task 2: Writable Properties View](#task-2-Writable-Properties-View)
+    - [Task 3: Create a Device](#task-3-Create-a-Device)
+
+- [Exercise 3:  Azure Maps](#exercise-3-Azure-Maps)
+- [Exercise 4: Create the device app](#exercise-4-Create-the-device-app)
+    - [Task 1: Set up your environment](#task-1-Set-up-your-environment)
+    - [Task 2: Launch your device](#task-2-Launch-your-device)
+    - [Task 3: Set up Properties](#task-3-Set-up-Properties)
+- [Exercise 5: Create Rules](#exercise-5-Create-Rules)
 - [Exercise 6: Set up Alerts](#exercise-6)
 - [Exercise 7: Export Data](#exercise-7)
 
@@ -307,10 +314,14 @@ To create an event, select **Add capability**. Then fill in the following inform
 </table>
 <br> 
 
+Your settings should look like the image below: 
+
 ![Truck State](./media/event.png 'Truck states')
 
 <br> 
 6. Add a Location capability following the below information:
+<br> 
+<br> 
 
 
 <table>
@@ -348,6 +359,8 @@ To create an event, select **Add capability**. Then fill in the following inform
 ### **Task 3: Add Capabilities - Properties** ###
 You'll define an optimal temperature for the truck contents as a property.
 1. Select Add capability. Then add the truck ID property.
+<br> 
+<br> 
 
 <table>
     <thead>
@@ -551,6 +564,189 @@ When you select the name of the device template, the menu that ends with the Vie
 ![Command Recall](./media/capabilities-all.png 'Command Recall')
 
 4. Select **Publish**. Then in the dialog box, select **Publish** again. The annotation should change from Draft to Published.
+
+## Exercise 2: Create a Dashboard ## 
+
+### **Task 1: Visualizing the device** ### 
+
+1. Select **Views**. Then select **Visualizing the device**.
+You see a list of all the Telemetry, Property, and Commands elements you created, each with a check box. You also see a list of Cloud properties and Custom tiles. Ignore these two lists for now.
+
+
+  ![Command Recall](./media/dashboard-view.png 'Command Recall')
+
+
+
+
+2. Under **Telemetry**, select **Location** > **Add tile**. Dashboards are made of tiles. We choose the location tile first because we want to expand it.
+
+3. Change the View name to something more specific, for example, **Truck view**
+
+4. Select each of the rest of the telemetry and property capabilities in turn, starting at the top. For each capability, select **Add tile**
+
+Your new Dashboard should look like this one:
+
+  ![Command Recall](./media/dashboard-device.png 'Command Recall')
+
+5. Select **Save** to save this view.
+
+
+### **Task 2: Writable Properties View** ### 
+
+We need to create a separate view. Its sole purpose will be to set writable properties.
+
+1. Select **Views**, and then select the **Editing device and cloud data tile**
+
+2. Change the form name to something like **Set properties**.
+
+3. Select the **Optimal temperature** property check box. Then select **Add section**.
+
+4. Verify that your view looks similar to the following image. Then select **Save**.
+
+  ![Command Recall](./media/writeable-form.png 'Command Recall')
+
+
+### **Task 3: Create a Device** ### 
+
+1. On the menu on the left, select **Devices**.
+
+2. To ensure the new device uses this device template, in the Devices menu, select **RefrigeratedTruck**.
+
+3. Select **New**. In the Create a new device dialog box, verify that the device template is **RefrigeratedTruck**.
+
+
+    - **Device name**: RefrigeratedTruck - 1
+
+    - **Device ID**: RefrigeratedTruck1
+
+    - **Simulate this device?**: setting at No
+
+
+  ![Command Recall](./media/new-device.png 'Command Recall')
+
+4. Then click **Create**
+
+
+Notice that the Device status is **Registered**. Only after the device status is **Provisioned** will the IoT Central app accept a connection to the device. The coding unit that follows shows how to provision a device.
+
+5. Select RefrigeratedTruck -1. You see the live dashboard. It includes lots of Waiting for data messages. On the bar that includes Truck view, select Commands. Notice that the two commands you entered are ready to run.
+
+6. Record the connection keys. In the upper-right menu, select **Connect**. Do not select **Attach to gateway**.
+
+In the Device connection dialog box that opens, carefully copy the **ID scope**, **Device ID**, and P**rimary key**. The ID scope identifies the app. The device ID identifies the real device. And the primary key gives you permission for the connection.
+
+Paste this information in a text file. 
+
+Leave the Authentication type setting as **Shared access signature (SAS)**.
+
+After you save the IDs and the key, select Close on the dialog box.
+
+## Exercise 3: Azure Maps ## 
+
+1. Go to Azure Portal: https://ms.portal.azure.com/
+2. Select **Create a Resource**, in the marketplace look for **Azure Maps**, select Azure Maps and then click **create**
+
+    ![Command Recall](./media/azure-maps.png 'Command Recall')
+
+Complete the creation form: 
+- **Subscription**: Select the subscription you are using for this training.
+- **Resource Group**: Select the resource group you are using for this training.
+-**Name**: mytrucksacademySUFFIX
+-**Pricing Tier**: Standard S1
+-**Confirm the license and Privacy terms** make sure it is check.
+
+Then click **Create** at the bottom of the page.
+
+   ![Command Recall](./media/azure-maps-form.png 'Command Recall')
+
+Once Azure Maps resource is created, find the key by selecting **Authentication**. Copy the **primary key** and paste it into your notepad. 
+
+
+## Exercise 4: Create the device app ## 
+
+### **Task 1: Set up your environment** ###
+
+1. Open Visual Studio Code locally
+
+2. On the top bar select **Terminal** and then **New Terminal** in Visual Studio Code. 
+
+3. Create a folder called RefrigeratedTruck by entering **mkdir RefrigeratedTruck** and then enter. Go to the folder by entering **cd RefrigeratedTruck**.
+
+  ![Command Recall](./media/vs-code-mkdir.png 'Command Recall')
+
+
+
+4. Enter **dotnet new console**. This command creates a Program.cs file and a project file in your folder.
+
+5. Enter **dotnet restore**. This command gives your app access to the required .NET packages.
+
+Install the required libraries, copy and paste the below code in the terminal.
+
+```bash 
+
+dotnet add package AzureMapsRestToolkit
+dotnet add package Microsoft.Azure.Devices.Client
+dotnet add package Microsoft.Azure.Devices.Provisioning.Client
+dotnet add package Microsoft.Azure.Devices.Provisioning.Transport.Mqtt
+dotnet add package System.Text.Json
+```
+
+6. From the File menu, open the Program.cs file just created. Then replace the whole content copying and pasting from the file **Program.cs** you will find in  
+**code_sample** folder.
+
+7. Once you replace the content of the files, we need to add our keys to connect with our services. Look for lines **123** to **126**. Replace accordingly based on the keys you were adding to your notepad in previous exercises. 
+
+
+ ![Command Recall](./media/vscode-replace-keys.png 'Command Recall')
+
+After the changes are made, save the file with **Ctrl+S**
+### **Task 2: Launch your device** ### 
+
+To begin testing, open the Azure IoT Central app in a browser. Then run the device app.
+1. In the terminal, enter **dotnet run**.
+
+A console screen opens with the message Starting Truck number 1.
+
+ ![Command Recall](./media/register-device.png 'Command Recall')
+
+
+Once your device in registered through VS Code, you should see in your IoT Central an status change to **Provisioned**:
+
+
+ ![Command Recall](./media/device-provisioned.png 'Command Recall')
+
+ At this point in the Track View dashboard you should see data flowing thorught it, the map should show a blue dot with your truck and the chart receiving telemetry data should show some data points already.
+
+ 2. Select the device's **Commands** tab. This control should be under the truck name, to the right of the Truck view control.
+
+3. Enter a customer ID, say **1**. (Numerals 0 through 9 are valid customer IDs.) Then select **Run**.
+
+In the console for the device app, you see both a New customer event and a Route found message
+
+
+
+ ![Command Recall](./media/new-command.png 'Command Recall')
+
+
+4. On the dashboard's Location tile, check to see whether your truck is on its way. You might have to wait a short time for the apps to sync.
+
+5. Verify the event text on the Event tile. You should see a new Customer Event.
+
+6. When the truck returns to base and is reloaded with contents, its state is ready. Try issuing another delivery command. Choose another customer ID.
+
+7. Before the truck reaches the customer, make a recall command to check whether the truck responds.
+
+
+### **Task 3: Set up Properties** ### 
+
+
+The next test is to check the writable property, **OptimalTemperature**. To change this value, select the **Set properties** view.
+
+Set the optimal temperature to any value, say **-8**. Select **Save** and then notice the Pending status.
+
+ ![Command Recall](./media/set-property.png 'Command Recall')
+
+Now you should see the new Optimal temperature is set to -8. in the **Optimal Temperature** Tile.
 
 
 **Resources Needed**
