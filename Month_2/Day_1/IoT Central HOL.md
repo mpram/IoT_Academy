@@ -13,11 +13,11 @@ IoT Central provides all you need to handle this scenario. In the following imag
 
 **Final Application**
 
-Prtscrn here
+At the end of this hands=on lab your newly created application should look like the below one.
 
-**Architecture Diagram**
 
-image here 
+ ![Create a Custom App](./media/iotcentral-app.png 'Create a Custom App')
+
 
 **IoT Central Theory**
 
