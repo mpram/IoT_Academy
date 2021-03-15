@@ -42,8 +42,13 @@ The deck presented in this section it is available in the pdf files folder.
     - [Task 2: Launch your device](#task-2-Launch-your-device)
     - [Task 3: Set up Properties](#task-3-Set-up-Properties)
 - [Exercise 5: Create Rules](#exercise-5-Create-Rules)
-- [Exercise 6: Set up Alerts](#exercise-6)
-- [Exercise 7: Export Data](#exercise-7)
+    - [Task 1: Cooling system state](#Task-1-Cooling-system-state)
+    - [Task 2: Temperature spiking](#Task-2-Temperature-spiking)
+    - [Task 3: Truck leaves base](#Task-3-Truck-leaves-base)
+    - [Task 4: Temperature of the contents](#Task-4-Temperature-of-the-contents)
+
+- [Exercise 6: Clean up](#exercise-6-clean-up)
+
 
 ## **Exercise 1: Create a Custom IoT Central app** ##
 
@@ -748,8 +753,89 @@ Set the optimal temperature to any value, say **-8**. Select **Save** and then n
 Now you should see the new Optimal temperature is set to -8. in the **Optimal Temperature** Tile.
 
 
+## Exercise 5: Create Rules ## 
+
+### **Task 1: Cooling system state** ###
+
+1. In the IoT portal, select **Rules** in the left-hand menu, then **+ New**. Enter a meaningful name for the rule, such as **"Cooling system failed"**. Press Enter.
+
+ ![Rules](./media/new-rule.png 'New Rule')
+
+
+
+ 2. Select **RefrigeratedTruck** for the **device template**.
+
+3. Under **Conditions** notice that all the telemetry elements of the device template are available. Select **Cooling system state**.
+
+For Operator, select **Equals**.
+
+For value, type the word **"failed"**, then click on Select: "failed".
+
+Leave Time aggregation as Off.
+
+For **Actions**, click on **+ Email**.
+
+In Display name, enter a title for the email, perhaps "Cooling system failed"!
+
+For To, enter the email you've used for your IoT Central account. And for Note enter some descriptive text that will form the body of the email.
+
+**Note**: To receive emails the account you select has to be login to IoT central at least one time, otherwise you will not receive any emails.
+
+Your new rule should look like the below image.
+
+ ![Rules](./media/rule-cooling-system.png 'New Rule Cooling System')
+
+
+### **Task 2: Temperature spiking** ###
+
+1. Create a new rule with a name such as **"Contents temperature spiking"**.
+
+2. Turn on **Time aggregation**, and select an interval of **5 minutes**.
+
+3. Select **Contents Temperature** for Telemetry.
+
+4. In the range Aggregation values, select **Maximum.**
+
+5. For Operator. select Is greater than or equal to. Then enter **"0"** for the value, and select that as the value.
+
+6. For Actions, fire off another email. Give the email an appropriate title and note.
+
+7. Make sure to click Save, to save off this rule.
+
+
+ ![Rules Temp](./media/temp-spiking.png 'New Rule Temp System')
+
+### **Task 3: Truck leaves base** ###
+
+1. Select **Rules** in the left-hand menu, then **+ New**. Enter a meaningful name for the rule, such as **"Truck leaving base"**. Press Enter.
+
+Now, enter the following five conditions.
+- Location / Latitude: doesn't equal => **47.644702**
+- Location / Longitude: doesn't equal => **-122.130137**
+- Truck state: Equals => **enroute**
+
+### **Task 4: Temperature of the contents** ###
+
+1. Enter a rule with a name such as **"Truck contents OK"**.
+
+2. Turn on Time aggregation, with a period of **five minutes**.
+
+3. Enter conditions that fire if the average Contents Temperature is less than **-1** degrees Celsius, and greater than **-18** degrees Celsius.
+
+4. Again, enter an appropriate **email action**, and click **Save**.
+
+At this point you should see all the rules listed as below:
+
+ ![Rules Temp](./media/rules-all.png 'New Rule Temp System')
+
+
+At this point it is time to test your Rules Go to your Device Dashboard, sent a Command to trigger a new Customer trip, remember use numbers from 1 to 9.
+In a few minutes you should start receiving emails.
+
+## Exercise 6: Clean up ## 
+
+Once you completed all the exercises, go to Azure Portal, look for the azure IoT Central Application and delete resource.
+
 **Resources Needed**
 - Azure IoT Central
 - VS Code
-
-
