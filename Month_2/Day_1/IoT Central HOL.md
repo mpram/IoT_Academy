@@ -565,7 +565,7 @@ Your recall property should look like the below one:
 
 When you select the name of the device template, the menu that ends with the Views option summarizes the capabilities, 6 Telemetry based, 2 Properties and 2 Commands: 
 
-![Command Recall](./media/capabilities-all.png 'Command Recall')
+![Summary list](./media/capabilities-all.png 'Summary List')
 
 4. Select **Publish**. Then in the dialog box, select **Publish** again. The annotation should change from Draft to Published.
 
@@ -577,7 +577,7 @@ When you select the name of the device template, the menu that ends with the Vie
 You see a list of all the Telemetry, Property, and Commands elements you created, each with a check box. You also see a list of Cloud properties and Custom tiles. Ignore these two lists for now.
 
 
-  ![Command Recall](./media/dashboard-view.png 'Command Recall')
+  ![Device](./media/dashboard-view.png 'Visualizing Device')
 
 
 
@@ -590,7 +590,7 @@ You see a list of all the Telemetry, Property, and Commands elements you created
 
 Your new Dashboard should look like this one:
 
-  ![Command Recall](./media/dashboard-device.png 'Command Recall')
+  ![Dashboard](./media/dashboard-device.png 'New Dashboard')
 
 5. Select **Save** to save this view.
 
@@ -607,8 +607,9 @@ We need to create a separate view. Its sole purpose will be to set writable prop
 
 4. Verify that your view looks similar to the following image. Then select **Save**.
 
-  ![Command Recall](./media/writeable-form.png 'Command Recall')
+  ![Writable properties](./media/writeable-form.png 'Properties')
 
+5. Select **Publish**. Then in the dialog box, select **Publish** again. The annotation should change from Draft to Published.
 
 ### **Task 3: Create a Device** ### 
 
@@ -626,7 +627,7 @@ We need to create a separate view. Its sole purpose will be to set writable prop
     - **Simulate this device?**: setting at No
 
 
-  ![Command Recall](./media/new-device.png 'Command Recall')
+  ![New Device](./media/new-device.png 'New Device')
 
 4. Then click **Create**
 
