@@ -10,7 +10,7 @@
   - [Task 1: Creating an Application](#task-1-creating-an-application)
 
 
-## **Exercise 1: Create a Custom IoT Central app** ##
+## **Exercise 1: Setting up your Environment** ##
 
 
 ### **Task 1: Create IoT Hub** ###
@@ -87,4 +87,147 @@ az deployment group create \
 After a few minutes you should see your VM provisioned in the portal. 
 
 ![List of devices](./media/vm-edge-device.png 'List of devices')
+
+### **Task 2: Connect Virtual Machine to IoT Hub** ###
+
+In this step we will connect the virtual machine jsut created in previous step to Azure IoT Hub, assigning the device01.
+
+1. Launch putty locally, copy the IP of the virtual machine in the overview tab
+
+You will find the public IP for your VM as shown below:
+
+![VM Public IP](./media/vm-ip.png 'VM Public IP')
+
+Copy and paste the IP in the **Host Name** section in Putty, then click **Yes** to continue. Now you will see the **Login** steps, use the credentials from the script creation you applied in previous step.
+
+2. Once login run the following command to edit the connection string to your device
+
+```bash
+sudo nano /etc/iotedge/config.yaml
+```
+
+Now you can replace the connection string from Azure portal to the config.yaml file in your device: 
+
+![Device Connection String](./media/device-cs.png 'Device Connection String')
+
+
+The connectio string to paste in the section above you will find it in Azure IoT Hub, **Automatic Device Management** section, **IoT Edge**, click in **device01**, copy **Primary Connection String**
+
+
+![Device Connection String](./media/connection-string.png 'Device Connection String')
+
+After you replace the connection string, **Crtl+X** to save the changes and **Y** to confirm 
+
+Restart your edge deamon with the below command: 
+
+```bash
+sudo systemctl restart iotedge
+```
+
+After a few minutes you should be able to see the edgeAgent container running in your Virtual machine executing the following command:
+
+```bash
+sudo iotedge list
+```
+
+## **Exercise 2: Assigning Tags** ##
+In this exercise you will learn how to assign tags to your devices using different tools. According to our architecture we will assign Tags according to the following distribution: 
+
+- Devices: 1-3 Dev Env, Location Tampa
+- Devices: 4-6 Dev Env, Location Seattle
+- Devices: 7-13 Dev Prod, Location Seattle
+- Devices: 14-13 Dev Prod, Location Tampa
+
+
+
+### **Task 1: Device Twins** ###
+In this first task you will assign task using the Azure Portal, modifiying the device twin of the edge device. 
+
+1. Go to Azure IoT Hub, **Automatic Device Management**, then **IoT Edge** select **device01**:
+
+
+![Device Twin](./media/device-twin.png 'Device Twin')
+
+Once you open the devie twin you can add your tags, copy and paste the following json right below **version** section:
+
+```json
+  "tags": {
+    "env": "dev",
+    "location": "Tampa"
+  },
+  ```
+
+ Then click **Save** on the top
+
+Your Device Twin should look like the below screen:
+
+![Portal Tags](./media/tags-portal.png 'Device Twin Tags')
+
+
+### **Task 2: Visual Studio Code** ###
+
+Next we will assing tags using Visual Studio Code.
+
+1. Launch Visual Studio Code.
+If it is your fisrt time using VS Code with Azure IoT hub, you will need to follow the next step:
+
+Click in the left menu **Extensions**, in search box type **Azure IoT Tools**, once you select the extension, you will have an **install** buttom on the right screen, click on it to start the installation
+
+![VS Code Extensiones](./media/extensions-vscode.png 'VS Code Azure IoT Hub Extension')
+
+2. After this step Go to the **View** menu select **Command Palette** in the search box type **Azure IoT Hub: Select IoT Hub** follow the steps to select Subscription, Resource group and finally the IoT Hub created for this training. 
+
+3. In the left menu select **Files** you should see at the bottom a new section for **Azure IoT Hub**, expanding this section you should see your IoT Hub and all the devices.
+
+
+
+  ![VS Code IoT Hub](./media/vscode-iothub.png 'VS Code Azure IoT Hub ')
+
+4. Right click on **device02** select **Edit Device Twin**
+
+5. At the bottom of the new file, you will a tags section, add there the following json
+
+```json
+  "tags": {
+    "env": "dev",
+    "location": "Tampa"
+  }
+```
+Your new file should like the below sreen:
+
+![VS Code IoT Hub](./media/vscode-device-twin.png 'VS Code Azure IoT Hub ')
+
+6. Save your new file, **Ctrl+S**. After saving, right click any area of the new file and select **Update Device Twin**. 
+
+7. You should receive a message in the terminal specifiying **Device Twin updated successfully**. You can validate the changes in Azure Portal accessing the device twin of your device.
+
+
+### **Task 3: IoT Hub Explorer** ###
+
+1. Launch Azure Iot explorer locally. Add a new connection 
+
+![IoT explorer](./media/iot-explorer.png 'IoT Explorer')
+
+2. In the new screen paste the IoT Hub **Primary connection string** you will find it in the **Shared access policies** section.
+
+
+![IoT explorer](./media/iot-hub-cs.png
+ 'IoT Explorer')
+
+ 3. After pasting the connection string, click **Save**, next you will see the list of all your devices. Select **device03**
+
+4. Select **Device Twin** and assign the new tags after the version section, then click **Save**
+
+
+```json
+  "tags": {
+    "env": "dev",
+    "location": "Tampa"
+  }
+```
+Your new twin should look like the below image: 
+
+![IoT explorer](./media/explorer-tags.png 'IoT Explorer')
+
+5. Now that you know some of the tools available complete the rest of the tags assignment for the devices with you prefer tool.
 
