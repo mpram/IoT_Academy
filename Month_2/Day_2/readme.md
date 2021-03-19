@@ -1,4 +1,4 @@
-# Deploy IoT Edge modules at Scale # 
+# Deploy IoT Edge modules at Scale #
 
 ## Scenario ##
 
@@ -230,4 +230,32 @@ Your new twin should look like the below image:
 ![IoT explorer](./media/explorer-tags.png 'IoT Explorer')
 
 5. Now that you know some of the tools available complete the rest of the tags assignment for the devices with you prefer tool.
+
+
+## **Exercise 3: Querying Devices** ##
+
+1. To query your devices, you can use the **Query explorer**. Go to your IoT Hub, **Explorers**, then clikc in **Query Explorer** now you should be able to write your queries on the right side panel.
+
+![IoT explorer](./media/query-explorer.png 'IoT Explorer')
+
+
+2. Try different queries to identify devices by location or environment or both
+
+```sql
+SELECT * FROM devices where tags.location='Tampa'
+```
+
+```sql
+SELECT * FROM devices where tags.location='Tampa' and tags.env='prod'
+```
+
+3. You can run queries based on grouping functions accorting to properties or status jobs.
+
+```sql
+SELECT properties.reported.telemetryConfig.status AS status,
+    COUNT() AS numberOfDevices
+  FROM devices
+  GROUP BY properties.reported.telemetryConfig.status
+  ```
+
 
