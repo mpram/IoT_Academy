@@ -258,4 +258,113 @@ SELECT properties.reported.telemetryConfig.status AS status,
   GROUP BY properties.reported.telemetryConfig.status
   ```
 
+## **Exercise 4: Creating a deployment at scale** ##
 
+
+### **Task 1: IoT Edge New Solution template** ###
+
+1. Go to Visual Stuio Code, make sure you can see your IoT Hub at the bottom left of the screen, then click on **View** menu on the top bar, then **Command Pallette** then search for **Azure IoT Edge: New IoT EDge Solution**
+
+2. Next step Create a folder for your deployment go to your C:\ drive,   create a folder **iotedgedeploy**, select the folder just created. 
+
+3. Then the command paletter will ask you additional parameters for your solution
+- Name your Solution: **edgedeploy**
+- Select Language: **C# Module**
+- Module name: **securitymodule**
+- Docker image repository: Accept default option
+
+4. After a few minutes you will see a new window with the files ready for your solution as shown below: 
+
+![sample files](./media/edge-solution.png 'IoT Edge Solution')
+
+5. Select the file **deployment.template.json** and replace the image URI for your deployment, use the following URL:
+
+
+```json
+"image": "mcr.microsoft.com/ascforiot/azureiotsecurity:1.0.1",
+```
+
+Your line 60, should look like the below screen:
+
+
+![security Module](./media/security-module.png 'Security image')
+
+6. Save the File **Ctrl+S**
+
+7. Right click in the **deployment.template.json** file, select **Generate IoT Edge Deployment Manifest** after generating the file, you should see the new deployment manifest in your **config** folfer
+
+![Deployment Manifest](./media/config-file.png 'Deployment manifest')
+
+
+### **Task 2: Create deployment at Scale, VS Code* ###
+
+To start deployment at scale we will select all the devices from **Seattle** to deploy our solution.
+
+1. Go to the **View** Menu select **Command Palette** search for **Azure IoT Edge: Create Deployment at Scale**. This selection will trigger some parameters you will need to fill:
+
+- Select the deployment manifest generated in previous step, search for it in the **config** folder.
+- Enter deployment ID: **1**
+- Enter a target condition: **tags.location='Seattle'**
+- Select a priority for your deployment: **10**
+- Enter to start deployment.
+
+3. In afew minutes your should receive a message at tht bottom of your screen with your deployment succeed.
+
+![Deployment Succeed](./media/deployment-succeeded.png 'Deployment Succed')
+
+4. Verify the status of your deployment directly in Azure Portal, open your **Azure IoT Hub**, select **IoT Edge** in **Automatic DEvice Management** Section, go to **IoT Edge Deployments**: 
+
+
+![Deployment Manifest](./media/deployment-progress.png 'Deployment manifest')
+
+3. Validate the modules section in your Seattle devices you should see the new modules ready for your devices. 
+
+
+### **Task 3: Create deployment at Scale, Azure Portal** ###
+
+Now let's make sure your Tampa devices are secure. We will create an additional deployment through the portal to deploy Azure Defender for IoT to Tampa modules.
+
+1.  **Go to IoT Edge**, select **Create Deployments** in the new screen the fist tab will ask you to assign a deployment ID you can assign **2**
+
+
+
+![Deployment Azure portal](./media/create-deployment-portal.png 'Deployment Azure portal')
+
+For Labels you can assign:
+Name: **Lcoation**
+Value: **Tampa**
+Then click **Next: Modules**
+
+2. In the Modules section: 
+Name: **security**
+Address: **mcr.microsoft.com/ascforiot/azureiotsecurity:1.0.1**
+
+3. Then go to **+Add** then select **+Marketplace Module**, search for **security**  and select **Azure Security Security Center for IoT** as shown below: 
+
+
+
+![SecurityModules](./media/marketplace-secutiry.png 'Marketplace modules')
+
+4. Your modules tab should look like the below image:
+
+![Deployment Modules](./media/modules-tag.png 'Deployment modules')
+
+5. Then select **Next: Routes**, leave the default option and move to **Metrics**
+
+6. Again in metrics, leave default options and move to **Target Devices**
+
+7. In the new tab, assign a priority for your deployment, i.e. **10**, then enter a **Target Condition** for your devices **tags.location='Tampa'**
+Refresh to see the devices targets based on your selection.
+
+![Deployment Modules](./media/target-devices.png 'Deployment modules')
+
+8. Click on **Review + Click**, once your validation passed and the deployment started you should see your device01 ready to receive the security module
+
+
+
+9. Your deployment is ready to start, you can Monitor your deploymnet directly through **IoT Edge** then click **IoT Edge deployments**. Another way will be to check your device01 in the Module section of each device.
+
+
+## Exercise 5: Clean up ## 
+
+Once you completed all the exercises, go to Azure Portal, look for the azure Resource Group you were using for this training and delete the resources group or the resources within the resource group.
