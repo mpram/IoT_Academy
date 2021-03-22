@@ -44,7 +44,7 @@ az extension add --name azure-iot
 
 ```
 
-If you never used before you will be prompted to mount an storage account, click **Create Storage** to continue. If you used before, you will skip this step.
+If you never used  CLI before you will be prompted to mount an storage account, click **Create Storage** to continue. If you used before, you will skip this step.
 
 Run the following commmand to create an Azure IoT Hub, make sure to replace the name of your Resource Group and assign a name to your IoT Hub similar to **iotacademySUFFIX**
 
@@ -82,7 +82,7 @@ az iot hub device-identity create -n <YOUR_HUB_NAME_HERE>    -d device20 --edge-
 
 ```
 
-3. After a few minutes you you should see all the new devices in your Azure IoT Hub: 
+3. After a few minutes you should see all the new devices in your Azure IoT Hub: 
 
 ![List of devices](./media/devices-list.png 'List of devices')
 
@@ -107,7 +107,7 @@ After a few minutes you should see your VM provisioned in the portal.
 
 ### **Task 2: Connect Virtual Machine to IoT Hub** ###
 
-In this step we will connect the virtual machine jsut created in previous step to Azure IoT Hub, assigning the device01.
+In this step we will connect the virtual machine just created in previous step to Azure IoT Hub, assigning the device01.
 
 1. Launch putty locally, copy the IP of the virtual machine in the overview tab
 
@@ -128,7 +128,7 @@ Now you can replace the connection string from Azure portal to the config.yaml f
 ![Device Connection String](./media/device-cs.png 'Device Connection String')
 
 
-The connectio string to paste in the section above you will find it in Azure IoT Hub, **Automatic Device Management** section, **IoT Edge**, click in **device01**, copy **Primary Connection String**
+The connection string to paste in the section above you will find it in Azure IoT Hub, **Automatic Device Management** section, **IoT Edge**, click in **device01**, copy **Primary Connection String**
 
 
 ![Device Connection String](./media/connection-string.png 'Device Connection String')
@@ -148,7 +148,7 @@ sudo iotedge list
 ```
 
 ## **Exercise 2: Assigning Tags** ##
-In this exercise you will learn how to assign tags to your devices using different tools. According to our architecture we will assign Tags according to the following distribution: 
+In this exercise you will learn how to assign tags to your devices using different tools. According to our architecture we will assign Tags based on the following distribution: 
 
 - Devices: 1-3 Dev Env, Location Tampa
 - Devices: 4-6 Dev Env, Location Seattle
@@ -202,7 +202,7 @@ Click in the left menu **Extensions**, in search box type **Azure IoT Tools**, o
 
 4. Right click on **device02** select **Edit Device Twin**
 
-5. At the bottom of the new file, you will a tags section, add there the following json
+5. At the bottom of the new file, you will see a tags section, add there the following json
 
 ```json
   "tags": {
@@ -210,7 +210,7 @@ Click in the left menu **Extensions**, in search box type **Azure IoT Tools**, o
     "location": "Tampa"
   }
 ```
-Your new file should like the below sreen:
+Your new file should look like the below screen:
 
 ![VS Code IoT Hub](./media/vscode-device-twin.png 'VS Code Azure IoT Hub ')
 
@@ -221,7 +221,7 @@ Your new file should like the below sreen:
 
 ### **Task 3: IoT Hub Explorer** ###
 
-1. Launch Azure Iot explorer locally. Add a new connection 
+1. Launch Azure IoT explorer locally. Add a new connection 
 
 ![IoT explorer](./media/iot-explorer.png 'IoT Explorer')
 
@@ -246,12 +246,12 @@ Your new twin should look like the below image:
 
 ![IoT explorer](./media/explorer-tags.png 'IoT Explorer')
 
-5. Now that you know some of the tools available complete the rest of the tags assignment for the devices with you prefer tool.
+5. Now that you know some of the tools available complete the rest of the tags assignment for the devices with your prefer tool.
 
 
 ## **Exercise 3: Querying Devices** ##
 
-1. To query your devices, you can use the **Query explorer**. Go to your IoT Hub, **Explorers**, then clikc in **Query Explorer** now you should be able to write your queries on the right side panel.
+1. To query your devices, you can use the **Query explorer**. Go to your IoT Hub, **Explorers**, then click in **Query Explorer** now you should be able to write your queries on the right side panel.
 
 ![IoT explorer](./media/query-explorer.png 'IoT Explorer')
 
@@ -280,7 +280,7 @@ SELECT properties.reported.telemetryConfig.status AS status,
 
 ### **Task 1: IoT Edge New Solution template** ###
 
-1. Go to Visual Stuio Code, make sure you can see your IoT Hub at the bottom left of the screen, then click on **View** menu on the top bar, then **Command Pallette** then search for **Azure IoT Edge: New IoT EDge Solution**
+1. Go to Visual Studio Code, make sure you can see your IoT Hub at the bottom left of the screen, then click on **View** menu on the top bar, then **Command Pallette** then search for **Azure IoT Edge: New IoT Edge Solution**
 
 2. Next step Create a folder for your deployment go to your C:\ drive,   create a folder **iotedgedeploy**, select the folder just created. 
 
@@ -294,7 +294,7 @@ SELECT properties.reported.telemetryConfig.status AS status,
 
 ![sample files](./media/edge-solution.png 'IoT Edge Solution')
 
-5. Select the file **deployment.template.json** and replace the image URI for your deployment, use the following URL:
+5. Select the file **deployment.template.json** and replace the image URI for your deployment, use the following URI:
 
 
 ```json
@@ -313,9 +313,9 @@ Your line 60, should look like the below screen:
 ![Deployment Manifest](./media/config-file.png 'Deployment manifest')
 
 
-### **Task 2: Create deployment at Scale, VS Code* ###
+### **Task 2: Create deployment at Scale, VS Code** ###
 
-To start deployment at scale we will select all the devices from **Seattle** to deploy our solution.
+To start the deployment at scale we will select all the devices from **Seattle** to deploy our solution.
 
 1. Go to the **View** Menu select **Command Palette** search for **Azure IoT Edge: Create Deployment at Scale**. This selection will trigger some parameters you will need to fill:
 
@@ -325,21 +325,21 @@ To start deployment at scale we will select all the devices from **Seattle** to 
 - Select a priority for your deployment: **10**
 - Enter to start deployment.
 
-3. In afew minutes your should receive a message at tht bottom of your screen with your deployment succeed.
+3. In a few minutes you should receive a message at the bottom of your screen with your deployment succeed.
 
 ![Deployment Succeed](./media/deployment-succeeded.png 'Deployment Succed')
 
-4. Verify the status of your deployment directly in Azure Portal, open your **Azure IoT Hub**, select **IoT Edge** in **Automatic DEvice Management** Section, go to **IoT Edge Deployments**: 
+4. Verify the status of your deployment directly in Azure Portal, open your **Azure IoT Hub**, select **IoT Edge** in **Automatic Device Management** Section, go to **IoT Edge Deployments**: 
 
 
 ![Deployment Manifest](./media/deployment-progress.png 'Deployment manifest')
 
-3. Validate the modules section in your Seattle devices you should see the new modules ready for your devices. 
+3. Validate the modules section in your Seattle devices, you should see the new modules ready for your devices. 
 
 
 ### **Task 3: Create deployment at Scale, Azure Portal** ###
 
-Now let's make sure your Tampa devices are secure. We will create an additional deployment through the portal to deploy Azure Defender for IoT to Tampa modules.
+Now let's make sure your Tampa devices are secure. We will create an additional deployment through the portal to deploy Azure Security Center for IoT to Tampa modules.
 
 1.  **Go to IoT Edge**, select **Create Deployments** in the new screen the fist tab will ask you to assign a deployment ID you can assign **2**
 
@@ -348,7 +348,7 @@ Now let's make sure your Tampa devices are secure. We will create an additional 
 ![Deployment Azure portal](./media/create-deployment-portal.png 'Deployment Azure portal')
 
 For Labels you can assign:
-Name: **Lcoation**
+Name: **Location**
 Value: **Tampa**
 Then click **Next: Modules**
 
@@ -356,7 +356,7 @@ Then click **Next: Modules**
 Name: **security**
 Address: **mcr.microsoft.com/ascforiot/azureiotsecurity:1.0.1**
 
-3. Then go to **+Add** then select **+Marketplace Module**, search for **security**  and select **Azure Security Security Center for IoT** as shown below: 
+3. Then go to **+Add** then select **+Marketplace Module**, search for **security**  and select **Azure Security Center for IoT** as shown below: 
 
 
 
@@ -375,11 +375,11 @@ Refresh to see the devices targets based on your selection.
 
 ![Deployment Modules](./media/target-devices.png 'Deployment modules')
 
-8. Click on **Review + Click**, once your validation passed and the deployment started you should see your device01 ready to receive the security module
+8. Click on **Review + Create**, once your validation passed and the deployment started you should see your device01 ready to receive the security module
 
 
 
-9. Your deployment is ready to start, you can Monitor your deploymnet directly through **IoT Edge** then click **IoT Edge deployments**. Another way will be to check your device01 in the Module section of each device.
+9. At this point your deployment is ready to start, you can Monitor your deploymnet directly through **IoT Edge** then click **IoT Edge deployments**. Another way will be to check your device01 in the Module section of each device.
 
 
 ## Exercise 5: Clean up ## 
