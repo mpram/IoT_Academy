@@ -6,8 +6,25 @@
 
 
 ## **Content - Hands-on Lab:** ##
-- [Exercise 1: Create a Custom IoT Central app](#exercise-1-create-a-custom-iot-central-app)
-  - [Task 1: Creating an Application](#task-1-creating-an-application)
+- [Exercise 1: Setting up your Environment](#exercise-1-setting-up-your-environment)
+  - [Task 1: Create IoT Hub](#task-1-create-iot-hub)
+  - [Task 2: Connect Virtual Machine to IoT Hub](#task-2-connect-Virtual-Machine-to-IoT-Hub)
+
+- [Exercise 2: Assigning Tags](#Exercise-2-Assigning-Tags)
+  - [Task 1: Device Twins](#Task-1-Device-Twins)
+  - [Task 2: VS Code](#Task-2-VS-Code)
+  - [Task 3: IoT Hub Explorer](#Task-3-IoT-Hub-Explorer)
+
+-  [Exercise 3: Querying Devices](#Exercise-3-Querying-Devices)
+
+- [Exercise 4: Creating a deployment at scale](#Exercise-4-Creating-a-deployment-at-scale)
+  - [Task 1: IoT Edge New Solution template](#Task-1-IoT-Edge-New-Solution-template)
+  - [Task 2: Create deployment at Scale](#Task-2-Create-deployment-at-Scale)
+  - [Task 3: Create deployment at Scale, Azure Portal](#Task-3-Create-deployment-at-Scale-Azure-Portal)
+  
+- [Exercise 5: Clean up](#Exercise-5-Clean-up)
+
+
 
 
 ## **Exercise 1: Setting up your Environment** ##
