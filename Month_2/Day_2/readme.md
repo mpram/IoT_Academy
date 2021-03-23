@@ -384,4 +384,4 @@ Refresh to see the devices targets based on your selection.
 
 ## Exercise 5: Clean up ## 
 
-Once you completed all the exercises, go to Azure Portal, look for the azure Resource Group you were using for this training and delete the resources group or the resources within the resource group.
+Once you completed all the exercises, go to Azure Portal, look for the azure Resource Group you were using for this training and delete the resources group or the resources within the resource group, assuming this resouce group it is only used for the training and not for any other solutions.
