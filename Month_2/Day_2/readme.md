@@ -150,10 +150,10 @@ sudo iotedge list
 ## **Exercise 2: Assigning Tags** ##
 In this exercise you will learn how to assign tags to your devices using different tools. According to our architecture we will assign Tags based on the following distribution: 
 
-- Devices: 1-3 Dev Env, Location Tampa
-- Devices: 4-6 Dev Env, Location Seattle
-- Devices: 7-13 Dev Prod, Location Seattle
-- Devices: 14-13 Dev Prod, Location Tampa
+- Devices: 1-3    Env: Dev, Location: Tampa
+- Devices: 4-6    Env: Dev, Location: Seattle
+- Devices: 7-13   Env: Prod, Location: Seattle
+- Devices: 14-20  Env: Prod, Location: Tampa
 
 
 
@@ -208,7 +208,7 @@ Click in the left menu **Extensions**, in search box type **Azure IoT Tools**, o
   "tags": {
     "env": "dev",
     "location": "Tampa"
-  }
+  },
 ```
 Your new file should look like the below screen:
 
