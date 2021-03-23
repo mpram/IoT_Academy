@@ -122,6 +122,7 @@ Copy and paste the IP in the **Host Name** section in Putty, then click **Yes** 
 ```bash
 sudo nano /etc/iotedge/config.yaml
 ```
+**Note**: Validate if you already have the connection string in your config.yaml, if you run succesfully the vm creation script, the device connection string should be assigned already, if you dont see it, then follow the next steps; otherwise skip it and move to restart your edge deamon.
 
 Now you can replace the connection string from Azure portal to the config.yaml file in your device: 
 
