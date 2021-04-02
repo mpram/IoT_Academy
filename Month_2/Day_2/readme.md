@@ -443,9 +443,10 @@ and then select your name from the user list.
 Click **Save**
 
 
-5. Add a tag to your device
+### **5. Add a tag to your device** ###
 
-LIn the Azure Portal, look for your IoT Hub, find your IoT Edge device and navigate to the Device Twin or Module Twin.
+
+In the Azure Portal, look for your IoT Hub, find your IoT Edge device and navigate to the Device Twin or Module Twin.
 
 Add a new Device Update tag value as shown below.
 
@@ -463,7 +464,7 @@ Your device Twin should like the below image:
 
 
 
-6. Import update
+## **6. Import update** ##
 
 Go to Device Update releases in GitHub and click the **Assets** drop-down.
 https://github.com/Azure/iot-hub-device-update/releases
