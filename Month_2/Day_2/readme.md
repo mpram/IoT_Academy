@@ -386,7 +386,9 @@ Refresh to see the devices targets based on your selection.
 
 ## Exercise 5: Device Updates ## 
 
-1. First, install the Device Update agent .deb packages in your edge device using Putty.
+### **1. Prepare your device** ###
+
+First, install the Device Update agent .deb packages in your edge device using Putty.
 
 ```bash
 sudo apt-get install deviceupdate-agent deliveryoptimization-plugin-apt
@@ -402,7 +404,7 @@ Delivery optimization client license
 https://github.com/microsoft/do-client/blob/main/LICENSE
 
 
-2. Create a Device update account.
+### **2. Create a Device update account.** ###
 
 Go to Azure Portal, create a new resource, in the search box type  **"Device Update for IoT Hub"**
 
@@ -416,7 +418,7 @@ Specify a **Name** and **Location** for your Device Update Account. Then click *
 
 
 
-3.Create a device update instance
+### **3.Create a device update instance** ###
 
 Once you are in your newly created account resource, go to the Instance Management **Instances** blade. Click **+ Create** and specify an instance **Name** and select your IoT Hub, the same IoT Hub you have been using during this training. Then Clikc **Create**
 
@@ -426,7 +428,7 @@ Your new instance will be in **Provisioning State: Creating** after 5-10min will
 Once the state is **Succeeded**, click on **Configure IoT Hub**. Select **I agree to make these changes**
 and then **Update**
 
-4. Configure access control roles
+### **4. Configure access control roles** ###
 
 
 Go to **Access control (IAM)** within the Device Update account
@@ -464,7 +466,7 @@ Your device Twin should like the below image:
 
 
 
-## **6. Import update** ##
+### **6. Import update** ###
 
 Go to Device Update releases in GitHub and click the **Assets** drop-down.
 https://github.com/Azure/iot-hub-device-update/releases
@@ -491,7 +493,7 @@ Select **+ Import New Update**
 When the Status column indicates the import has succeeded, select the **Ready to Deploy** header. You should see your imported update in the list now.
 
 
-7. Create update group
+### **7. Create update group** ###
 
 Go to the IoT Hub you previously connected to your Device Update instance.
 
@@ -506,7 +508,7 @@ Select the **Add** button to create a new group.
 
 Select the IoT Hub tag you created in the previous step from the list. Select Create update group.
 
-8. Deploy update 
+### **8. Deploy update** ###
 
 Once the group is created, you should see a new update available for your device group, with a link to the update in the Available updates column. You may need to Refresh once.
 
