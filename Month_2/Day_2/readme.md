@@ -22,7 +22,8 @@
   - [Task 2: Create deployment at Scale](#Task-2-Create-deployment-at-Scale)
   - [Task 3: Create deployment at Scale, Azure Portal](#Task-3-Create-deployment-at-Scale-Azure-Portal)
   
-- [Exercise 5: Clean up](#Exercise-5-Clean-up)
+- [Exercise 5: Device Updates](#Exercise-5-device-updates)
+- [Exercise 6: Clean up](#Exercise-6-Clean-up)
 
 
 
@@ -383,6 +384,143 @@ Refresh to see the devices targets based on your selection.
 9. At this point your deployment is ready to start, you can Monitor your deploymnet directly through **IoT Edge** then click **IoT Edge deployments**. Another way will be to check your device01 in the Module section of each device.
 
 
-## Exercise 5: Clean up ## 
+## Exercise 5: Device Updates ## 
+
+1. First, install the Device Update agent .deb packages in your edge device using Putty.
+
+```bash
+sudo apt-get install deviceupdate-agent deliveryoptimization-plugin-apt
+
+```
+
+Device Update for Azure IoT Hub software packages are subject to the following license terms:
+
+Device update for IoT Hub license
+https://github.com/Azure/iot-hub-device-update/blob/main/LICENSE.md
+
+Delivery optimization client license
+https://github.com/microsoft/do-client/blob/main/LICENSE
+
+
+2. Create a Device update account.
+
+Go to Azure Portal, create a new resource, in the search box type  **"Device Update for IoT Hub"**
+
+Click **Create**
+
+Specify the **Azure Subscription** to be associated with your *Device Update Account and **Resource Group**
+
+Specify a **Name** and **Location** for your Device Update Account. Then click **Create**
+
+![Device Update](./media/device-update-create.png 'Device Update')
+
+
+
+3.Create a device update instance
+
+Once you are in your newly created account resource, go to the Instance Management **Instances** blade. Click **+ Create** and specify an instance **Name** and select your IoT Hub, the same IoT Hub you have been using during this training. Then Clikc **Create**
+
+
+Your new instance will be in **Provisioning State: Creating** after 5-10min will change to **Succeeded**
+
+Once the state is **Succeeded**, click on **Configure IoT Hub**. Select **I agree to make these changes**
+and then **Update**
+
+4. Configure access control roles
+
+
+Go to **Access control (IAM)** within the Device Update account
+
+Click **Add role assignments**.
+
+![Device Update add roles](./media/device-update-roles.png 'Add Roles')
+
+
+
+
+Under **Select a Role**, select a Device Update role from the given options: **Device Update Administrator**
+and then select your name from the user list. 
+Click **Save**
+
+
+5. Add a tag to your device
+
+LIn the Azure Portal, look for your IoT Hub, find your IoT Edge device and navigate to the Device Twin or Module Twin.
+
+Add a new Device Update tag value as shown below.
+
+```json
+
+"tags": {
+            "ADUGroup": "<CustomTagValue>"
+            },
+
+```
+
+Your device Twin should like the below image:
+
+![Device Update add tags](./media/new-tag.png 'Add Tags')
+
+
+
+6. Import update
+
+Go to Device Update releases in GitHub and click the **Assets** drop-down.
+https://github.com/Azure/iot-hub-device-update/releases
+
+Download the **Edge.package.update.samples.zip** by clicking on it.
+
+Extract the contents of the folder to discover an update sample and its corresponding import manifests.
+
+In Azure portal, select the Device Updates option under **Automatic Device Management** from the left-hand navigation bar in your IoT Hub.
+
+Select the **Updates** tab.
+
+Select **+ Import New Update**
+
+- Select the folder icon or text box under 
+**Select an Import Manifest File**. You will see a file picker dialog. Select the **sample-1.0.1-aziot-edge-importManifest.json** import manifest from the folder you downloaded previously. 
+
+- Next, select the folder icon or text box under **Select one or more update files** You will see a file picker dialog. Select the **sample-1.0.1-aziot-edge-apt-manifest.json** apt manifest update file from the folder you downloaded previously. This update will update the aziot-identity-service and the aziot-edge packages to version 1.2.0~rc4-1 on your device.
+
+- Select the folder icon or text box under **Select a storage container**. Then select the appropriate storage account or create one storage account during this step.
+
+- Select **Submit** to start the import process.
+
+When the Status column indicates the import has succeeded, select the **Ready to Deploy** header. You should see your imported update in the list now.
+
+
+7. Create update group
+
+Go to the IoT Hub you previously connected to your Device Update instance.
+
+Select the **Device Updates** option under A**utomatic Device Management** from the left-hand navigation bar.
+
+Select the **Groups** tab at the top of the page.
+
+![Device Update add groups](./media/device-updates-groups.png 'Add Groups')
+
+
+Select the **Add** button to create a new group.
+
+Select the IoT Hub tag you created in the previous step from the list. Select Create update group.
+
+8. Deploy update 
+
+Once the group is created, you should see a new update available for your device group, with a link to the update in the Available updates column. You may need to Refresh once.
+
+Click on the link to the available update.
+
+Confirm the correct group is selected as the target group and schedule your deployment
+
+Select Deploy update.
+
+View the compliance chart. You should see the update is now in progress.
+
+After your device is successfully updated, you should see your compliance chart and deployment details update to reflect the same.
+
+You have now completed a successful end-to-end package update using Device Update for IoT Hub on an Ubuntu Server 18.04 x64 device.
+
+## Exercise 6: Clean up ## 
 
 Once you completed all the exercises, go to Azure Portal, look for the azure Resource Group you were using for this training and delete the resources group or the resources within the resource group, assuming this resouce group it is only used for the training and not for any other solutions.
