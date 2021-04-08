@@ -444,6 +444,8 @@ Under **Select a Role**, select a Device Update role from the given options: **D
 and then select your name from the user list. 
 Click **Save**
 
+**NOTE: Do not move forward until your IoT Hub is fully connected to the Device Update account and the new consumer groups are created, wait 15min before procceding to tag your device, otherwise you will not see the Tag when creating the Groups for deployments**
+
 
 ### **5. Add a tag to your device** ###
 
