@@ -131,7 +131,7 @@ In this section, you will create a new instance of Azure Digital Twins using the
 
 Once in the portal, start by selecting Create a resource in the Azure services home page menu.
 
-![Azure Digital Twin](./media/ADT1.png 'AzureDigitalTwin')
+![Azure Digital Twin](./media/adt-create.png 'Azure Digital Twin Create')
 
 Search for Azure Digital Twins in the search box, and choose the Azure Digital Twins service from the results. Select the Create button to create a new instance of the service.
 
