@@ -127,70 +127,70 @@ In this task, you will set up a new Azure Digital twins instance
 
 2. Create Azure Digital Twins instance
 
-In this section, you will create a new instance of Azure Digital Twins using the Azure portal. Navigate to the portal and log in with your credentials.
+    In this section, you will create a new instance of Azure Digital Twins using the Azure portal. Navigate to the portal and log in with your credentials.
 
-Once in the portal, start by selecting Create a resource in the Azure services home page menu.
+    Once in the portal, start by selecting Create a resource in the Azure services home page menu.
 
-![Azure Digital Twin](./media/ADT1.png 'AzureDigitalTwin')
+    ![Azure Digital Twin](./media/ADT1.png 'AzureDigitalTwin')
 
-Search for Azure Digital Twins in the search box, and choose the Azure Digital Twins service from the results. Select the Create button to create a new instance of the service.
+    Search for Azure Digital Twins in the search box, and choose the Azure Digital Twins service from the results. Select the Create button to create a new instance of the service.
 
-![Create Azure Digital Twin](./media/ADT2.jpg 'CreateAzureDigitalTwin')
-
-
-On the following Create Resource page, fill in the values given below:
-
-Subscription: The Azure subscription you're using
-Resource group: A resource group in which to deploy the instance. If you don't already have an existing resource group in mind, you can create one here by selecting the Create new link and entering a name for a new resource group
-Location: An Azure Digital Twins-enabled region for the deployment. For more details on regional support, visit Azure products available by region (Azure Digital Twins).
-Resource name: A name for your Azure Digital Twins instance. If your subscription has another Azure Digital Twins instance in the region that's already using the specified name, you'll be asked to pick a different name.
-
-![Review+Create](./media/ADT3.jpg 'Review+Create')
+    ![Create Azure Digital Twin](./media/ADT2.jpg 'CreateAzureDigitalTwin')
 
 
-When you're finished, you can select Review + create if you don't want to configure any more settings for your instance. This will take you to a summary page, where you can review the instance details you've entered and finish with Create.
+    On the following Create Resource page, fill in the values given below:
 
-### Task 4: Verify success and collect important values
+    Subscription: The Azure subscription you're using
+    Resource group: A resource group in which to deploy the instance. If you don't already have an existing resource group in mind, you can create one here by selecting the Create new link and entering a name for a new resource group
+    Location: An Azure Digital Twins-enabled region for the deployment. For more details on regional support, visit Azure products available by region (Azure Digital Twins).
+    Resource name: A name for your Azure Digital Twins instance. If your subscription has another Azure Digital Twins instance in the region that's already using the specified name, you'll be asked to pick a different name.
 
-After finishing your instance setup by selecting Create, you can view the status of your instance's deployment in your Azure notifications along the portal icon bar. The notification will indicate when deployment has succeeded, and you'll be able to select the Go to resource button to view your created instance.
-
-![Createdinstance](./media/ADT4.jpg 'CreatedInstance')
-
-
-From the instance's Overview page, note its Name, Resource group, and Host name. These are all important values that you may need as you continue working with your Azure Digital Twins instance. If other users will be programming against the instance, you should share these values with them.
-
- ![Azure Digital Twin Host-name](./media/ADT5.jpg 'AzureDigitalTwinHostname')
+    ![Review+Create](./media/ADT3.jpg 'Review+Create')
 
 
-You now have an Azure Digital Twins instance ready to go. Next, you'll give the appropriate Azure user permissions to manage it.
+    When you're finished, you can select Review + create if you don't want to configure any more settings for your instance. This will take you to a summary page, where you can review the instance details you've entered and finish with Create.
 
-## Set up User Access Permissions
+    ### Task 4: Verify success and collect important values
 
-Assign the role
-To give a user permissions to manage an Azure Digital Twins instance, you must assign them the Azure Digital Twins Data Owner role within the instance.
+    After finishing your instance setup by selecting Create, you can view the status of your instance's deployment in your Azure notifications along the portal icon bar. The notification will indicate when deployment has succeeded, and you'll be able to select the Go to resource button to view your created instance.
 
-First, open the page for your Azure Digital Twins instance in the Azure portal. From the instance's menu, select Access control (IAM). Select the + Add button to add a new role assignment.
-
-![Add-Role-Assignment](./media/ADT6.jpg 'AddRoleAssignment')
-
-On the following Add role assignment page, fill in the values (must be completed by a user with sufficient permissions in the Azure subscription):
-
-Role: Select Azure Digital Twins Data Owner from the dropdown menu
-Assign access to: Use User, group or service principal
-Select: Search for the name or email address of the user to assign. When you select the result, the user will show up in a Selected members section.
-
-![Azure Digital Twin](./media/ADT7.jpg 'AzureDigitalTwin')
+    ![Createdinstance](./media/ADT4.jpg 'CreatedInstance')
 
 
-When you're finished entering the details, hit the Save button.
+    From the instance's Overview page, note its Name, Resource group, and Host name. These are all important values that you may need as you continue working with your Azure Digital Twins instance. If other users will be programming against the instance, you should share these values with them.
 
-## Verify success
+     ![Azure Digital Twin Host-name](./media/ADT5.jpg 'AzureDigitalTwinHostname')
 
-You can view the role assignment you've set up under Access control (IAM) > Role assignments. The user should show up in the list with a role of Azure Digital Twins Data Owner.
 
-![Verify-access](./media/ADT8.jpg 'Verify-access')
+    You now have an Azure Digital Twins instance ready to go. Next, you'll give the appropriate Azure user permissions to manage it.
 
-You now have an Azure Digital Twins instance ready to go, and have assigned permissions to manage it.
+    ## Set up User Access Permissions
+
+    Assign the role
+    To give a user permissions to manage an Azure Digital Twins instance, you must assign them the Azure Digital Twins Data Owner role within the instance.
+
+    First, open the page for your Azure Digital Twins instance in the Azure portal. From the instance's menu, select Access control (IAM). Select the + Add button to add a new role assignment.
+
+    ![Add-Role-Assignment](./media/ADT6.jpg 'AddRoleAssignment')
+
+    On the following Add role assignment page, fill in the values (must be completed by a user with sufficient permissions in the Azure subscription):
+
+    Role: Select Azure Digital Twins Data Owner from the dropdown menu
+    Assign access to: Use User, group or service principal
+    Select: Search for the name or email address of the user to assign. When you select the result, the user will show up in a Selected members section.
+
+    ![Azure Digital Twin](./media/ADT7.jpg 'AzureDigitalTwin')
+
+
+    When you're finished entering the details, hit the Save button.
+
+    ## Verify success
+
+    You can view the role assignment you've set up under Access control (IAM) > Role assignments. The user should show up in the list with a role of Azure Digital Twins Data Owner.
+
+    ![Verify-access](./media/ADT8.jpg 'Verify-access')
+
+    You now have an Azure Digital Twins instance ready to go, and have assigned permissions to manage it.
 
 
 
