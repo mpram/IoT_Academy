@@ -175,56 +175,54 @@ In this task, you will set up a new Azure Digital twins instance
   
   </br>
 
-    When you're finished, you can select Review + create if you don't want to configure any more settings for your instance. This will take you to a summary page, where you can review the instance details you've entered and finish with Create.
+    When you're finished, you can select Review + create if you don't want to configure any more settings for your instance. This will take you to a summary page, where you can review the instance details you've entered and finish with **Create**.
     
     </br>
 
-    ![Create](./media/ADT3.1.png 'Create')
+    ![ADT Create](./media/adt-create-resource.png 'Create resource')
 
-    ### Task 4: Verify success and collect important values
-
-    After finishing your instance setup by selecting Create, you can view the status of your instance's deployment in your Azure notifications along the portal icon bar. The notification will indicate when deployment has succeeded, and you'll be able to select the Go to resource button to view your created instance.
-
-    </br>
-
-    ![Createdinstance](./media/ADT4.png 'CreatedInstance')
+  </br>
+    
+### Task 4: Verify success and collect important values ###
 
 
-    From the instance's Overview page, note its Name, Resource group, and Host name. These are all important values that you may need as you continue working with your Azure Digital Twins instance. If other users will be programming against the instance, you should share these values with them.
 
-    </br>
+  After finishing your instance setup by selecting Create, you can view the status of your instance's deployment in your Azure notifications along the portal icon bar. The notification will indicate when deployment has succeeded, and you'll be able to select the **Go to resource** button to view your created instance.
 
-    ![Azure Digital Twin Host-name](./media/ADT5.png 'AzureDigitalTwinHostname')
+    
+  From the instance's Overview page, note its Name, Resource group, and Host name. These are all important values that you may need as you continue working with your Azure Digital Twins instance. If other users will be programming against the instance, you should share these values with them.
+
+   </br>
+
+   ![Azure Digital Twin Host-name](./media/ADT5.png 'AzureDigitalTwinHostname')
 
 
-    You now have an Azure Digital Twins instance ready to go. Next, you'll verify if you have the correct user access permissions
+   You now have an Azure Digital Twins instance ready to go. Next, you'll verify if you have the correct user access permissions
 
-    ### 1. Verify User Access Permissions ###
+   ### 1. Verify User Access Permissions ###
 
-    Assign the role to give a user permissions to manage an Azure Digital Twins instance, you must assign them the Azure Digital Twins Data Owner role within the instance. Note that we assigned ourselves the owner role during creation of the Azure digital Twin instance
+   Assign the role to give a user permissions to manage an Azure Digital Twins instance, you must assign them the Azure Digital Twins Data Owner role within the instance. Note that we assigned ourselves the owner role during creation of the Azure digital Twin instance
 
-    First, open the page for your Azure Digital Twins instance in the Azure portal. From the instance's menu, select Access control (IAM). Under Check access, click on **View my access**
+   First, open the page for your Azure Digital Twins instance in the Azure portal. From the instance's menu, select Access control (IAM). Under Check access, click on **View my access**
 
-    </br>
+   </br>
 
-    ![View-Access](./media/ADT6.png 'ViewAccess')
+   ![View-Access](./media/ADT6.png 'ViewAccess')
 
     A panel will open up on the right side showing your access level. You should have **Azure Digital Twin Data Owner** access
 
-    </br>
+   </br>
 
-    ![Azure Digital Twin](./media/ADT7.png 'AzureDigitalTwin')
-
-
+  ![Azure Digital Twin](./media/ADT7.png 'AzureDigitalTwin')
   
 
-    #### 2. Verify success ###
+   #### 2. Verify success ###
 
-    You can also view the role assignment you've set up under Access control (IAM) > Role assignments. The user should show up in the list with a role of Azure Digital Twins Data Owner.
+   You can also view the role assignment you've set up under Access control (IAM) > Role assignments. The user should show up in the list with a role of Azure Digital Twins Data Owner.
 
-    </br>
+   </br>
 
-    ![Verify-access](./media/ADT8.png 'Verify-access')
+   ![Verify-access](./media/ADT8.png 'Verify-access')
 
     You now have an Azure Digital Twins instance ready to go, and have assigned permissions to manage it.
 
