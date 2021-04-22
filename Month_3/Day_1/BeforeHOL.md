@@ -138,11 +138,12 @@ Search for Azure Digital Twins in the search box, and choose the Azure Digital T
 - Subscription: The Azure subscription you're using.
 - Resource group: A resource group in which to deploy the instance. If you don't already have an existing resource group in mind, you can create one here by selecting the Create new link and entering a name for a new resource group.
 - Location: An Azure Digital Twins-enabled region for the deployment. For more details on regional support, visit Azure products available by region (Azure Digital Twins).
-- Resource name: A name for your Azure Digital Twins instance. If your subscription has another Azure Digital Twins instance in the region that's already using the specified name, you'll be asked to pick a different name.
+- Resource name: A name for your Azure Digital Twins instance. Select the checkbox for **"Assign Azure Digital Twins Owner role"**
 ![Review+Create](./media/ADT3.png 'Review+Create')
 
 
     When you're finished, you can select Review + create if you don't want to configure any more settings for your instance. This will take you to a summary page, where you can review the instance details you've entered and finish with Create.
+![Create](./media/ADT3.1.png 'Create')
 
     ### Task 4: Verify success and collect important values
 
@@ -154,29 +155,25 @@ Search for Azure Digital Twins in the search box, and choose the Azure Digital T
 ![Azure Digital Twin Host-name](./media/ADT5.png 'AzureDigitalTwinHostname')
 
 
-    You now have an Azure Digital Twins instance ready to go. Next, you'll give the appropriate Azure user permissions to manage it.
+    You now have an Azure Digital Twins instance ready to go. Next, you'll verify if you have the correct user access permissions
 
-    ## Set up User Access Permissions
+    ## Verify User Access Permissions
 
     Assign the role
-    To give a user permissions to manage an Azure Digital Twins instance, you must assign them the Azure Digital Twins Data Owner role within the instance.
+    To give a user permissions to manage an Azure Digital Twins instance, you must assign them the Azure Digital Twins Data Owner role within the instance. Note that we assigned ourselves the owner role during creation of the Azure digital Twin instance
 
-    First, open the page for your Azure Digital Twins instance in the Azure portal. From the instance's menu, select Access control (IAM). Select the + Add button to add a new role assignment.
-![Add-Role-Assignment](./media/ADT6.png 'AddRoleAssignment')
+    First, open the page for your Azure Digital Twins instance in the Azure portal. From the instance's menu, select Access control (IAM). Under Check access, click on **View my access**
+![View-Access](./media/ADT6.png 'ViewAccess')
 
-    On the following Add role assignment page, fill in the values (must be completed by a user with sufficient permissions in the Azure subscription):
-
-    Role: Select Azure Digital Twins Data Owner from the dropdown menu
-    Assign access to: Use User, group or service principal
-    Select: Search for the name or email address of the user to assign. When you select the result, the user will show up in a Selected members section.
+    A panel will open up on the right side showing your access level. You should have **Azure Digital Twin Data Owner** access
 ![Azure Digital Twin](./media/ADT7.png 'AzureDigitalTwin')
 
 
-    When you're finished entering the details, hit the Save button.
+  
 
     ## Verify success
 
-    You can view the role assignment you've set up under Access control (IAM) > Role assignments. The user should show up in the list with a role of Azure Digital Twins Data Owner.
+    You can also view the role assignment you've set up under Access control (IAM) > Role assignments. The user should show up in the list with a role of Azure Digital Twins Data Owner.
 ![Verify-access](./media/ADT8.png 'Verify-access')
 
     You now have an Azure Digital Twins instance ready to go, and have assigned permissions to manage it.
