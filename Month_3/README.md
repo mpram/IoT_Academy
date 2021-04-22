@@ -27,13 +27,16 @@ During this month in the Academy the attendees will be working with the followin
 
 If you have any questions, please contact: azureiotacademy@microsoft.com
 
-### **Azure IoT Academy Month #3 Timeline**###
+### **Azure IoT Academy Month #3 Timeline** ###
 
 - 04-05-06 May/2021, 10am - 5pm CST. 
 
 **Day #1**: We will be focus on Azure Digital Twins Hands-on Lab.
+
 **Day #2**: We will be focus on Intelligent Edge with Windows IoT, hands-on lab.
-**Day #3**: Graduation Ceremony
+
+**Day #3**: Graduation Ceremony.
+
 
 
 ### **Azure IoT Academy Graduation** ###
