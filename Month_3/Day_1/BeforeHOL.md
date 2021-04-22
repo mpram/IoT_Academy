@@ -43,8 +43,7 @@ In this task, you will create an Azure resource group for the resources used thr
    - **Subscription**: Select the subscription you are using for this hands-on lab.
 
    - **Resource group location**: Select the region you would like to use for resources in this hands-on lab. Remember this location so you can use it for the other resources you'll provision throughout this lab.
-
-     ![Create Resource Group](media/create-resource-group.jpg 'Create resource group')
+![Create Resource Group](media/create-resource-group.png 'Create resource group')
 
    - Select **Create**.
 
@@ -61,8 +60,7 @@ In this task, you will provision a virtual machine running Visual Studio Communi
 2. In the **Search the marketplace** textbox, enter `Visual Studio 2019 Latest` and then select it from the suggested options.
 
 3. For the **Select a software plan**, select **Visual Studio 2019 Enterprise on Windows Server 2019 (x64)** from the results, and select **Create**.
-
-   ![In the Visual Studio 2019 Latest resource overview screen, Visual Studio Community 2019 (latest) on Windows Server 2019 (x64) is selected in the Select a software plan drop down list.](./media/visual-studio-vm.jpg 'Create Windows Server 2019 with Visual Studio Community 2019')
+![In the Visual Studio 2019 Latest resource overview screen, Visual Studio Community 2019 (latest) on Windows Server 2019 (x64) is selected in the Select a software plan drop down list.](./media/visual-studio-vm.png 'Create Windows Server 2019 with Visual Studio Community 2019')
 
 4. Set the following configuration on the **Basics** tab:
 
@@ -88,7 +86,7 @@ In this task, you will provision a virtual machine running Visual Studio Communi
 
    - **Selected inbound ports**: Select **RDP (3389)** from the drop down.
 
-     ![Screenshot of the Create virtual machine blade, with fields set to the previously mentioned settings.](media/virtual-machine.jpg 'Create virtual machine blade')
+![Screenshot of the Create virtual machine blade, with fields set to the previously mentioned settings.](media/virtual-machine.png 'Create virtual machine blade')
 
    - **License Type**: Select **Windows Server** from the drop down.
 
@@ -116,8 +114,7 @@ In this task, you will set up a new Azure Digital twins instance
     Common roles that meet this requirement are **Owner, Account admin, or the combination of User Access Administrator and Contributor**. 
 
     To view your role in your subscription, visit the subscriptions page in the Azure portal (you can use this link or look for Subscriptions with the portal search bar). Look for the name of the subscription you are using, and view your role for it in the My role column:
-
-    ![SubscriptionCheck](./media/SubscriptionCheck.jpg 'SubscriptionCheck')
+[SubscriptionCheck](./media/SubscriptionCheck.png 'SubscriptionCheck')
 
 
     If you find that the value is Contributor, or another role that doesn't have the required permissions described above, you can contact the user on your subscription that does have these permissions (such as a subscription Owner or Account admin) and proceed in one of the following ways:
@@ -130,12 +127,10 @@ In this task, you will set up a new Azure Digital twins instance
     In this section, you will create a new instance of Azure Digital Twins using the Azure portal. Navigate to the portal and log in with your credentials.
 
     Once in the portal, start by selecting Create a resource in the Azure services home page menu.
-
 ![Azure Digital Twin](./media/adt-create.png 'Azure Digital Twin Create')
 
 Search for Azure Digital Twins in the search box, and choose the Azure Digital Twins service from the results. Select the Create button to create a new instance of the service.
-
-  ![Create Azure Digital Twin](./media/ADT2.jpg 'CreateAzureDigitalTwin')
+![Create Azure Digital Twin](./media/ADT2.png 'CreateAzureDigitalTwin')
 
 
  On the following Create Resource page, fill in the values given below:
@@ -144,9 +139,7 @@ Search for Azure Digital Twins in the search box, and choose the Azure Digital T
 - Resource group: A resource group in which to deploy the instance. If you don't already have an existing resource group in mind, you can create one here by selecting the Create new link and entering a name for a new resource group.
 - Location: An Azure Digital Twins-enabled region for the deployment. For more details on regional support, visit Azure products available by region (Azure Digital Twins).
 - Resource name: A name for your Azure Digital Twins instance. If your subscription has another Azure Digital Twins instance in the region that's already using the specified name, you'll be asked to pick a different name.
-
-
-    ![Review+Create](./media/ADT3.jpg 'Review+Create')
+![Review+Create](./media/ADT3.png 'Review+Create')
 
 
     When you're finished, you can select Review + create if you don't want to configure any more settings for your instance. This will take you to a summary page, where you can review the instance details you've entered and finish with Create.
@@ -154,13 +147,11 @@ Search for Azure Digital Twins in the search box, and choose the Azure Digital T
     ### Task 4: Verify success and collect important values
 
     After finishing your instance setup by selecting Create, you can view the status of your instance's deployment in your Azure notifications along the portal icon bar. The notification will indicate when deployment has succeeded, and you'll be able to select the Go to resource button to view your created instance.
-
-    ![Createdinstance](./media/ADT4.jpg 'CreatedInstance')
+![Createdinstance](./media/ADT4.png 'CreatedInstance')
 
 
     From the instance's Overview page, note its Name, Resource group, and Host name. These are all important values that you may need as you continue working with your Azure Digital Twins instance. If other users will be programming against the instance, you should share these values with them.
-
-     ![Azure Digital Twin Host-name](./media/ADT5.jpg 'AzureDigitalTwinHostname')
+![Azure Digital Twin Host-name](./media/ADT5.png 'AzureDigitalTwinHostname')
 
 
     You now have an Azure Digital Twins instance ready to go. Next, you'll give the appropriate Azure user permissions to manage it.
@@ -171,16 +162,14 @@ Search for Azure Digital Twins in the search box, and choose the Azure Digital T
     To give a user permissions to manage an Azure Digital Twins instance, you must assign them the Azure Digital Twins Data Owner role within the instance.
 
     First, open the page for your Azure Digital Twins instance in the Azure portal. From the instance's menu, select Access control (IAM). Select the + Add button to add a new role assignment.
-
-    ![Add-Role-Assignment](./media/ADT6.jpg 'AddRoleAssignment')
+![Add-Role-Assignment](./media/ADT6.png 'AddRoleAssignment')
 
     On the following Add role assignment page, fill in the values (must be completed by a user with sufficient permissions in the Azure subscription):
 
     Role: Select Azure Digital Twins Data Owner from the dropdown menu
     Assign access to: Use User, group or service principal
     Select: Search for the name or email address of the user to assign. When you select the result, the user will show up in a Selected members section.
-
-    ![Azure Digital Twin](./media/ADT7.jpg 'AzureDigitalTwin')
+![Azure Digital Twin](./media/ADT7.png 'AzureDigitalTwin')
 
 
     When you're finished entering the details, hit the Save button.
@@ -188,8 +177,7 @@ Search for Azure Digital Twins in the search box, and choose the Azure Digital T
     ## Verify success
 
     You can view the role assignment you've set up under Access control (IAM) > Role assignments. The user should show up in the list with a role of Azure Digital Twins Data Owner.
-
-    ![Verify-access](./media/ADT8.jpg 'Verify-access')
+![Verify-access](./media/ADT8.png 'Verify-access')
 
     You now have an Azure Digital Twins instance ready to go, and have assigned permissions to manage it.
 
