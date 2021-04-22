@@ -133,7 +133,7 @@ In this task, you will set up a new Azure Digital twins instance
 
     </br>
 
-    ![Subscription Check](./media/SubscriptionCheck.png 'Subscription Check')
+    ![Subscription Check](./media/Subscriptioncheck.png 'Subscription Check')
 
     </br>
 
