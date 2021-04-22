@@ -8,7 +8,7 @@
     - [Task 1: Provision a resource group](#task-1-provision-a-resource-group)
     - [Task 2: Setup a lab virtual machine](#task-2-setup-a-lab-virtual-machine)
     - [Task 3: Setup an Azure Digital Twins instance](#task-3-setup-an-Azure-Digital-Twins-instance)
-    - [Task 4: Verify success and collect important values](#task-4-verify-succes
+    - [Task 4: Verify success and collect important values](#task-4-verify-success)
     
 
 <!-- /TOC -->
