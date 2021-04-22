@@ -94,14 +94,15 @@ In this task, you will provision a virtual machine running Visual Studio Communi
 
    - **Size**: Select the **Standard D2 v3** size if it is not already selected.
 
-   - **Username**: Enter `demouser`
+   - **Username**: Enter `iotacademy`
 
-   - **Password**: Enter a password that you remember.
+   - **Password**: `Maydelivery01!`
 
    - **Public inbound ports**: Select **Allow selected ports**.
 
    - **Selected inbound ports**: Select **RDP (3389)** from the drop down.
-  ![Screenshot of the Create virtual machine blade, with fields set to the previously mentioned settings](./media/virtual-machine.png 'Create virtual machine blade')
+
+      ![Screenshot of the Create virtual machine blade, with fields set to the previously mentioned settings](./media/Virtual-machine.png 'Create virtual machine blade')
 
    - **License Type**: Select **Windows Server** from the drop down.
 
