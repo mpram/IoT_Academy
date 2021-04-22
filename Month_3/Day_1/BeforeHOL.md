@@ -166,11 +166,12 @@ In this task, you will set up a new Azure Digital twins instance
 - **Subscription**: The Azure subscription you're using.
 - **Resource group**: A resource group in which to deploy the instance. If you don't already have an existing resource group in mind, you can create one here by selecting the Create new link and entering a name for a new resource group.
 - **Location**: An Azure Digital Twins-enabled region for the deployment. For more details on regional support, visit Azure products available by region (Azure Digital Twins).
-- **Resource name**: A name for your Azure Digital Twins instance. Select the checkbox for **"Assign Azure Digital Twins Owner role"**
+- **Resource name**: adtacademy-SUFFIX
+- Select the checkbox for **"Assign Azure Digital Twins Owner role"**
 
   </br>
 
-    ![Review+Create](./media/ADT3.PNG 'Review+Create')
+    ![Review+Create](./media/ADT3.png 'Review+Create')
   
   </br>
 
