@@ -59,7 +59,8 @@ In this task, you will provision a virtual machine running Visual Studio Communi
 
 2. In the **Search the marketplace** textbox, enter `Visual Studio 2019 Latest` and then select it from the suggested options.
 
-3. For the **Select a software plan**, select **Visual Studio 2019 Enterprise on Windows Server 2019 (x64)** from the results, and select **Create**.![Create VM](./media/visual-studio-vm.png 'Create Windows Server 2019 with Visual Studio Community 2019')
+3. For the **Select a software plan**, select **Visual Studio 2019 Enterprise on Windows Server 2019 (x64)** from the results, and select **Create**.
+1. ![Create VM](./media/visual-studio-vm.png 'Create Windows Server 2019 with Visual Studio Community 2019')
 
 
 4. Set the following configuration on the **Basics** tab:
