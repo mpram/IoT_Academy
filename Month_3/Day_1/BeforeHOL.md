@@ -60,7 +60,7 @@ In this task, you will provision a virtual machine running Visual Studio Communi
 2. In the **Search the marketplace** textbox, enter `Visual Studio 2019 Latest` and then select it from the suggested options.
 
 3. For the **Select a software plan**, select **Visual Studio 2019 Enterprise on Windows Server 2019 (x64)** from the results, and select **Create**.
-![In the Visual Studio 2019 Latest resource overview screen, Visual Studio Community 2019 (latest) on Windows Server 2019 (x64) is selected in the Select a software plan drop down list.](./media/visual-studio-vm.png 'Create Windows Server 2019 with Visual Studio Community 2019')
+![Create VM](./media/visual-studio-vm.png 'Create Windows Server 2019 with Visual Studio Community 2019')
 
 4. Set the following configuration on the **Basics** tab:
 
@@ -85,8 +85,7 @@ In this task, you will provision a virtual machine running Visual Studio Communi
    - **Public inbound ports**: Select **Allow selected ports**.
 
    - **Selected inbound ports**: Select **RDP (3389)** from the drop down.
-
-![Screenshot of the Create virtual machine blade, with fields set to the previously mentioned settings.](media/virtual-machine.png 'Create virtual machine blade')
+  ![Screenshot of the Create virtual machine blade, with fields set to the previously mentioned settings.](media/virtual-machine.png 'Create virtual machine blade')
 
    - **License Type**: Select **Windows Server** from the drop down.
 
