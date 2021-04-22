@@ -71,4 +71,5 @@ Internet of Things, Global Black Belt Team at Microsoft, USA.
 
 ## Office Hours
 
-TBD
+Monday 26th 3pm EST Time
+Wednesday 28th 1:30pm EST Time
