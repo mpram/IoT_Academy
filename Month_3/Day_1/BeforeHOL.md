@@ -82,7 +82,7 @@ In this task, you will provision a virtual machine running Visual Studio Communi
 
    - **Username**: Enter `demouser`
 
-   - **Password**: Enter a password that you will remember.
+   - **Password**: Enter a password that you remember.
 
    - **Public inbound ports**: Select **Allow selected ports**.
 
