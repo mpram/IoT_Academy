@@ -133,17 +133,18 @@ In this task, you will set up a new Azure Digital twins instance
 
 ![Azure Digital Twin](./media/adt-create.png 'Azure Digital Twin Create')
 
-    Search for Azure Digital Twins in the search box, and choose the Azure Digital Twins service from the results. Select the Create button to create a new instance of the service.
+Search for Azure Digital Twins in the search box, and choose the Azure Digital Twins service from the results. Select the Create button to create a new instance of the service.
 
-    ![Create Azure Digital Twin](./media/ADT2.jpg 'CreateAzureDigitalTwin')
+  ![Create Azure Digital Twin](./media/ADT2.jpg 'CreateAzureDigitalTwin')
 
 
-    On the following Create Resource page, fill in the values given below:
+ On the following Create Resource page, fill in the values given below:
 
-    Subscription: The Azure subscription you're using
-    Resource group: A resource group in which to deploy the instance. If you don't already have an existing resource group in mind, you can create one here by selecting the Create new link and entering a name for a new resource group
-    Location: An Azure Digital Twins-enabled region for the deployment. For more details on regional support, visit Azure products available by region (Azure Digital Twins).
-    Resource name: A name for your Azure Digital Twins instance. If your subscription has another Azure Digital Twins instance in the region that's already using the specified name, you'll be asked to pick a different name.
+- Subscription: The Azure subscription you're using.
+- Resource group: A resource group in which to deploy the instance. If you don't already have an existing resource group in mind, you can create one here by selecting the Create new link and entering a name for a new resource group.
+- Location: An Azure Digital Twins-enabled region for the deployment. For more details on regional support, visit Azure products available by region (Azure Digital Twins).
+- Resource name: A name for your Azure Digital Twins instance. If your subscription has another Azure Digital Twins instance in the region that's already using the specified name, you'll be asked to pick a different name.
+
 
     ![Review+Create](./media/ADT3.jpg 'Review+Create')
 
