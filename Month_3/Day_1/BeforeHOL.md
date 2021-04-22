@@ -102,7 +102,7 @@ In this task, you will provision a virtual machine running Visual Studio Communi
 
    - **Selected inbound ports**: Select **RDP (3389)** from the drop down.
 
-      ![Screenshot of the Create virtual machine blade, with fields set to the previously mentioned settings](./media/Virtual-machine.png 'Create virtual machine blade')
+        ![Ports enabled](./media/Virtual-machine.png 'Ports')
 
    - **License Type**: Select **Windows Server** from the drop down.
 
