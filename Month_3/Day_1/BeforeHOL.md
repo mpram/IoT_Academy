@@ -106,7 +106,7 @@ In this task, you will provision a virtual machine running Visual Studio Communi
 
 In this task, you will set up a new Azure Digital twins instance 
 
-1. Checking your subscription access
+1. **Checking your subscription access**
 
     To be able to complete all the steps in this article, you need to have a role in your subscription that has the following permissions:
 
@@ -125,7 +125,7 @@ In this task, you will set up a new Azure Digital twins instance
     Request that they complete the steps in this article on your behalf
     Request that they elevate your role on the subscription so that you will have the permissions to proceed yourself. Whether this is appropriate depends on your organization and your role within it.
 
-2. Create Azure Digital Twins instance
+2. **Create Azure Digital Twins instance**
 
     In this section, you will create a new instance of Azure Digital Twins using the Azure portal. Navigate to the portal and log in with your credentials.
 
