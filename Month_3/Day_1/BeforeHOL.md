@@ -43,7 +43,7 @@ In this task, you will create an Azure resource group for the resources used thr
    - **Subscription**: Select the subscription you are using for this hands-on lab.
 
    - **Resource group location**: Select the region you would like to use for resources in this hands-on lab. Remember this location so you can use it for the other resources you'll provision throughout this lab.
-![Create Resource Group](media/create-resource-group.png 'Create resource group')
+![Create Resource Group](./media/create-resource-group.png 'Create resource group')
 
    - Select **Create**.
 
@@ -60,7 +60,7 @@ In this task, you will provision a virtual machine running Visual Studio Communi
 2. In the **Search the marketplace** textbox, enter `Visual Studio 2019 Latest` and then select it from the suggested options.
 
 3. For the **Select a software plan**, select **Visual Studio 2019 Enterprise on Windows Server 2019 (x64)** from the results, and select **Create**.
-![Create VM](media/visual-studio-vm.png 'Create Windows Server 2019 with Visual Studio Community 2019')
+![Create VM](./media/visual-studio-vm.png 'Create Windows Server 2019 with Visual Studio Community 2019')
 
 
 4. Set the following configuration on the **Basics** tab:
@@ -86,7 +86,7 @@ In this task, you will provision a virtual machine running Visual Studio Communi
    - **Public inbound ports**: Select **Allow selected ports**.
 
    - **Selected inbound ports**: Select **RDP (3389)** from the drop down.
-  ![Screenshot of the Create virtual machine blade, with fields set to the previously mentioned settings](media/virtual-machine.png 'Create virtual machine blade')
+  ![Screenshot of the Create virtual machine blade, with fields set to the previously mentioned settings](./media/virtual-machine.png 'Create virtual machine blade')
 
    - **License Type**: Select **Windows Server** from the drop down.
 
