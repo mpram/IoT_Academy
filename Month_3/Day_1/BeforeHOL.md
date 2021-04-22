@@ -209,7 +209,7 @@ In this task, you will set up a new Azure Digital twins instance
 
    ![View-Access](./media/ADT6.png 'ViewAccess')
 
-    A panel will open up on the right side showing your access level. You should have **Azure Digital Twin Data Owner** access
+  A panel will open up on the right side showing your access level. You should have **Azure Digital Twin Data Owner** access
 
    </br>
 
@@ -224,7 +224,7 @@ In this task, you will set up a new Azure Digital twins instance
 
    ![Verify-access](./media/ADT8.png 'Verify-access')
 
-    You now have an Azure Digital Twins instance ready to go, and have assigned permissions to manage it.
+  You now have an Azure Digital Twins instance ready to go, and have assigned permissions to manage it.
 
 
 
