@@ -170,7 +170,7 @@ Search for Azure Digital Twins in the search box, and choose the Azure Digital T
 
     You now have an Azure Digital Twins instance ready to go. Next, you'll verify if you have the correct user access permissions
 
-    ## Verify User Access Permissions
+    #### 1. Verify User Access Permissions
 
     Assign the role
     To give a user permissions to manage an Azure Digital Twins instance, you must assign them the Azure Digital Twins Data Owner role within the instance. Note that we assigned ourselves the owner role during creation of the Azure digital Twin instance
@@ -184,7 +184,7 @@ Search for Azure Digital Twins in the search box, and choose the Azure Digital T
 
   
 
-    ## Verify success
+    #### 2. Verify success
 
     You can also view the role assignment you've set up under Access control (IAM) > Role assignments. The user should show up in the list with a role of Azure Digital Twins Data Owner.
 ![Verify-access](./media/ADT8.png 'Verify-access')
