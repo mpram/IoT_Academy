@@ -1,1 +1,0 @@
-Intelligent Edge + Windows IoT HOL, coming soon! 
