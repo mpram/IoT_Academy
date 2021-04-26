@@ -245,7 +245,7 @@ In this task, you will set up a new Azure Digital twins instance
    ![Open-VM](./media/rdp-connect.png 'Open-VM')
 
 
- 2. Once in your VM, download *Chrome**. We will use this to download other requirements onto our virtual machine. 
+ 2. Once in your VM, download **Chrome**. We will use this to download other requirements onto our virtual machine. 
  
  3. On your VM, download the LTS version of [NodeJS](https://nodejs.org/en/)
     
