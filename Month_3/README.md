@@ -20,8 +20,12 @@ During this month in the Academy the attendees will be working with the followin
 - Powershell
 - Live Video Analytics
 - Virtual Machines, Public IP, RDP access.
+- Azure Virtual Network
+- Azure Bastion
+- [VLC media player](https://www.videolan.org/)
 - Visual Studio & VS Code
 - Github
+- [.Net Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-desktop-3.1.14-windows-x64-installer)
 
 ### **Contact information** ###
 
