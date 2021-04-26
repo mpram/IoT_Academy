@@ -232,13 +232,15 @@ In this task, you will set up a new Azure Digital twins instance
 
 ### Task 5: Install requirements on VM ###
 
-1. Go to the VM you created in **Task 1**. Click on **Connect** then on **RDP**.
+ 1. Go to the VM you created in **Task 1**. Click on **Connect** then on **RDP**.
+    
     </br>
 
     ![Connect to VM](./media/ConnectVM.png 'Connect to VM')
 
     This will take you to the below screen. Click on **Download RDP file**. Once the file has downloaded, double-click on it to open the VM. It will ask you for **username** and **password**. Enter the **username and password** you used while creating the VM in **Task 1**
     </br>
+    
     ![Open VM](./media/RDPfile.png 'Open VM')
 
 
