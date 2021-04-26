@@ -264,12 +264,13 @@ In this task, you will set up a new Azure Digital twins instance
 
     </br>
 
-    ![Extract-lab-files](./media/extract-lab-files.png 'Extract-lab-files')
+    ![Extract-lab-files](./media/extract-files.png 'Extract-lab-files')
 
  6. Your extracted files should look like the below picture
+
    </br>
     
-   ![Extracted-lab-files](./media/extracted-lab-files.png 'Extracted-lab-files')
+  ![Extracted-lab-files](./media/extracted-files.png 'Extracted-lab-files')
 
 
 
