@@ -242,7 +242,7 @@ In this task, you will set up a new Azure Digital twins instance
  This will take you to the below screen. Click on **Download RDP file**. Once the file has downloaded, double-click on it to open the VM. It will ask you for **username** and **password**. Enter the **username and password** you used while creating the VM in **Task 1**
    </br>
     
-   ![Open-VM](./media/RDPfile.png 'Open-VM')
+   ![Open-VM](./media/rdp-connect.png 'Open-VM')
 
 
  2. Once in your VM, download *Chrome**. We will use this to download other requirements onto our virtual machine. 
@@ -251,14 +251,14 @@ In this task, you will set up a new Azure Digital twins instance
     
    </br>
     
-  ![Download-NodeJS](./media/NodeJS.png 'Download-NodeJS')
+  ![Download-NodeJS](./media/nodejs.png 'Download-NodeJS')
 
 
  4. On your VM, from chrome explorer, navigate to labfiles of [Azure Digital twin end-to-end solution](https://github.com/Azure-Samples/digital-twins-explorer/tree/main/)
     
    </br>
     
-  ![Download-lab-files](./media/labfiles.png 'Download-lab-files')
+  ![Download-lab-files](./media/lab-files.png 'Download-lab-files')
   
  5. Click on **Code** and then **Download Zip**. Once downloaded, unzip the zip file directly in the **C:** of your VM. 
 
