@@ -37,7 +37,7 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
 
 2. Select **Virtual Network** from the results, and then select **Create**.
 
-  ![+Create a virtual network is selected](./media/Create-VN.png 'Create a Virtual Network')
+  ![+Create a virtual network is selected](./media/Create-VN.PNG 'Create a Virtual Network')
 
 3. In **Create virtual network**, enter or select this information in the **Basics** tab:
 
@@ -50,7 +50,7 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
       | Name | Enter **myVNetwork**. |
       | Region | Select **(US) East US**. |
 
-      ![Virtual Network Basics Tab](./media/Create-VN-Basics.png 'Virtual Network Basics Tab')
+      ![Virtual Network Basics Tab](./media/Create-VN-Basics.PNG 'Virtual Network Basics Tab')
 
 4. Select the **IP Addresses** tab, or select the **Next: IP Addresses** button at the bottom of the page.
 
@@ -60,7 +60,7 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
 
 7. Select **Add**.
 
-      ![Virtual Network Add Subnet](./media/Create-VN-Add-Subnet.png 'Virtual Network Add Subnet')
+      ![Virtual Network Add Subnet](./media/Create-VN-Add-Subnet.PNG 'Virtual Network Add Subnet')
 
 8. Select the **Security** tab, or select the **Next: Security** button at the bottom of the page.
 
@@ -111,7 +111,7 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
     | **Inbound port rules** |    |
     | Public inbound ports | Select **None**. |
 
-    ![Virtual Machine Basics Tab](./media/Create-VM-Basic.png 'Virtual Machine Basics Tab')
+    ![Virtual Machine Basics Tab](./media/Create-VM-Basic.PNG 'Virtual Machine Basics Tab')
 
 3. Select the **Networking** tab, or select **Next: Disks**, then **Next: Networking**.
 
