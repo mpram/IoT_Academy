@@ -104,7 +104,7 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
     | **Inbound port rules** |    |
     | Public inbound ports | Select **None**. |
 
-    ![Virtual Machine Basics Tab](./media/Exercise-1/Create-VM-Basic.png 'Virtual Machine Basics Tab')
+    ![Virtual Machine Basics Tab](./media/Create-VM-Basic.png 'Virtual Machine Basics Tab')
 
 3. Select the **Networking** tab, or select **Next: Disks**, then **Next: Networking**.
 
