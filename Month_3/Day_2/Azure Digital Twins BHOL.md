@@ -251,7 +251,7 @@ In this task, you will set up a new Azure Digital twins instance
     
    </br>
     
-  ![Download-NodeJS](./media/nodejs.png 'Download-NodeJS')
+  ![Download-nodejs](./media/nodejs.png 'Download-nodejs')
 
 
  4. On your VM, from chrome explorer, navigate to labfiles of [Azure Digital twin end-to-end solution](https://github.com/Azure-Samples/digital-twins-explorer/tree/main/)
@@ -274,6 +274,7 @@ In this task, you will set up a new Azure Digital twins instance
 
  7. In this step, we will run and configure **Azure Digital Twins Explorer**. 
      1. Go to the downloaded and unzipped **digital-twins-explorer-main** folder in your **C:**
+     
      1.  Open a cmd console window to the folder location **digital-twins-explorer-main/client/src**
  
      2. Run **npm-install** to download all the required dependencies
