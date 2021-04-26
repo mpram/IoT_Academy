@@ -232,7 +232,15 @@ In this task, you will set up a new Azure Digital twins instance
 
 ### Task 5: Install requirements on VM ###
 
- 1. Go to the VM you created in **Task 1**. Click on **Connect** then on **RDP**.
+   1. Go to the VM you created in **Task 1**. Click on **Connect** then on **RDP**.
+
+   </br>
+
+   ![Connect to VM](./media/ConnectVM.png 'Connect to VM')
+
+  You now have an Azure Digital Twins instance ready to go, and have assigned permissions to manage it.
+
+ 1. 
     
    </br>
 
