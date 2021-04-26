@@ -251,7 +251,7 @@ In this task, you will set up a new Azure Digital twins instance
     
    </br>
     
-  ![Download-nodejs](./media/nodejs.png 'Download-nodejs')
+  ![Download-node](./media/nodejs.png 'Download-node')
 
 
  4. On your VM, from chrome explorer, navigate to labfiles of [Azure Digital twin end-to-end solution](https://github.com/Azure-Samples/digital-twins-explorer/tree/main/)
