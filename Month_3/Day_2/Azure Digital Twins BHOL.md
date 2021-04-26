@@ -275,9 +275,14 @@ In this task, you will set up a new Azure Digital twins instance
  7. In this step, we will run and configure **Azure Digital Twins Explorer**. 
      1. Go to the downloaded and unzipped **digital-twins-explorer-main** folder in your **C:**
      
-     1.  Open a cmd console window to the folder location **digital-twins-explorer-main/client/src**
+     1.  Open a cmd console window to the folder location  **digital-twins-explorer-main/client/src** run the following command.
+     
+     ```cmd
+     cd c:\digital-twins-explorer-main\client\src
+     ```
+    
  
-     2. Run **npm-install** to download all the required dependencies
+     2. Then run **npm-install** to download all the required dependencies
 
 
 
