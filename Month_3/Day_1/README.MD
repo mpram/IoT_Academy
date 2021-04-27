@@ -15,7 +15,7 @@ In this lab we will be setting up Azure IoT Edge for Linux on Windows (EFLOW) wi
    - [Task 4: Download Windows Admin Center](#task-4-download-windows-admin-center)
    - [Task 5: Create a new deployment](#task-5-create-a-new-deployment)
    - [Task 6: Verify successful configuration](#task-6-verify-successful-configuration)
-- [Exercise 3: Set up Live Video Analytics]
+- [Exercise 3: Set up Live Video Analytics](#exercise-3-set-up-live-video-analytics)
   - [Task 1: Download Tools and Resources](#task-1-download-tools-and-resources)
   - [Task 2: Create Azure Resources](#task-2-create-azure-resources)
   - [Task 3: Configure the Azure IoT Tools extension](#task-3-configure-the-azure-iot-tools-extension)
