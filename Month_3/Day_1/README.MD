@@ -61,6 +61,8 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
 
   <kbd><img src="./media/Create-VN-Add-Subnet.PNG" /></kbd>
 
+  >[!NOTE] You can ignore the warning as we are not intending to peer virtual networks.
+
 8. Select the **Security** tab, or select the **Next: Security** button at the bottom of the page.
 
 9. Under **BastionHost**, select **Enable**. Enter this information:
@@ -86,9 +88,9 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
 
 ### **Task 2: Virtual Machine** ###
 
-1. On the upper-left side of the portal, select **Create a resource** > **Compute** > **Virtual machine** . **Create**.
+1. On the upper-left side of the portal, select: **Create a resource** > **Compute** > **Virtual machine** >> **Create**
 
-    ![Virtual Machine Create](./media/Create-VM.PNG 'Virtual Machine Creation')
+  <kbd><img src="./media/Create-VM.PNG" /></kbd>
 
 2. In **Create a virtual machine**, type or select the values in the **Basics** tab:
 
@@ -104,14 +106,14 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
     | Image | Select **Windows 10 Pro, vNext - Gen1** |
     | Azure Spot instance | Select **No** |
     | Size | **Standard_D4s_v3 - 4 vcpus, 16 GiB memory** |
-    | **Administrator account** |  |
-    | Username | Enter a username |
-    | Password | Enter a password |
+    | **Administrator Account** | **Use the following Credentials** |
+    | Username | AIOTA |
+    | Password | Day3! |
     | Confirm password | Reenter password |
     | **Inbound port rules** |    |
     | Public inbound ports | Select **None**. |
 
-    ![Virtual Machine Basics Tab](./media/Create-VM-Basic.PNG 'Virtual Machine Basics Tab')
+    <kbd><img src="./media/Create-VM-Basic.PNG" /></kbd>
 
 3. Select the **Networking** tab, or select **Next: Disks**, then **Next: Networking**.
 
@@ -126,17 +128,17 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
     | NIC network security group | Select **Basic**|
     | Public inbound ports network | Select **None**. |
 
-    ![Virtual Machine Networking Tab](./media/Create-VM-Networking.PNG 'Virtual Machine Networking Tab')
+    <kbd><img src="./media/Create-VM-Networking.PNG" /></kbd>
 
 5. Select the **Review + create** tab, or select the blue **Review + create** button at the bottom of the page.
 
 6. Review the settings, and then select **Create**.
 
-    ![Virtual Machine Validation](./media/Create-VM-Validations.PNG 'Virtual Machine Validation')
+    <kbd><img src="./media/Create-VM-Validations.PNG" /></kbd>
 
 7. It will take a few minutes to deploy. At the end you should see the your resources deployed.
-    ![Virtual Machine Deployment](./media/Create-VM-Deployment.PNG 'Virtual Machine Deployment')
 
+    <kbd><img src="./media/Create-VM-Deployment.PNG" /></kbd>
 
 ### **Task 3: Connect to Virtual Machine** ###
 
