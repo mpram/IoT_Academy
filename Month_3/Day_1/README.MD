@@ -90,7 +90,7 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
 
 1. On the upper-left side of the portal, select: **Create a resource** > **Compute** > **Virtual machine** >> **Create**
 
-  <kbd><img src="./media/Create-VM.PNG" /></kbd>
+    <kbd><img src="./media/Create-VM.PNG" /></kbd>
 
 2. In **Create a virtual machine**, type or select the values in the **Basics** tab:
 
@@ -146,23 +146,28 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
 
 2. In the VM menu bar, select **Connect**, then select **Bastion**.
 
-  ![Connect VM - Bastion](./media/Connect-VM-Bastion.PNG 'Connect Virtual Bastion')
+    <kbd><img src="./media/Connect-VM-Bastion.PNG" /></kbd>
 
 4. In the **Connect** page, select the blue **Use Bastion** button.
 
-  ![Connect VM - Bastion Button](./media/Connect-VM-Bastion-Button.PNG 'Connect Virtual Bastion Button')
+    <kbd><img src="./media/Connect-VM-Bastion-Button.PNG" /></kbd>
 
-5. In the **Bastion** page, enter the username and password you created for the virtual machine previously.
+5. In the **Bastion** page, enter the username and password for the virtual machine.
+
+    | Field | Enter |
+    |-------|-------|
+    | **Username** | *AIOTA* |
+    | **Password** | *Day3!* |
 
 6. Select **Connect**.
 
-  ![Connect VM - Connect Bastion](./media/Connect-VM-Bastion-Connect.PNG 'Connect Virtual Machine Bastion')
+  <kbd><img src="./media/Connect-VM-Bastion-Connect.PNG" /></kbd>
 
 7. A new tab should open, and you should be connected to your virtual machine.
 
 8. **Accept** the default settings.
 
-  !Bastion Settings](./media/VM-Bastion-Settings.PNG 'Bastion Settings')
+  <kbd><img src="./media/VM-Bastion-Settings.PNG" /></kbd>
 
 9. **We will be using this virtual machine for the remaining two exercises.**
 
