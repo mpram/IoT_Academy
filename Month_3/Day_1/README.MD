@@ -49,7 +49,7 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
       | Name | Enter **myVNetwork**. |
       | Region | Select **(US) East US**. |
 
-      ![Virtual Network Basics Tab](./media/Create-VN-Basics.PNG 'Virtual Network Basics Tab')
+  <kbd><img src="./media/Create-VN-Basics.PNG " /></kbd>
 
 4. Select the **IP Addresses** tab, or select the **Next: IP Addresses** button at the bottom of the page.
 
@@ -59,7 +59,7 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
 
 7. Select **Add**.
 
-      ![Virtual Network Add Subnet](./media/Create-VN-Add-Subnet.PNG 'Virtual Network Add Subnet')
+  <kbd><img src="./media/Create-VN-Add-Subnet.PNG" /></kbd>
 
 8. Select the **Security** tab, or select the **Next: Security** button at the bottom of the page.
 
@@ -73,15 +73,16 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
 
 10. Select the **Review + create** tab or select the **Review + create** button.
 
-    ![Virtual Network Security Tab](./media/Create-VN-Security.PNG 'Virtual Network Security Tab')
+  <kbd><img src="./media/Create-VN-Security.PNG" /></kbd>
 
 11. Select **Create**.
 
-    ![Virtual Network Validation](./media/Create-VN-Validations.PNG 'Virtual Network Validation')
+  <kbd><img src="./media/Create-VN-Validations.PNG" /></kbd>
 
 12. It will take a few minutes to deploy. At the end you should see the your resources deployed.
 
-    ![Virtual Network Deployment](./media/Create-VN-Deployment.PNG 'Virtual Network Deployment')
+  <kbd><img src="./media/Create-VN-Deployment.PNG" /></kbd>
+
 
 ### **Task 2: Virtual Machine** ###
 
