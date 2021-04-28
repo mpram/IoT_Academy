@@ -8,7 +8,7 @@ In this lab we will be setting up Azure IoT Edge for Linux on Windows (EFLOW) wi
    - [Task 1: Virtual Network](#task-1-virtual-network)
    - [Task 2: Virtual Machine](#task-2-virtual-machine)
    - [Task 3: Connect to Virtual Machine](#task-3-connect-to-virtual-machine)
-- [Exercise 2: Set up Azure Edge For Linux on Windows (EFLOW)](#exercise-2-set-up-azure-edge-for-linux-on-windows-(EFLOW))
+- [Exercise 2: Set up Azure Edge For Linux on Windows](#exercise-2-set-up-azure-edge-for-linux-on-windows)
    - [Task 1: Enable Hyper-V](#task-1-enable-hyper-v)
    - [Task 2: Set up Azure IoT Hub](#task-2-set-up-azure-iot-hub)
    - [Task 3: Register an IoT Hub Device](#task-3-register-an-iot-hub-device)
@@ -22,11 +22,10 @@ In this lab we will be setting up Azure IoT Edge for Linux on Windows (EFLOW) wi
   - [Task 4: Deploy Modules on Windows Host](#task-4-deploy-modules-on-windows-host)
   - [Task 5: Provision Azure IoT Edge for Linux Configuration](task-5-provision-azure-iot-edge-for-linux-configuration)
   - [Task 6: Test Video Stream](task-6-test-video-stream)
-  - [Task 7: Enable Live Video Analytics: Inferencing](task-7-enable-live-video-analytics)
+  - [Task 7: Enable Live Video Analytics: Inferencing](task-7-enable-live-video-analytics-inferencing)
   - [Task 8: Connect Windows Video with Linux Inferencing](task-8-connect-windows-video-with-linux-inferencing)
 - [Exercise 4: Clean up](#exercise-7-clean-up)
    - [Task 1: Delete resources](#task-1-Delete-resources)
-
 
 ## **Exercise 1: Set up Environment** ##
 During this exercise you will be setting up your Windows 10 IoT Enterprise environment for this lab in an Azure Virtual Machine.
@@ -37,7 +36,7 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
 
 2. Select **Virtual Network** from the results, and then select **Create**.
 
-  ![+Create a virtual network is selected](./media/Create-VN.PNG 'Create a Virtual Network')
+ :::image type="content" source="media/Create-VN.PNG" alt-text="Create a virtual network is selected.":::
 
 3. In **Create virtual network**, enter or select this information in the **Basics** tab:
 
@@ -165,7 +164,7 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
 9. **We will be using this virtual machine for the remaining two exercises.**
 
 
-## **Exercise 2: Set up Azure Edge For Linux on Windows (EFLOW)** ##
+## **Exercise 2: Set up Azure Edge For Linux on Windows** ##
 
 ### **Task 1: Enable Hyper-V** ###
 We are going to enable Hyper-V via PowerShell in the newly created VM.
@@ -374,7 +373,7 @@ You can use Windows Admin Center to make install and manage Azure IoT Edge for L
 > 2. Visit the networking tab at the bottom and wait until an IP address has been populated to ensure that your VM is running.
 
 
-## **Exercise 3: Set up Environment** ##
+## **Exercise 3: Set up Live Video Analytics** ##
 
 ### **Task 1: Download Tools and Resources** ###
 In the Virtual Machine tab install the following tools:
@@ -688,6 +687,7 @@ output
 15. Right click on the instance and select **Deactivate Graph Instance**
 
   ![Deactivate Graph Instance](./media/deactivate-graph-instance.PNG 'Deactivate Graph Instance')
+
 
 ### **Task 8: Connect Windows Video with Linux Inferencing** ###
 
