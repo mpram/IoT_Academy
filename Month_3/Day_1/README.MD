@@ -36,7 +36,7 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
 
 2. Select **Virtual Network** from the results, and then select **Create**.
 
- :::image type="content" source="media/Create-VN.PNG" alt-text="Create a virtual network is selected.":::
+  <kbd><img src="./media/Create-VN.PNG" /></kbd>
 
 3. In **Create virtual network**, enter or select this information in the **Basics** tab:
 
