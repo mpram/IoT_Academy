@@ -36,7 +36,7 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
 
 2. Select **Virtual Network** from the results, and then select **Create**.
 
-  <kbd><img src="./media/Create-VN.PNG" /></kbd>
+   <kbd><img src="./media/Create-VN.PNG" /></kbd>
 
 3. In **Create virtual network**, enter or select this information in the **Basics** tab:
 
@@ -49,7 +49,7 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
       | Name | Enter **myVNetwork**. |
       | Region | Select **(US) East US**. |
 
-  <kbd><img src="./media/Create-VN-Basics.PNG " /></kbd>
+   <kbd><img src="./media/Create-VN-Basics.PNG " /></kbd>
 
 4. Select the **IP Addresses** tab, or select the **Next: IP Addresses** button at the bottom of the page.
 
@@ -59,7 +59,7 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
 
 7. Select **Add**.
 
-  <kbd><img src="./media/Create-VN-Add-Subnet.PNG" /></kbd>
+    <kbd><img src="./media/Create-VN-Add-Subnet.PNG" /></kbd>
 
   >[!NOTE] You can ignore the warning as we are not intending to peer virtual networks.
 
@@ -75,15 +75,15 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
 
 10. Select the **Review + create** tab or select the **Review + create** button.
 
-  <kbd><img src="./media/Create-VN-Security.PNG" /></kbd>
+    <kbd><img src="./media/Create-VN-Security.PNG" /></kbd>
 
 11. Select **Create**.
 
-  <kbd><img src="./media/Create-VN-Validations.PNG" /></kbd>
+    <kbd><img src="./media/Create-VN-Validations.PNG" /></kbd>
 
 12. It will take a few minutes to deploy. At the end you should see the your resources deployed.
 
-  <kbd><img src="./media/Create-VN-Deployment.PNG" /></kbd>
+    <kbd><img src="./media/Create-VN-Deployment.PNG" /></kbd>
 
 
 ### **Task 2: Virtual Machine** ###
@@ -161,13 +161,13 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
 
 6. Select **Connect**.
 
-  <kbd><img src="./media/Connect-VM-Bastion-Connect.PNG" /></kbd>
+    <kbd><img src="./media/Connect-VM-Bastion-Connect.PNG" /></kbd>
 
 7. A new tab should open, and you should be connected to your virtual machine.
 
 8. **Accept** the default settings.
 
-  <kbd><img src="./media/VM-Bastion-Settings.PNG" /></kbd>
+    <kbd><img src="./media/VM-Bastion-Settings.PNG" /></kbd>
 
 9. **We will be using this virtual machine for the remaining two exercises.**
 
