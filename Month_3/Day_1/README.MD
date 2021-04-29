@@ -8,25 +8,24 @@ In this lab we will be setting up Azure IoT Edge for Linux on Windows (EFLOW) wi
    - [Task 1: Virtual Network](#task-1-virtual-network)
    - [Task 2: Virtual Machine](#task-2-virtual-machine)
    - [Task 3: Connect to Virtual Machine](#task-3-connect-to-virtual-machine)
-- [Exercise 2: Set up Azure Edge For Linux on Windows (EFLOW)](#exercise-2-set-up-azure-edge-for-linux-on-windows-(EFLOW))
+- [Exercise 2: Set up Azure Edge For Linux on Windows](#exercise-2-set-up-azure-edge-for-linux-on-windows)
    - [Task 1: Enable Hyper-V](#task-1-enable-hyper-v)
    - [Task 2: Set up Azure IoT Hub](#task-2-set-up-azure-iot-hub)
    - [Task 3: Register an IoT Hub Device](#task-3-register-an-iot-hub-device)
    - [Task 4: Download Windows Admin Center](#task-4-download-windows-admin-center)
    - [Task 5: Create a new deployment](#task-5-create-a-new-deployment)
    - [Task 6: Verify successful configuration](#task-6-verify-successful-configuration)
-- [Exercise 3: Set up Live Video Analytics]
+- [Exercise 3: Set up Live Video Analytics](#exercise-3-set-up-live-video-analytics)
   - [Task 1: Download Tools and Resources](#task-1-download-tools-and-resources)
   - [Task 2: Create Azure Resources](#task-2-create-azure-resources)
   - [Task 3: Configure the Azure IoT Tools extension](#task-3-configure-the-azure-iot-tools-extension)
   - [Task 4: Deploy Modules on Windows Host](#task-4-deploy-modules-on-windows-host)
   - [Task 5: Provision Azure IoT Edge for Linux Configuration](task-5-provision-azure-iot-edge-for-linux-configuration)
   - [Task 6: Test Video Stream](task-6-test-video-stream)
-  - [Task 7: Enable Live Video Analytics: Inferencing](task-7-enable-live-video-analytics)
+  - [Task 7: Enable Live Video Analytics: Inferencing](task-7-enable-live-video-analytics-inferencing)
   - [Task 8: Connect Windows Video with Linux Inferencing](task-8-connect-windows-video-with-linux-inferencing)
 - [Exercise 4: Clean up](#exercise-7-clean-up)
    - [Task 1: Delete resources](#task-1-Delete-resources)
-
 
 ## **Exercise 1: Set up Environment** ##
 During this exercise you will be setting up your Windows 10 IoT Enterprise environment for this lab in an Azure Virtual Machine.
@@ -37,7 +36,7 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
 
 2. Select **Virtual Network** from the results, and then select **Create**.
 
-  ![+Create a virtual network is selected](./media/Create-VN.png 'Create a Virtual Network')
+  <kbd><img src="./media/Create-VN.PNG" /></kbd>
 
 3. In **Create virtual network**, enter or select this information in the **Basics** tab:
 
@@ -50,7 +49,7 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
       | Name | Enter **myVNetwork**. |
       | Region | Select **(US) East US**. |
 
-      ![Virtual Network Basics Tab](./media/Create-VN-Basics.png 'Virtual Network Basics Tab')
+  <kbd><img src="./media/Create-VN-Basics.PNG " /></kbd>
 
 4. Select the **IP Addresses** tab, or select the **Next: IP Addresses** button at the bottom of the page.
 
@@ -60,7 +59,9 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
 
 7. Select **Add**.
 
-      ![Virtual Network Add Subnet](./media/Create-VN-Add-Subnet.png 'Virtual Network Add Subnet')
+  <kbd><img src="./media/Create-VN-Add-Subnet.PNG" /></kbd>
+
+  >[!NOTE] You can ignore the warning as we are not intending to peer virtual networks.
 
 8. Select the **Security** tab, or select the **Next: Security** button at the bottom of the page.
 
@@ -74,21 +75,22 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
 
 10. Select the **Review + create** tab or select the **Review + create** button.
 
-    ![Virtual Network Security Tab](./media/Create-VN-Security.png 'Virtual Network Security Tab')
+  <kbd><img src="./media/Create-VN-Security.PNG" /></kbd>
 
 11. Select **Create**.
 
-    ![Virtual Network Validation](./media/Create-VN-Validations.png 'Virtual Network Validation')
+  <kbd><img src="./media/Create-VN-Validations.PNG" /></kbd>
 
 12. It will take a few minutes to deploy. At the end you should see the your resources deployed.
 
-    ![Virtual Network Deployment](./media/Create-VN-Deployment.png 'Virtual Network Deployment')
+  <kbd><img src="./media/Create-VN-Deployment.PNG" /></kbd>
+
 
 ### **Task 2: Virtual Machine** ###
 
-1. On the upper-left side of the portal, select **Create a resource** > **Compute** > **Virtual machine** . **Create**.
+1. On the upper-left side of the portal, select: **Create a resource** > **Compute** > **Virtual machine** >> **Create**
 
-    ![Virtual Machine Create](./media/Create-VM.png 'Virtual Machine Creation')
+    <kbd><img src="./media/Create-VM.PNG" /></kbd>
 
 2. In **Create a virtual machine**, type or select the values in the **Basics** tab:
 
@@ -104,14 +106,14 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
     | Image | Select **Windows 10 Pro, vNext - Gen1** |
     | Azure Spot instance | Select **No** |
     | Size | **Standard_D4s_v3 - 4 vcpus, 16 GiB memory** |
-    | **Administrator account** |  |
-    | Username | Enter a username |
-    | Password | Enter a password |
+    | **Administrator Account** | **Use the following Credentials** |
+    | Username | AIOTA |
+    | Password | Day3! |
     | Confirm password | Reenter password |
     | **Inbound port rules** |    |
     | Public inbound ports | Select **None**. |
 
-    ![Virtual Machine Basics Tab](./media/Create-VM-Basic.png 'Virtual Machine Basics Tab')
+    <kbd><img src="./media/Create-VM-Basic.PNG" /></kbd>
 
 3. Select the **Networking** tab, or select **Next: Disks**, then **Next: Networking**.
 
@@ -126,17 +128,17 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
     | NIC network security group | Select **Basic**|
     | Public inbound ports network | Select **None**. |
 
-    ![Virtual Machine Networking Tab](./media/Create-VM-Networking.png 'Virtual Machine Networking Tab')
+    <kbd><img src="./media/Create-VM-Networking.PNG" /></kbd>
 
 5. Select the **Review + create** tab, or select the blue **Review + create** button at the bottom of the page.
 
 6. Review the settings, and then select **Create**.
 
-    ![Virtual Machine Validation](./media/Create-VM-Validations.png 'Virtual Machine Validation')
+    <kbd><img src="./media/Create-VM-Validations.PNG" /></kbd>
 
 7. It will take a few minutes to deploy. At the end you should see the your resources deployed.
-    ![Virtual Machine Deployment](./media/Create-VM-Deployment.png 'Virtual Machine Deployment')
 
+    <kbd><img src="./media/Create-VM-Deployment.PNG" /></kbd>
 
 ### **Task 3: Connect to Virtual Machine** ###
 
@@ -144,34 +146,39 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
 
 2. In the VM menu bar, select **Connect**, then select **Bastion**.
 
-  ![Connect VM - Bastion](./media/Connect-VM-Bastion.png 'Connect Virtual Bastion')
+    <kbd><img src="./media/Connect-VM-Bastion.PNG" /></kbd>
 
 4. In the **Connect** page, select the blue **Use Bastion** button.
 
-  ![Connect VM - Bastion Button](./media/Connect-VM-Bastion-Button.png 'Connect Virtual Bastion Button')
+    <kbd><img src="./media/Connect-VM-Bastion-Button.PNG" /></kbd>
 
-5. In the **Bastion** page, enter the username and password you created for the virtual machine previously.
+5. In the **Bastion** page, enter the username and password for the virtual machine.
+
+    | Field | Enter |
+    |-------|-------|
+    | **Username** | *AIOTA* |
+    | **Password** | *Day3!* |
 
 6. Select **Connect**.
 
-  ![Connect VM - Connect Bastion](./media/Connect-VM-Bastion-Connect.png 'Connect Virtual Machine Bastion')
+  <kbd><img src="./media/Connect-VM-Bastion-Connect.PNG" /></kbd>
 
 7. A new tab should open, and you should be connected to your virtual machine.
 
 8. **Accept** the default settings.
 
-  !Bastion Settings](./media/VM-Bastion-Settings.png 'Bastion Settings')
+  <kbd><img src="./media/VM-Bastion-Settings.PNG" /></kbd>
 
 9. **We will be using this virtual machine for the remaining two exercises.**
 
 
-## **Exercise 2: Set up Azure Edge For Linux on Windows (EFLOW)** ##
+## **Exercise 2: Set up Azure Edge For Linux on Windows** ##
 
 ### **Task 1: Enable Hyper-V** ###
 We are going to enable Hyper-V via PowerShell in the newly created VM.
 
 1. Search for **PowerShell** and right click to select **Run as Administrator**.
-  ![Run PowerShell as an Administrator](./media/PowerShell-Admin.png 'Run PowerShell as an Administrator')
+  ![Run PowerShell as an Administrator](./media/PowerShell-Admin.PNG 'Run PowerShell as an Administrator')
 
 2. Run the following command:
 
@@ -183,7 +190,7 @@ We are going to enable Hyper-V via PowerShell in the newly created VM.
 
 3. When the installation has completed, reboot the VM by typing in **Y**.
 
-  ![Hyper-V-Enabled](./media/Hyper-V-Enabled.png 'Hyper-V-Enabled')
+  ![Hyper-V-Enabled](./media/Hyper-V-Enabled.PNG 'Hyper-V-Enabled')
 
 4. Reconnect to the VM.
 
@@ -195,7 +202,7 @@ These steps can be done outside of the VM.
 
 2. Select **IoT Hub** from the search results, and then select **Create**.
 
-  ![Create IoT Hub](./media/IoTHub.png 'Create IoT Hub')
+  ![Create IoT Hub](./media/IoTHub.PNG 'Create IoT Hub')
 
 3. On the **Basics** tab, complete the fields as follows:
 
@@ -211,13 +218,13 @@ These steps can be done outside of the VM.
       >
       > Because the IoT hub will be publicly discoverable as a DNS endpoint, be sure to avoid entering any sensitive or personally identifiable information when you name it.
 
-  ![IoT Hub Basics](./media/IoTHub-Basics.png 'IoT Hub Basics Tab')
+  ![IoT Hub Basics](./media/IoTHub-Basics.PNG 'IoT Hub Basics Tab')
 
 4. Select **Next: Networking** to continue creating your hub.
 
    Choose the endpoints that can connect to your IoT Hub. You can select the default setting **Public endpoint (all networks)**.
 
-   ![IoT Hub networking](./media/IoTHub-Networking.png 'IoT Hub Networking Tab')
+   ![IoT Hub networking](./media/IoTHub-Networking.PNG 'IoT Hub Networking Tab')
 
 5. Select **Next: Management** to continue creating your hub.
 
@@ -229,21 +236,21 @@ These steps can be done outside of the VM.
 
 8. Select **Create** to create your new hub.
 
-  ![IoT Hub Review Tab](./media/IoTHub-Review.png 'IoT Hub Review + Create Tab')
+  ![IoT Hub Review Tab](./media/IoTHub-Review.PNG 'IoT Hub Review + Create Tab')
 
 9. It will take a few minutes for your Hub to deploy.
 
-  ![IoT Hub Deployment](./media/IoTHub-Deploy.png 'IoT Hub Deployment')
+  ![IoT Hub Deployment](./media/IoTHub-Deploy.PNG 'IoT Hub Deployment')
 
 ### **Task 3: Register an IoT Hub Device** ###
 
 1. Navigate to your IoT Hub and select **IoT Edge** from the menu.
 
-  ![Select IoT Edge](./media/IoTHub-IoTEdge.png 'Select IoT Edge')
+  ![Select IoT Edge](./media/IoTHub-IoTEdge.PNG 'Select IoT Edge')
 
 2. Select **Add an IoT Edge device**.
 
-  ![Add IoT Edge Device](./media/Add-IoTEdge-Device.png 'Add IoT Edge Device')
+  ![Add IoT Edge Device](./media/Add-IoTEdge-Device.PNG 'Add IoT Edge Device')
 
 3. Create a Device - Select or Enter:
 
@@ -256,7 +263,7 @@ These steps can be done outside of the VM.
 
 4. Select **Save**.
 
-  ![Save IoT Edge Device](./media/Create-Device.png 'Save IoT Edge Device')
+  ![Save IoT Edge Device](./media/Create-Device.PNG 'Save IoT Edge Device')
 
 ### **Task 4: Download Windows Admin Center** ###
 Back to the Windows VM, we need to download Windows Admin Center.
@@ -265,30 +272,30 @@ Back to the Windows VM, we need to download Windows Admin Center.
 
 2. A prompt at the bottom of the screen should appear. Select **Run**
 
-  ![Download Windows Admin Center](./media/download-WAC.png 'Download Windows Admin Center')
+  ![Download Windows Admin Center](./media/download-WAC.PNG 'Download Windows Admin Center')
 
 3. Run the downloaded installer and follow the install wizard prompts to install Windows Admin Center.
 
 4. Once installed, use a supported browser to open Windows Admin Center. Supported browsers include Microsoft Edge (Windows 10, version 1709 or later), Google Chrome, and Microsoft Edge Insider. Search **Windows Admin Center**
 
-  ![Open Windows Admin Center](./media/Open-WAC.png 'Open Windows Admin Center')
+  ![Open Windows Admin Center](./media/Open-WAC.PNG 'Open Windows Admin Center')
 
 5. On the first use of Windows Admin Center, you will be prompted to select a certificate to use. Select **Windows Admin Center Client** as your certificate.
 
 6. It is time to install the Azure IoT Edge extension. Select the gear icon in the top right of the Windows Admin Center dashboard.
 
-  ![Open Windows Admin Center](./media/select-settings-gear.png 'Open Windows Admin Center')
+  ![Open Windows Admin Center](./media/select-settings-gear.PNG 'Open Windows Admin Center')
 
 
 7. On the **Settings** menu, under **Gateway**, select **Extensions**.
 
 8. On the **Available extensions** tab, find **Azure IoT Edge** in the list of extensions. Choose it, and select the **Install** prompt above the list of extensions.
 
-  ![Install Azure IoT Edge](./media/install-azure-iot-edge.png 'Install Azure IoT Edge')
+  ![Install Azure IoT Edge](./media/install-azure-iot-edge.PNG 'Install Azure IoT Edge')
 
 9. After the installation completes, you should see Azure IoT Edge in the list of installed extensions on the **Installed extensions** tab.
 
-  ![Extension Installed](./media/installed.png 'Extension Installed')
+  ![Extension Installed](./media/installed.PNG 'Extension Installed')
 
 ### **Task 5: Create a new deployment** ###
 
@@ -298,15 +305,15 @@ You can use Windows Admin Center to make install and manage Azure IoT Edge for L
 
 1. Select **Add**.
 
-  ![Add](./media/Add.png 'Add')
+  ![Add](./media/Add.PNG 'Add')
 
 2. On the **Add or create resources** pane, locate the **Azure IoT Edge** tile. Select **Create new** to install a new instance of Azure IoT Edge for Linux on Windows on a device.
 
-  ![Create New Azure IoT Edge Resource](./media/create-new.png 'Create New Azure IoT Edge Resource')
+  ![Create New Azure IoT Edge Resource](./media/create-new.PNG 'Create New Azure IoT Edge Resource')
 
 3. The **Create an Azure IoT Edge for Linux on Windows deployment** pane will open. On the **1. Getting Started** tab, verify that your target device meets the minimum requirements, and select **Next**.
 
-  ![Getting Started - Prerequisites](./media/pre-req.png 'Getting Started - Prerequisites')
+  ![Getting Started - Prerequisites](./media/pre-req.PNG 'Getting Started - Prerequisites')
 
 4. Review the license terms, check **I Accept**, and select **Next**.
 
@@ -316,27 +323,27 @@ You can use Windows Admin Center to make install and manage Azure IoT Edge for L
 
 7. On the **2. Deploy** tab, under **Select a target device**, click on your listed device to validate it meets the minimum requirements. Once its status is confirmed as supported, select **Next**.
 
-  ![Select Target Device](./media/target-device.png 'Select Target Device')
+  ![Select Target Device](./media/target-device.PNG 'Select Target Device')
 
 8. On the **2.2 Settings** tab, review the configuration settings of your deployment. Once you are satisfied with the settings, select **Next**.
 
 9. On the **2.3 Deployment** tab, you can watch the progress of the deployment. The full process includes downloading the Azure IoT Edge for Linux on Windows package, installing the package, configuring the host device, and setting up the Linux virtual machine. This process may take several minutes to complete. A successful deployment is pictured below.
 
-  ![Successful Deployment](./media/successful-deployment.png 'Successful Deployment')
+  ![Successful Deployment](./media/successful-deployment.PNG 'Successful Deployment')
 
 10. Select **Next: Connect**
 
 11. Go back to the Azure Portal in another browser tab (outside of the VM) and navigate to the **IoT Edge tab** of your **IoT Hub**.
 
-  ![IoT Edge Device](./media/IoT-Edge-Device-IoT-Hub.png 'IoT Edge Device')
+  ![IoT Edge Device](./media/IoT-Edge-Device-IoT-Hub.PNG 'IoT Edge Device')
 
 12. Click on the device ID of your device. Copy the Primary Connection String field.
 
-  ![Retrieve Primary Connection String](./media/primary-connection-string.png 'Retrieve Primary Connection String')
+  ![Retrieve Primary Connection String](./media/primary-connection-string.PNG 'Retrieve Primary Connection String')
 
 13. Paste it into the device connection string field in the Windows Admin Center. Then, choose Provisioning with the selected method.
 
-  ![Device Provisioning](./media/device-provisioning.png 'Device Provisioning')
+  ![Device Provisioning](./media/device-provisioning.PNG 'Device Provisioning')
 
 14. Select **Finish** once Azure IoT device has successfully provisioned.
 
@@ -344,7 +351,7 @@ You can use Windows Admin Center to make install and manage Azure IoT Edge for L
 
 1. Select your IoT Edge device from the list of connected devices in Windows Admin Center to connect to it.
 
-  ![Connect to Device](./media/connect-to-device.png 'Connect to Device')
+  ![Connect to Device](./media/connect-to-device.PNG 'Connect to Device')
 
 1. The device overview page displays some information about the device:
 
@@ -353,7 +360,7 @@ You can use Windows Admin Center to make install and manage Azure IoT Edge for L
 
 1. If you need to troubleshoot the IoT Edge service, use the **Command Shell** tool on the device page to ssh (secure shell) into the virtual machine and run the Linux commands.
 
-  ![Troubleshoot](./media/troubleshoot.png 'Troubleshoot')
+  ![Troubleshoot](./media/troubleshoot.PNG 'Troubleshoot')
 
     1. If you need to troubleshoot the service, retrieve the service logs.
 
@@ -374,7 +381,7 @@ You can use Windows Admin Center to make install and manage Azure IoT Edge for L
 > 2. Visit the networking tab at the bottom and wait until an IP address has been populated to ensure that your VM is running.
 
 
-## **Exercise 3: Set up Environment** ##
+## **Exercise 3: Set up Live Video Analytics** ##
 
 ### **Task 1: Download Tools and Resources** ###
 In the Virtual Machine tab install the following tools:
@@ -388,14 +395,14 @@ In the Virtual Machine tab install the following tools:
 
 ### **Task 2: Create Azure Resources** ###
 1. Go to [Azure portal](https://portal.azure.com) and select the Cloud Shell icon.
-  ![Cloud Shell](./media/cloud-shell.png 'Cloud Shell')
+  ![Cloud Shell](./media/cloud-shell.PNG 'Cloud Shell')
 
 2. If you're using Cloud Shell for the first time, you'll be prompted to select a subscription to create a storage account and a Microsoft Azure Files share. Select **Create storage** to create a storage account for your Cloud Shell session information. This storage account is separate from the account that the script will create to use with your Azure Media Services account.
 
 3. In the drop-down menu on the left side of the Cloud Shell window, select **Bash** as your environment.
 bash-environment
 
-  ![Bash Enviornment](./media/bash-environment.png 'Cloud Shell')
+  ![Bash Enviornment](./media/bash-environment.PNG 'Cloud Shell')
 
 4. Run the following command.
 
@@ -433,42 +440,42 @@ bash-environment
 1. In your VM, open Visual Studio Code.
 2. Open the Extensions tab (or press Ctrl+Shift+X) and search for Azure IoT Hub.
 
-  ![Azure IoT Hub Extension](./media/azure-iot-hub-extension.png 'Azure IoT Hub Extension')
+  ![Azure IoT Hub Extension](./media/azure-iot-hub-extension.PNG 'Azure IoT Hub Extension')
 
 3. **Install** Azure IoT Hub
 
 4. In the Extensions search, select the "gear icon" to open the menu and select **Extension Settings**.
-  ![Azure IoT Hub Extension Settings](./media/azure-iot-hub-extension-settings.png 'Azure IoT Hub Extension Settings')
+  ![Azure IoT Hub Extension Settings](./media/azure-iot-hub-extension-settings.PNG 'Azure IoT Hub Extension Settings')
 
 5. Search and enable “Show Verbose Message”.
 
-  ![Show Verbose Message](./media/show-verbose-message.png 'Show Verbose Message')
+  ![Show Verbose Message](./media/show-verbose-message.PNG 'Show Verbose Message')
 
 6. Select **View** > **Explorer**. Or, select Ctrl+Shift+E.
 7. In the lower-left corner of the **Explorer** tab, select **Azure IoT Hub**.
 
-  ![Visual Studio Azure IoT Hub](./media/vsc-azure-iot-hub.png 'Visual Studio Azure IoT Hub')
+  ![Visual Studio Azure IoT Hub](./media/vsc-azure-iot-hub.PNG 'Visual Studio Azure IoT Hub')
 
 8. Select the **More Options** icon to see the context menu. Then select **Set IoT Hub Connection String**.
 9. In the Azure Portal, navigate to **IoT Hub** >> **Settings** >> **Shared access policies** >> Select the Policy for **iothubowner** and copy **Connection string-primary key**
 
-  ![Primary Connection String](./media/iothubowner-primaryconnectionstring.png 'Primary Connection String')
+  ![Primary Connection String](./media/iothubowner-primaryconnectionstring.PNG 'Primary Connection String')
 
 10. Paste in visual studio code.
 
-  ![Paste in Connection String](./media/paste-connection-string.png 'Paste in Connection String')
+  ![Paste in Connection String](./media/paste-connection-string.PNG 'Paste in Connection String')
 
 11. Notification on the bottom right in Visual Studio should alert you that the IoT Hub Connection String has been updated.
 
-  ![Notification Update](./media/notification-update.png 'Notification Update')
+  ![Notification Update](./media/notification-update.PNG 'Notification Update')
 
 12. At this point you should sign into your Azure account in Visual Studio if you haven't done so already by selecting the "Azure" icon on the left hand panel.
 
-  ![Azure Panel](./media/azure-panel.png 'Azure Panel')
+  ![Azure Panel](./media/azure-panel.PNG 'Azure Panel')
 
 13. Select your IoT Hub under EndPoints.
 
-  ![Endpoints](./media/Endpoints.png 'Endpoints')
+  ![Endpoints](./media/Endpoints.PNG 'Endpoints')
 
 
 ### **Task 4: Deploy Modules on Windows Host** ###
@@ -477,26 +484,26 @@ bash-environment
 3. Save the file as **deployment.eflow_demo.amd64.json** in your **JSON** folder.
 4. Open the **JSON folder** in Visual Studio in the explorer tab.
 
-  ![Folder](./media/Folder.png 'Folder')
+  ![Folder](./media/Folder.PNG 'Folder')
 
 3. In a browser window, navigate to the deployment.JSON file: https://github.com/fcabrera23/EFLOW_Demo/blob/main/deployment.eflow_demo.amd64.json
 4. Select "Raw"
 
-  ![Raw Input](./media/RAW.png 'Raw Input')
+  ![Raw Input](./media/RAW.PNG 'Raw Input')
 
 5. Copy and Paste into new file - and save.
 6. Right click on the file and select **Create Deployment for Single Device**
 
 
-  ![Deployment for Single Device](./media/deployment-single-device.png 'Deployment for Single Device')
+  ![Deployment for Single Device](./media/deployment-single-device.PNG 'Deployment for Single Device')
 
 7. Select your IoT Hub Device
 
-  ![Select IoT Hub Device](./media/select-iot-hub-device.png 'Select IoT Hub Device')
+  ![Select IoT Hub Device](./media/select-iot-hub-device.PNG 'Select IoT Hub Device')
 
 8. You should see that your deployment has succeeded.
 
-  ![Output Windows Deployment Succeeded Message](./media/output-window-deployment-succeeded.png 'Output Windows Deployment Succeeded Message')
+  ![Output Windows Deployment Succeeded Message](./media/output-window-deployment-succeeded.PNG 'Output Windows Deployment Succeeded Message')
 
 9. Now the modules are deployed, but no media graphs are active. So we must enable graphics.
 
@@ -518,9 +525,9 @@ bash-environment
 
     Identify the EFLOW VM IP `sudo ifconfig`
 
-    ![EFLOW VM IP](./media/eth0.png 'EFLOW VM IP')
+    ![EFLOW VM IP](./media/eth0.PNG 'EFLOW VM IP')
 
-    Run : `wget https://raw.githubusercontent.com/Azure/live-video-analytics/master/edge/setup/prep_device.sh > prep_device.sh`
+    Run : `wget https://raw.githubusercontent.com/Azure/live-video-analytics/master/edge/setup/prep_device.sh`
 
     Run: `sudo sh prep_device.sh`
 
@@ -532,7 +539,7 @@ bash-environment
 
 certificate-transfer
 
-  ![EFLOW VM IP](./media/certificate-transfer.png 'EFLOW VM IP')
+  ![EFLOW VM IP](./media/certificate-transfer.PNG 'EFLOW VM IP')
 
 
 12. Use PowerShell on the Windows host to get the EFLOW VM IP address.  
@@ -566,49 +573,129 @@ certificate-transfer
 >
 > To save the file and exit nano, press <kbd>CTRL</kbd>+<kbd>x</kbd>, confirm save and exit with <kbd>Y</kbd> and press <kbd>Enter</kbd>. This concludes the provisioning and configuration.
 
+  ![Update Certificates](./media/certificates-update.PNG 'Update Certificates')
+
 4. Restart IoT Edge by running the following command.
     ```base
     sudo systemctl restart iotedge
     ```
 
 ### **Task 6: Test Video Stream** ###
+1. Open VLC media player
+2. Navigate to **Media** >> **Open Network Stream**
+3. Input the following as the **network URL**
+  ```
+  rtsp://<EFLOW VM IP>:554/media/lots_015.mkv
+  ```
+  ![Open Media](./media/open-media.PNG 'Open Media')
 
+4. Select play to view the video stream
 
 ### **Task 7: Enable Live Video Analytics: Inferencing** ###
-1. In Visual Studio Code, open the **Extensions** tab (or press Ctrl+Shift+X) and search for Azure IoT Hub.
-2. **Install** Live Video Analytics - once installed you will the Live Video Analytics Icon appear on the left bar
+1. In Visual Studio Code, open the **Extensions** tab (or press Ctrl+Shift+X) and search for **Live Video Analytics on IoT Edge**.
+    ![Install LVA](./media/install-lva.PNG 'Install LVA')
+
+2. **Install** Live Video Analytics on IoT Edge - once installed you will the Live Video Analytics Icon appear on the left bar
+  LVA-Icon-Left
+
+    ![LVA Icon](./media/LVA-Icon-Left.PNG 'LVA Icon')
+
 3. Create an Azure Child Device
-  * Navigate to the **Azure Portal**
-  * Navigate to your **IoT Hub**
-  * Navigate to **IoT Devices**
-  * Select **+ New** to create a new device
-    * [Give your Device a name]
-    * Authentication Type: **Symmetric key**
-    * Check **Auto-generate keys**
-    * Connect this device to an IoT Hub: **Enable**
-    * Select your Parent IoT Edge Device
-4. Add connection string in Live Video Analytics extension in Visual Studio
-  * Azure Portal >> IoT Hub >> Share access policies >> select **iothubowner** >> copy **Connection string-primary key**
-  * Enter IoT Hub connection string
-  * Select your IoT Edge Device
-  * Select the Live Video Analytics module: **lvaedge**
+4. Navigate to the **Azure Portal** >> **IoT Hub** >> **IoT Devices**
+5. Select **+ New** to create a new device
 
-  You should see that the deployment has started and succeeded in the output window.
+  ![Add New Child Device](./media/new-child-device.PNG 'Add New Child Device')
+6. Fill in the following parameters for your new device:
+  | Setting | Value |
+  |-|-|
+  | Device ID | Give your device a name |
+  | Authentication type | **Symmetric key** |
+  | Autogenerate | Default - Keep Selected |
+  | Connect this device to an IoT Hub | **Enable** |
+  | IoT Hub to Use | Select your Parent IoT Edge Device |
 
-5. Navigate to the Azure Iot Hub tab in Visual Studio, select Devices >> Modules >> lvaEdge, right click and **Invoke Module Direct Method**
-6. Copy the [lva_graph_topology_track.JSON](https://github.com/fcabrera23/EFLOW_Demo/blob/main/lva_graph_topology_truck.json)
-7. Paste the payload in Visual Studio (black bar on the top) and hit enter
+  ![Create Azure Child Device Parameters](./media/create-azure-child-device.PNG 'Create Azure Child Device Parameters')
+
+4. Add connection string in Live Video Analytics extension in Visual Studio\
+
+  ![Enter Connection String for LVA](./media/lva-enter-connection-string.PNG 'Enter Connection String for LVA')
+
+5. **Azure Portal** >> **IoT Hub** >> **Share access policies** >> select **iothubowner** >> copy **Connection string-primary key**
+
+  ![Copy Primary Connection Key](./media/copy-primary-connection-key.PNG 'Copy Primary Connection Key')
+
+
+6. Enter IoT Hub connection string into Visual Studio
+
+  ![Copy Primary Connection Key](./media/enter-primary-key-in-lva.PNG 'Copy Primary Connection Key')
+
+7. Select your IoT Edge **PARENT** Device
+
+8. Select the Live Video Analytics module: **lvaedge**
+
+9. You should now see this in the Live Video Analytics pane.
+
+  ![LVA Status](./media/LVA-Pane.PNG 'LVA Status')
+
+5. Navigate to the **Azure Iot Hub** tab in Visual Studio >> **Devices** >> **Modules** >> **lvaEdge** right click and select **Invoke Module Direct Method**
+
+  ![Invoke Module Direct Method](./media/Invoke-Module-Direct-Method.PNG 'Invoke Module Direct Method')
+
+6. Enter [Method name] as *GraphTopologySet*
+
+  ![Graph Topology Set](./media/graph-topology-set.PNG 'Graph Topology Set')
+
+7. Copy the [lva_graph_topology_track.JSON](https://github.com/fcabrera23/EFLOW_Demo/blob/main/lva_graph_topology_truck.json)
+
+8. Paste the [Payload] (lva_group_topology_track) in Visual Studio (black bar on the top) and hit enter.
+
+  ![Paste Payload](./media/paste-payload.PNG 'Graph Topology Set')
+
 8. Navigate to the Live Video Analytics tab and you should see **InferencingwithOpenVino** under Graph topologies
-9. Select **InferecingwithOpenVino** to create a new graph instance
-  * Instance Name: [Create a name]
-  * rtspUrl: rtsp://rtspsim:554/media/lots_015.mkv'
-  * Select **Save** at the top right corner
-10. Under the graph topology, InferecingwithOpenVino, you should see a new instance has been created.
-11. Navigate back to the Azure IoT Hub in Visual Studio >> your IoT Edge Device, right click and select **Start Monitoring Built-in Event Endpoint**
-12. Navigate to the LVA tab in visual studio, and right click on your newly created instance and select **Activate Graph Instance**
+
+  ![InferencingwithOpenVino](./media/LVA-graph-top.PNG 'InferencingwithOpenVino')
+
+9. Select **+** next to **InferecingwithOpenVino** to create a new graph instance
+
+  ![Create an Instance](./media/Create-Instance.PNG 'Create an Instance')
+
+10. Input the following parameters:
+
+| Setting | Value |
+|-|-|
+| Instance name | Give your device a name |
+| rtspUrl | **rtsp://rtspsim:554/media/lots_015.mkv** |
+
+  ![Create a New Graph Instance](./media/create-new-graph-instance.PNG 'Create a New Graph Instance')
+
+11. Select **Save** at the top right corner.
+
+10. Under the graph topology, InferecingwithOpenVino, you should see your new instance has been created.
+
+![New Instance Created](./media/new-instance-created.PNG 'New Instance Created')
+
+11. Navigate back to the **Azure IoT Hub** in Visual Studio >> **Device** > **IoT Edge Device** right click and select **Start Monitoring Built-in Event Endpoint**
+
+  ![Start Monitoring Built-in Event Endpoint](./media/monitoring-built-in-endpoint.PNG 'Start Monitoring Built-in Event Endpoint')
+
+12. Navigate aback to the live video analytics tab in visual studio, and right click on your newly created instance and select **Activate Graph Instance**
+
+  ![Activate Graph Instance](./media/activate-graph-instance.PNG 'Activate Graph Instance')
+
 13. You should receive a notification that you have successfully activated the instance
+success-message
+
+  ![Activate Graph Instance](./media/success-message.PNG 'Activate Graph Instance')
+
 14. In the output window you will now the inferencing occurring for each bounded box of time.
+output
+
+  ![Output Window](./media/output-message-window.PNG 'Output Window')
+
 15. Right click on the instance and select **Deactivate Graph Instance**
+
+  ![Deactivate Graph Instance](./media/deactivate-graph-instance.PNG 'Deactivate Graph Instance')
+
 
 ### **Task 8: Connect Windows Video with Linux Inferencing** ###
 
@@ -618,12 +705,32 @@ Recap:
 
 Next step: Connect the inferences with the Windows hub for a complete tool
 
-1. Navigate to the **publish** folder > select the **EFLOW+LVA** application and run it as an admin
-2. Select **run anyway** in case it doesn't immediately run
+1. Navigate to the **publish** folder > select the **EFLOW+LVA** application and run it as an administrator
+
+  ![Run Application as Admin](./media/eflow-lva-run-admin.PNG 'Run Application as Admin')
+
+2. Select **More info** > **Run anyway** in case Microsoft Defender SmartScreen prevents the app from running.
+  ![Microsoft Defender SmartScreen](./media/ms-defender.PNG 'Microsoft Defender SmartScreen')
+
 3. Fill in the remaining parameters:
-* IoT Hub Connection string: [Azure Portal >> IoT Device ]
-* EFLOW VM Hostname/IP:[Same as above]
-* Certificates Path: [Enter the path to the certificates folder] Tip: go to folder, right click and select properties to see file path
-* RTSP Connection String: rtsp://[EFLOW VM Hostname/IP]/media/lots_015.mkv
+
+  | Setting | Value |
+  |-|-|
+  | IoT Hub Device Connection String | Azure Portal >> IoT Hub >> IoT Device >> Select **Device ID** >> Copy **Primary Connection String** |
+  | EFLOW VM Hostname/IP |  |
+  | Certificate Path (azure-iot-test-only.root.ca.cert.pem) | [Enter the path to the certificates folder] Tip: go to folder, right click and select properties to see file path |
+  | RTSP Connection String | rtsp://[EFLOW VM Hostname/IP]/media/lots_015.mkv |
 
 4. Select *connect* - if the connection did not work - please see error message.
+
+
+## **Exercise 4: Clean Up** ##
+
+### **Task 1: Delete resources** ###
+When you're done using the virtual network and VM, delete the resource group and all of the resources it contains:
+
+1. Search for and select **myResourceGroup**.
+
+1. Select **Delete resource group**.
+
+1. Enter **myResourceGroup** for **TYPE THE RESOURCE GROUP NAME** and select **Delete**.
