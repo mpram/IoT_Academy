@@ -144,7 +144,12 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
 
 1. Navigate to the Azure Portal Home and select your newly created virtual machine.
 
-2. In the VM menu bar, select **Connect**, then select **Bastion**.
+2. Make sure you that you start your Virtual Machine and that the status is **Running**.
+
+>[!TIP]
+> You will not be able to start the Bastion connection if the VM has not been started and is running. So give it a minute or two to finish updating and wait for the status to say "Running".
+
+3. In the VM menu bar, select **Connect**, then select **Bastion**.
 
     <kbd><img src="./media/Connect-VM-Bastion.PNG" /></kbd>
 
@@ -178,7 +183,8 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
 We are going to enable Hyper-V via PowerShell in the newly created VM.
 
 1. Search for **PowerShell** and right click to select **Run as Administrator**.
-  ![Run PowerShell as an Administrator](./media/PowerShell-Admin.PNG 'Run PowerShell as an Administrator')
+
+    <kbd><img src="./media/PowerShell-Admin.PNG" /></kbd>
 
 2. Run the following command:
 
@@ -186,23 +192,25 @@ We are going to enable Hyper-V via PowerShell in the newly created VM.
   Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
   ```
 
-  If the command couldn't be found, make sure you're running PowerShell as Administrator.
+  If the command couldn't be found, make sure you're running PowerShell as an **Administrator**.
 
 3. When the installation has completed, reboot the VM by typing in **Y**.
 
-  ![Hyper-V-Enabled](./media/Hyper-V-Enabled.PNG 'Hyper-V-Enabled')
+    <kbd><img src="./media/Hyper-V-Enabled.PNG" /></kbd>
 
 4. Reconnect to the VM.
 
+>[!NOTE]
+> If you are not promoted to restart the VM within PowerShell. Please close the Bastion Host tab, and return to the Azure Portal, and select your VM. At this point you can either "restart your VM" and reconnect via Bastion. OR you can *STOP* the VM and *Start* the VM again.
+
 ### **Task 2: Set up Azure IoT Hub** ###
 
-These steps can be done outside of the VM.
+*These steps can be done outside of the VM or you can open up a browser window in the Azure Window and do everything from within the VM.*
 
 1. Navigate to the Azure Portal, select the **+ Create a resource** button, and then enter *IoT Hub* in the **Search the Marketplace** field.
 
 2. Select **IoT Hub** from the search results, and then select **Create**.
-
-  ![Create IoT Hub](./media/IoTHub.PNG 'Create IoT Hub')
+    <kbd><img src="./media/IoTHub.PNG" /></kbd>
 
 3. On the **Basics** tab, complete the fields as follows:
 
@@ -214,17 +222,18 @@ These steps can be done outside of the VM.
 
    - **IoT Hub Name**: Enter a name for your hub. This name must be globally unique.
 
-      >![IMPORTANT]
-      >
-      > Because the IoT hub will be publicly discoverable as a DNS endpoint, be sure to avoid entering any sensitive or personally identifiable information when you name it.
+   >[!IMPORTANT]
+   >
+   > Because the IoT hub will be publicly discoverable as a DNS endpoint, be sure to avoid entering any sensitive or personally identifiable information when you name it.
 
-  ![IoT Hub Basics](./media/IoTHub-Basics.PNG 'IoT Hub Basics Tab')
+   <kbd><img src="./media/IoTHub-Basics.PNG" /></kbd>
+
 
 4. Select **Next: Networking** to continue creating your hub.
 
    Choose the endpoints that can connect to your IoT Hub. You can select the default setting **Public endpoint (all networks)**.
 
-   ![IoT Hub networking](./media/IoTHub-Networking.PNG 'IoT Hub Networking Tab')
+   <kbd><img src="./media/IoTHub-Networking.PNG" /></kbd>
 
 5. Select **Next: Management** to continue creating your hub.
 
@@ -236,21 +245,21 @@ These steps can be done outside of the VM.
 
 8. Select **Create** to create your new hub.
 
-  ![IoT Hub Review Tab](./media/IoTHub-Review.PNG 'IoT Hub Review + Create Tab')
+    <kbd><img src="./media/IoTHub-Review.PNG" /></kbd>
 
 9. It will take a few minutes for your Hub to deploy.
 
-  ![IoT Hub Deployment](./media/IoTHub-Deploy.PNG 'IoT Hub Deployment')
+    <kbd><img src="./media/IoTHub-Deploy.PNG" /></kbd>
 
 ### **Task 3: Register an IoT Hub Device** ###
 
 1. Navigate to your IoT Hub and select **IoT Edge** from the menu.
 
-  ![Select IoT Edge](./media/IoTHub-IoTEdge.PNG 'Select IoT Edge')
+    <kbd><img src="./media/IoTHub-IoTEdge.PNG" /></kbd>
 
 2. Select **Add an IoT Edge device**.
 
-  ![Add IoT Edge Device](./media/Add-IoTEdge-Device.PNG 'Add IoT Edge Device')
+    <kbd><img src="./media/Add-IoTEdge-Device.PNG" /></kbd>
 
 3. Create a Device - Select or Enter:
 
@@ -263,7 +272,7 @@ These steps can be done outside of the VM.
 
 4. Select **Save**.
 
-  ![Save IoT Edge Device](./media/Create-Device.PNG 'Save IoT Edge Device')
+    <kbd><img src="./media/Create-Device.PNG" /></kbd>
 
 ### **Task 4: Download Windows Admin Center** ###
 Back to the Windows VM, we need to download Windows Admin Center.
@@ -272,30 +281,29 @@ Back to the Windows VM, we need to download Windows Admin Center.
 
 2. A prompt at the bottom of the screen should appear. Select **Run**
 
-  ![Download Windows Admin Center](./media/download-WAC.PNG 'Download Windows Admin Center')
+    <kbd><img src="./media/download-WAC.PNG" /></kbd>
 
 3. Run the downloaded installer and follow the install wizard prompts to install Windows Admin Center.
 
 4. Once installed, use a supported browser to open Windows Admin Center. Supported browsers include Microsoft Edge (Windows 10, version 1709 or later), Google Chrome, and Microsoft Edge Insider. Search **Windows Admin Center**
 
-  ![Open Windows Admin Center](./media/Open-WAC.PNG 'Open Windows Admin Center')
+    <kbd><img src="./media/Open-WAC.PNG" /></kbd>
 
 5. On the first use of Windows Admin Center, you will be prompted to select a certificate to use. Select **Windows Admin Center Client** as your certificate.
 
 6. It is time to install the Azure IoT Edge extension. Select the gear icon in the top right of the Windows Admin Center dashboard.
 
-  ![Open Windows Admin Center](./media/select-settings-gear.PNG 'Open Windows Admin Center')
-
+    <kbd><img src="./media/select-settings-gear.PNG" /></kbd>
 
 7. On the **Settings** menu, under **Gateway**, select **Extensions**.
 
 8. On the **Available extensions** tab, find **Azure IoT Edge** in the list of extensions. Choose it, and select the **Install** prompt above the list of extensions.
 
-  ![Install Azure IoT Edge](./media/install-azure-iot-edge.PNG 'Install Azure IoT Edge')
+    <kbd><img src="./media/install-azure-iot-edge.PNG" /></kbd>
 
 9. After the installation completes, you should see Azure IoT Edge in the list of installed extensions on the **Installed extensions** tab.
 
-  ![Extension Installed](./media/installed.PNG 'Extension Installed')
+    <kbd><img src="./media/installed.PNG" /></kbd>
 
 ### **Task 5: Create a new deployment** ###
 
@@ -305,15 +313,15 @@ You can use Windows Admin Center to make install and manage Azure IoT Edge for L
 
 1. Select **Add**.
 
-  ![Add](./media/Add.PNG 'Add')
+    <kbd><img src="./media/Add.PNG" /></kbd>
 
 2. On the **Add or create resources** pane, locate the **Azure IoT Edge** tile. Select **Create new** to install a new instance of Azure IoT Edge for Linux on Windows on a device.
 
-  ![Create New Azure IoT Edge Resource](./media/create-new.PNG 'Create New Azure IoT Edge Resource')
+    <kbd><img src="./media/create-new.PNG" /></kbd>
 
 3. The **Create an Azure IoT Edge for Linux on Windows deployment** pane will open. On the **1. Getting Started** tab, verify that your target device meets the minimum requirements, and select **Next**.
 
-  ![Getting Started - Prerequisites](./media/pre-req.PNG 'Getting Started - Prerequisites')
+    <kbd><img src="./media/pre-req.PNG" /></kbd>
 
 4. Review the license terms, check **I Accept**, and select **Next**.
 
@@ -321,29 +329,31 @@ You can use Windows Admin Center to make install and manage Azure IoT Edge for L
 
 6. Select **Next: Deploy**.
 
-7. On the **2. Deploy** tab, under **Select a target device**, click on your listed device to validate it meets the minimum requirements. Once its status is confirmed as supported, select **Next**.
+7. On the **2.1 Deploy** tab, under **Select a target device**, click on your listed device to validate it meets the minimum requirements. Once its status is confirmed as supported, select **Next**.
 
-  ![Select Target Device](./media/target-device.PNG 'Select Target Device')
+    <kbd><img src="./media/target-device.PNG" /></kbd>
 
-8. On the **2.2 Settings** tab, review the configuration settings of your deployment. Once you are satisfied with the settings, select **Next**.
+8. On the **2.2 Settings** tab, change the **Memory and cores** configuration to **4 GB, 2 cores (Standard_A2_v2)** and select **Next**.
+
+    <kbd><img src="./media/setting-configurations1.PNG" /></kbd>
 
 9. On the **2.3 Deployment** tab, you can watch the progress of the deployment. The full process includes downloading the Azure IoT Edge for Linux on Windows package, installing the package, configuring the host device, and setting up the Linux virtual machine. This process may take several minutes to complete. A successful deployment is pictured below.
 
-  ![Successful Deployment](./media/successful-deployment.PNG 'Successful Deployment')
+    <kbd><img src="./media/successful-deployment.PNG" /></kbd>
 
 10. Select **Next: Connect**
 
 11. Go back to the Azure Portal in another browser tab (outside of the VM) and navigate to the **IoT Edge tab** of your **IoT Hub**.
 
-  ![IoT Edge Device](./media/IoT-Edge-Device-IoT-Hub.PNG 'IoT Edge Device')
+    <kbd><img src="./media/IoT-Edge-Device-IoT-Hub.PNG" /></kbd>
 
 12. Click on the device ID of your device. Copy the Primary Connection String field.
 
-  ![Retrieve Primary Connection String](./media/primary-connection-string.PNG 'Retrieve Primary Connection String')
+    <kbd><img src="./media/primary-connection-string.PNG" /></kbd>
 
 13. Paste it into the device connection string field in the Windows Admin Center. Then, choose Provisioning with the selected method.
 
-  ![Device Provisioning](./media/device-provisioning.PNG 'Device Provisioning')
+    <kbd><img src="./media/device-provisioning.PNG" /></kbd>
 
 14. Select **Finish** once Azure IoT device has successfully provisioned.
 
@@ -351,24 +361,25 @@ You can use Windows Admin Center to make install and manage Azure IoT Edge for L
 
 1. Select your IoT Edge device from the list of connected devices in Windows Admin Center to connect to it.
 
-  ![Connect to Device](./media/connect-to-device.PNG 'Connect to Device')
+    <kbd><img src="./media/connect-to-device.PNG" /></kbd>
 
-1. The device overview page displays some information about the device:
+2. The device overview page displays some information about the device:
 
-    1. The **IoT Edge Module List** section shows running modules on the device. When the IoT Edge service starts for the first time, you should only see the **edgeAgent** module running. The edgeAgent module runs by default and helps to install and start any additional modules that you deploy to your device.
-    1. The **IoT Edge Status** section shows the service status, and should be reporting **active (running)**.
+  * The **IoT Edge Module List** section shows running modules on the device. When the IoT Edge service starts for the first time, you should only see the **edgeAgent** module running. The edgeAgent module runs by default and helps to install and start any additional modules that you deploy to your device.
 
-1. If you need to troubleshoot the IoT Edge service, use the **Command Shell** tool on the device page to ssh (secure shell) into the virtual machine and run the Linux commands.
+  * The **IoT Edge Status** section shows the service status, and should be reporting **active (running)**.
 
-  ![Troubleshoot](./media/troubleshoot.PNG 'Troubleshoot')
+3. If you need to troubleshoot the IoT Edge service, use the **Command Shell** tool on the device page to ssh (secure shell) into the virtual machine and run the Linux commands.
 
-    1. If you need to troubleshoot the service, retrieve the service logs.
+  <kbd><img src="./media/troubleshoot.PNG" /></kbd>
+
+    * If you need to troubleshoot the service, retrieve the service logs by inputting the following command:
 
        ```bash
        journalctl -u iotedge
        ```
 
-    2. Use the `check` tool to verify configuration and connection status of the device.
+    * Use the `check` tool to verify configuration and connection status of the device by using the following command:
 
        ```bash
        sudo iotedge check
