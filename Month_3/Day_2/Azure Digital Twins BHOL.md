@@ -282,7 +282,7 @@ In this task, you will set up a new Azure Digital twins instance
      ```
     
  
-     2. Then run **npm-install** to download all the required dependencies
+     2. Then run **npm install** to download all the required dependencies
 
 
 
