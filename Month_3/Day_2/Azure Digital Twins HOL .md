@@ -23,10 +23,7 @@ Here
 - [Exercise #4: Clean up](#Exercise-4-Clean-up)
 
 
-
-Click Yes, in the Network sign allowing your Virtual Machine to be discoverable by other devices in your network.
-
-
+</br>
 
 
 ## **Exercise #1: Configure Sample Application** ##
@@ -37,12 +34,12 @@ Click Yes, in the Network sign allowing your Virtual Machine to be discoverable 
 
   ![ADT Hostname](./media/adt-hostname.png 'ADT Hostname')
 
-2. Next, go to Virtual Machine created during BHOL section, connect using RDP. Go to the [IoT Academy github](https://github.com/mpram/IoT_Academy) and download the code as a zip file, **Download zip**
+2. Next, go to the Virtual Machine created during BHOL section, connect using RDP. Go to the [IoT Academy github](https://github.com/mpram/IoT_Academy) and download the code as a zip file, **Download zip**
 
  ![ADT Hostname](./media/download-code.png 'ADT Hostname')
 
 
-Look for the zip just downloaded, unzip the material and navigate into **AdtSampleApp** Folder **(Month_3/day_2/code)**. MAke sure is unzip also, right click on **AdtE2ESample.sln** and open with  **in Visual Studio 2019**.
+Look for the zip just downloaded, unzip the material and navigate into **AdtSampleApp** Folder **(Month_3/day_2/code)**. Right click on **AdtE2ESample.sln** and open with  **in Visual Studio 2019**.
 
 </br>
 
