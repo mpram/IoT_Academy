@@ -1,0 +1,86 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\iotacademy\\Downloads\\digital-twins-samples-master\\digital-twins-samples-master\\DeviceSimulator\\DeviceSimulator\\DeviceSimulator.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\iotacademy\\Downloads\\digital-twins-samples-master\\digital-twins-samples-master\\DeviceSimulator\\DeviceSimulator\\DeviceSimulator.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\iotacademy\\Downloads\\digital-twins-samples-master\\digital-twins-samples-master\\DeviceSimulator\\DeviceSimulator\\DeviceSimulator.csproj",
+        "projectName": "DeviceSimulator",
+        "projectPath": "C:\\Users\\iotacademy\\Downloads\\digital-twins-samples-master\\digital-twins-samples-master\\DeviceSimulator\\DeviceSimulator\\DeviceSimulator.csproj",
+        "packagesPath": "C:\\Users\\iotacademy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\iotacademy\\Downloads\\digital-twins-samples-master\\digital-twins-samples-master\\DeviceSimulator\\DeviceSimulator\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\iotacademy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Azure.Messaging.EventHubs": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
+            "Microsoft.Azure.Devices": {
+              "target": "Package",
+              "version": "[1.27.3, )"
+            },
+            "Microsoft.Azure.Devices.Client": {
+              "target": "Package",
+              "version": "[1.32.0, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[4.7.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

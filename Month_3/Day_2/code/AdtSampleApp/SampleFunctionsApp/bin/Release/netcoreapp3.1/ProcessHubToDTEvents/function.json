@@ -1,0 +1,13 @@
+{
+  "generatedBy": "Microsoft.NET.Sdk.Functions-3.0.9",
+  "configurationSource": "attributes",
+  "bindings": [
+    {
+      "type": "eventGridTrigger",
+      "name": "eventGridEvent"
+    }
+  ],
+  "disabled": false,
+  "scriptFile": "../bin/SampleFunctionsApp.dll",
+  "entryPoint": "SampleFunctionsApp.ProcessHubToDTEvents.Run"
+}
