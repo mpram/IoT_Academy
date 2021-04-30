@@ -394,26 +394,30 @@ You can use Windows Admin Center to make install and manage Azure IoT Edge for L
 
 ## **Exercise 3: Set up Live Video Analytics** ##
 
+This exercise will be completed in the Azure Virtual Machine as well.
+
 ### **Task 1: Download Tools and Resources** ###
-In the Virtual Machine tab install the following tools:
+
+In your **Azure Virtual Machine** install the following tools:
 * Visual Studio Code: https://code.visualstudio.com/Download
 * .Net Core 3.1 SDK: https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-desktop-3.1.14-windows-x64-installer
 * Download VLC media player: https://www.videolan.org/
+
+Unzip the following folders and **move to your Azure VM's Desktop**:
 * Windows Application: https://microsoft-my.sharepoint-df.com/:u:/p/fcabrera/EUvyooP-wZxMn4L1Hzjy8K4By7bDvrsLiV6EF-LZGGsOfw?e=SXZ3MD
-  * Unzip folder and move to Desktop
 * Certificates: https://microsoft-my.sharepoint-df.com/:u:/p/fcabrera/EdBZVhNFfpJLro5h7hJ8pjgBLl5qaXZ7fE8gn8GwsBbtTw?e=GEns2F
-  * Unzip folder and move to Desktop
 
 ### **Task 2: Create Azure Resources** ###
 1. Go to [Azure portal](https://portal.azure.com) and select the Cloud Shell icon.
-  ![Cloud Shell](./media/cloud-shell.PNG 'Cloud Shell')
+
+    <kbd><img src="./media/cloud-shell.PNG" /></kbd>
 
 2. If you're using Cloud Shell for the first time, you'll be prompted to select a subscription to create a storage account and a Microsoft Azure Files share. Select **Create storage** to create a storage account for your Cloud Shell session information. This storage account is separate from the account that the script will create to use with your Azure Media Services account.
 
 3. In the drop-down menu on the left side of the Cloud Shell window, select **Bash** as your environment.
 bash-environment
 
-  ![Bash Enviornment](./media/bash-environment.PNG 'Cloud Shell')
+    <kbd><img src="./media/bash-environment.PNG" /></kbd>
 
 4. Run the following command.
 
@@ -451,74 +455,81 @@ bash-environment
 1. In your VM, open Visual Studio Code.
 2. Open the Extensions tab (or press Ctrl+Shift+X) and search for Azure IoT Hub.
 
-  ![Azure IoT Hub Extension](./media/azure-iot-hub-extension.PNG 'Azure IoT Hub Extension')
+    <kbd><img src="./media/azure-iot-hub-extension.PNG" /></kbd>
 
 3. **Install** Azure IoT Hub
 
 4. In the Extensions search, select the "gear icon" to open the menu and select **Extension Settings**.
-  ![Azure IoT Hub Extension Settings](./media/azure-iot-hub-extension-settings.PNG 'Azure IoT Hub Extension Settings')
+
+    <kbd><img src="./media/azure-iot-hub-extension-settings.PNG" /></kbd>
 
 5. Search and enable “Show Verbose Message”.
 
-  ![Show Verbose Message](./media/show-verbose-message.PNG 'Show Verbose Message')
+    <kbd><img src="./media/show-verbose-message.PNG" /></kbd>
 
 6. Select **View** > **Explorer**. Or, select Ctrl+Shift+E.
+
 7. In the lower-left corner of the **Explorer** tab, select **Azure IoT Hub**.
 
-  ![Visual Studio Azure IoT Hub](./media/vsc-azure-iot-hub.PNG 'Visual Studio Azure IoT Hub')
+    <kbd><img src="./media/vsc-azure-iot-hub.PNG" /></kbd>
 
 8. Select the **More Options** icon to see the context menu. Then select **Set IoT Hub Connection String**.
+
 9. In the Azure Portal, navigate to **IoT Hub** >> **Settings** >> **Shared access policies** >> Select the Policy for **iothubowner** and copy **Connection string-primary key**
 
-  ![Primary Connection String](./media/iothubowner-primaryconnectionstring.PNG 'Primary Connection String')
+    <kbd><img src="./media/iothubowner-primaryconnectionstring.PNG" /></kbd>
 
 10. Paste in visual studio code.
 
-  ![Paste in Connection String](./media/paste-connection-string.PNG 'Paste in Connection String')
+    <kbd><img src="./media/paste-connection-string.PNG" /></kbd>
 
 11. Notification on the bottom right in Visual Studio should alert you that the IoT Hub Connection String has been updated.
 
-  ![Notification Update](./media/notification-update.PNG 'Notification Update')
+    <kbd><img src="./media/notification-update.PNG" /></kbd>
 
-12. At this point you should sign into your Azure account in Visual Studio if you haven't done so already by selecting the "Azure" icon on the left hand panel.
+12. At this point you should sign into your Azure account in Visual Studio if you haven't done so already by selecting the **Azure** icon on the left hand panel.
 
-  ![Azure Panel](./media/azure-panel.PNG 'Azure Panel')
+  <kbd><img src="./media/azure-panel.PNG" /></kbd>
 
-13. Select your IoT Hub under EndPoints.
+13. Select your IoT Hub under **EndPoints**.
 
-  ![Endpoints](./media/Endpoints.PNG 'Endpoints')
+  <kbd><img src="./media/Endpoints.PNG" /></kbd>
 
 
 ### **Task 4: Deploy Modules on Windows Host** ###
 1. Create a new folder on your Desktop called **JSON**
+
 2. In Visual Studio navigate to **File** >> **New File**.
+
 3. Save the file as **deployment.eflow_demo.amd64.json** in your **JSON** folder.
+
 4. Open the **JSON folder** in Visual Studio in the explorer tab.
 
-  ![Folder](./media/Folder.PNG 'Folder')
+    <kbd><img src="./media/Folder.PNG" /></kbd>
 
-3. In a browser window, navigate to the deployment.JSON file: https://github.com/fcabrera23/EFLOW_Demo/blob/main/deployment.eflow_demo.amd64.json
-4. Select "Raw"
+5. In a browser window, navigate to the deployment.JSON file: https://github.com/fcabrera23/EFLOW_Demo/blob/main/deployment.eflow_demo.amd64.json
 
-  ![Raw Input](./media/RAW.PNG 'Raw Input')
+6. Select "Raw"
 
-5. Copy and Paste into new file - and save.
-6. Right click on the file and select **Create Deployment for Single Device**
+  <kbd><img src="./media/RAW.PNG" /></kbd>
 
+7. **Copy** the raw input and **Paste** into new file - and **save**.
 
-  ![Deployment for Single Device](./media/deployment-single-device.PNG 'Deployment for Single Device')
+8. Right click on the file and select **Create Deployment for Single Device**
 
-7. Select your IoT Hub Device
+    <kbd><img src="./media/deployment-single-device.PNG" /></kbd>
 
-  ![Select IoT Hub Device](./media/select-iot-hub-device.PNG 'Select IoT Hub Device')
+9. Select your IoT Hub Device
 
-8. You should see that your deployment has succeeded.
+    <kbd><img src="./media/select-iot-hub-device.PNG" /></kbd>
 
-  ![Output Windows Deployment Succeeded Message](./media/output-window-deployment-succeeded.PNG 'Output Windows Deployment Succeeded Message')
+10. You should see that your deployment has succeeded.
 
-9. Now the modules are deployed, but no media graphs are active. So we must enable graphics.
+    <kbd><img src="./media/output-window-deployment-succeeded.PNG" /></kbd>
 
-10. Open a PowerShell Window and input the following commands:
+11. Now the modules are deployed, but no media graphs are active. So we must enable graphics.
+
+12. Open a PowerShell Window and input the following commands:
 
     Ssh into the EFLOW VM: `Ssh-EflowVm`
 
@@ -536,27 +547,29 @@ bash-environment
 
     Identify the EFLOW VM IP `sudo ifconfig`
 
-    ![EFLOW VM IP](./media/eth0.PNG 'EFLOW VM IP')
+    <kbd><img src="./media/eth0.PNG" /></kbd>
 
-    Run : `wget https://raw.githubusercontent.com/Azure/live-video-analytics/master/edge/setup/prep_device.sh`
+    Run: `wget https://raw.githubusercontent.com/Azure/live-video-analytics/master/edge/setup/prep_device.sh`
 
     Run: `sudo sh prep_device.sh`
 
-11. In a new PowerShell Windows, copy certificates to the EFLOW VM environment - Use SCP to copy the certificates downloaded
-      ```powershell
-      scp -i 'C:\Users\AIOTA\Desktop\certs'  .\certs\* iotedge-user@<eflowvm-ip>:~/certs/​
-      ```
-      Note: replace <eflowvm-ip> with your EFLOW VM's IP address found above in step 10.
 
-certificate-transfer
+13. In a new PowerShell Windows (representing the Windows host) input the following command to get the EFLOW VM IP address.  
 
-  ![EFLOW VM IP](./media/certificate-transfer.PNG 'EFLOW VM IP')
-
-
-12. Use PowerShell on the Windows host to get the EFLOW VM IP address.  
       ```powershell
       Get-EflowVmAddr
       ```
+
+> [!NOTE] This should be identical to what you found in step 12 above.
+
+14. Next, copy certificates to the EFLOW VM environment from the Windows host. Use SCP to copy the certificates downloaded. Make sure to navigate to your Desktop. See the picture below for commands on how to do that.
+
+    <kbd><img src="./media/certificate-transfer.PNG" /></kbd>
+
+      ```powershell
+      scp -i 'C:\Users\AIOTA\Desktop\certs'  .\certs\* iotedge-user@<eflowvm-ip>:~/certs/​
+      ```
+> [!NOTE] Don't forget to replace **eflowvm-ip** in the command above with **your EFLOW VM's IP address** found above in **step 12 or 13**.
 
 ### **Task 5: Provision Azure IoT Edge for Linux Configuration** ###
 1. Back to the EFLOW PowerShell Window, run the following command to allow Azure IoT Edge to read the certificates.
@@ -568,7 +581,7 @@ certificate-transfer
     ```bash
     sudo nano /etc/iotedge/config.yaml
     ```    
-3. Scroll down to "Certificates" section and update the file paths with what's below:
+3. Scroll down to **Certificates** section and update the file paths with what's below and don't forget to **UNCOMMENT** (remove hashes):
     ```yaml
     certificates:
         device_ca_cert: "/home/iotedge-user/certs/new-edge-device-full-chain.cert.pem"
@@ -576,17 +589,23 @@ certificate-transfer
         trusted_ca_certs: "/home/iotedge-user/certs/azure-iot-test-only.root.ca.cert.pem"
     ```
 
+      <kbd><img src="./media/certificates-update.PNG" /></kbd>
+
 >[!NOTE]
 >
-> Make sure there are no whitespaces before certificates paths and two spaces indenting each sub part.
+> Make sure there are **no whitespaces** before certificates paths and two spaces indenting each sub part.
+
+4. Scroll down a little further and update the **Host IP address** with the EFLOW VM's IP address.
+
+
 
 >[!TIP]
 >
 > To save the file and exit nano, press <kbd>CTRL</kbd>+<kbd>x</kbd>, confirm save and exit with <kbd>Y</kbd> and press <kbd>Enter</kbd>. This concludes the provisioning and configuration.
 
-  ![Update Certificates](./media/certificates-update.PNG 'Update Certificates')
 
-4. Restart IoT Edge by running the following command.
+5. Restart IoT Edge by running the following command.
+
     ```base
     sudo systemctl restart iotedge
     ```
@@ -598,24 +617,27 @@ certificate-transfer
   ```
   rtsp://<EFLOW VM IP>:554/media/lots_015.mkv
   ```
-  ![Open Media](./media/open-media.PNG 'Open Media')
+
+  <kbd><img src="./media/open-media.PNG" /></kbd>
 
 4. Select play to view the video stream
 
 ### **Task 7: Enable Live Video Analytics: Inferencing** ###
 1. In Visual Studio Code, open the **Extensions** tab (or press Ctrl+Shift+X) and search for **Live Video Analytics on IoT Edge**.
-    ![Install LVA](./media/install-lva.PNG 'Install LVA')
+
+    <kbd><img src="./media/install-lva.PNG" /></kbd>
 
 2. **Install** Live Video Analytics on IoT Edge - once installed you will the Live Video Analytics Icon appear on the left bar
   LVA-Icon-Left
 
-    ![LVA Icon](./media/LVA-Icon-Left.PNG 'LVA Icon')
+    <kbd><img src="./media/LVA-Icon-Left.PNG" /></kbd>
 
 3. Create an Azure Child Device
 4. Navigate to the **Azure Portal** >> **IoT Hub** >> **IoT Devices**
 5. Select **+ New** to create a new device
 
-  ![Add New Child Device](./media/new-child-device.PNG 'Add New Child Device')
+    <kbd><img src="./media/new-child-device.PNG" /></kbd>
+
 6. Fill in the following parameters for your new device:
   | Setting | Value |
   |-|-|
