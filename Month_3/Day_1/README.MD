@@ -108,7 +108,7 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
     | Size | **Standard_D4s_v3 - 4 vcpus, 16 GiB memory** |
     | **Administrator Account** | **Use the following Credentials** |
     | Username | AIOTA |
-    | Password | Day3! |
+    | Password | iotacademyDay3! |
     | Confirm password | Reenter password |
     | **Inbound port rules** |    |
     | Public inbound ports | Select **None**. |
@@ -162,7 +162,7 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
     | Field | Enter |
     |-------|-------|
     | **Username** | *AIOTA* |
-    | **Password** | *Day3!* |
+    | **Password** | *iotacademyDay3!* |
 
 6. Select **Connect**.
 
