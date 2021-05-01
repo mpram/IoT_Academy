@@ -410,14 +410,16 @@ Unzip the following folders and **move to your Azure VM's Desktop**:
 ### **Task 2: Create Azure Resources** ###
 1. Go to [Azure portal](https://portal.azure.com) and select the Cloud Shell icon.
 
-    <kbd><img src="./media/cloud-shell.PNG" /></kbd>
+
+    ![Cloud Shell](./media/cloud-shell.png 'Cloud Shell')
 
 2. If you're using Cloud Shell for the first time, you'll be prompted to select a subscription to create a storage account and a Microsoft Azure Files share. Select **Create storage** to create a storage account for your Cloud Shell session information. This storage account is separate from the account that the script will create to use with your Azure Media Services account.
 
 3. In the drop-down menu on the left side of the Cloud Shell window, select **Bash** as your environment.
 bash-environment
 
-    <kbd><img src="./media/bash-environment.PNG" /></kbd>
+  
+    ![Bash](./media/bash-environment.png 'Bash')
 
 4. Run the following command.
 
