@@ -471,7 +471,7 @@ bash-environment
 
 7. In the lower-left corner of the **Explorer** tab, select **Azure IoT Hub**.
 
-    <kbd><img src="./media/vsc-azure-iot-hub.PNG" /></kbd>
+    <kbd><img src="./media/vsc-azure-iot-hub.png" /></kbd>
 
 8. Select the **More Options** icon to see the context menu. Then select **Set IoT Hub Connection String**.
 
@@ -553,7 +553,6 @@ bash-environment
 
     Run: `sudo sh prep_device.sh`
 
-
 13. In a new PowerShell Windows (representing the Windows host) input the following command to get the EFLOW VM IP address.  
 
       ```powershell
@@ -589,7 +588,7 @@ bash-environment
         trusted_ca_certs: "/home/iotedge-user/certs/azure-iot-test-only.root.ca.cert.pem"
     ```
 
-      <kbd><img src="./media/certificates-update.PNG" /></kbd>
+      <kbd><img src="./media/certificates.PNG" /></kbd>
 
 >[!NOTE]
 >
@@ -597,7 +596,7 @@ bash-environment
 
 4. Scroll down a little further and update the **Host IP address** with the EFLOW VM's IP address.
 
-
+    <kbd><img src="./media/update-hostname.PNG" /></kbd>
 
 >[!TIP]
 >
@@ -618,11 +617,12 @@ bash-environment
   rtsp://<EFLOW VM IP>:554/media/lots_015.mkv
   ```
 
-  <kbd><img src="./media/open-media.PNG" /></kbd>
+    <kbd><img src="./media/open-media.PNG" /></kbd>
 
 4. Select play to view the video stream
 
 ### **Task 7: Enable Live Video Analytics: Inferencing** ###
+
 1. In Visual Studio Code, open the **Extensions** tab (or press Ctrl+Shift+X) and search for **Live Video Analytics on IoT Edge**.
 
     <kbd><img src="./media/install-lva.PNG" /></kbd>
@@ -647,87 +647,92 @@ bash-environment
   | Connect this device to an IoT Hub | **Enable** |
   | IoT Hub to Use | Select your Parent IoT Edge Device |
 
-  ![Create Azure Child Device Parameters](./media/create-azure-child-device.PNG 'Create Azure Child Device Parameters')
+    <kbd><img src="./media/create-azure-child-device.PNG" /></kbd>
 
-4. Add connection string in Live Video Analytics extension in Visual Studio\
+7. Add connection string in Live Video Analytics extension in Visual Studio
 
-  ![Enter Connection String for LVA](./media/lva-enter-connection-string.PNG 'Enter Connection String for LVA')
+    <kbd><img src="./media/lva-enter-connection-string.PNG" /></kbd>
 
-5. **Azure Portal** >> **IoT Hub** >> **Share access policies** >> select **iothubowner** >> copy **Connection string-primary key**
+8. **Azure Portal** >> **IoT Hub** >> **Share access policies** >> select **iothubowner** >> copy **Connection string-primary key**
 
-  ![Copy Primary Connection Key](./media/copy-primary-connection-key.PNG 'Copy Primary Connection Key')
+    <kbd><img src="./media/copy-primary-connection-key.PNG" /></kbd>
+
+9. Enter IoT Hub connection string into Visual Studio
+
+    <kbd><img src="./media/enter-primary-key-in-lva.PNG" /></kbd>
+
+10. Select your IoT Edge **PARENT** Device
+
+11. Select the Live Video Analytics module: **lvaedge**
+
+12. You should now see this in the Live Video Analytics pane.
+
+    <kbd><img src="./media/LVA-Pane.PNG" /></kbd>
+
+13. Navigate to the **Azure Iot Hub** tab in Visual Studio >> **Devices** >> **Modules** >> **lvaEdge** right click and select **Invoke Module Direct Method**
+
+    <kbd><img src="./media/Invoke-Module-Direct-Method.PNG" /></kbd>
+
+14. Enter **[Method name]** as *GraphTopologySet*
+
+    <kbd><img src="./media/graph-topology-set.PNG" /></kbd>
 
 
-6. Enter IoT Hub connection string into Visual Studio
+15. In a browser window, navigate to the **lva_graph_topology_track.JSON:** https://github.com/fcabrera23/EFLOW_Demo/blob/main/lva_graph_topology_truck.json
 
-  ![Copy Primary Connection Key](./media/enter-primary-key-in-lva.PNG 'Copy Primary Connection Key')
+16. Select "Raw"
 
-7. Select your IoT Edge **PARENT** Device
+    <kbd><img src="./media/RAW.PNG" /></kbd>
 
-8. Select the Live Video Analytics module: **lvaedge**
+17. **Copy** the raw input
 
-9. You should now see this in the Live Video Analytics pane.
+18. Paste the [Payload] (lva_group_topology_track) in Visual Studio (black bar on the top) and hit enter.
 
-  ![LVA Status](./media/LVA-Pane.PNG 'LVA Status')
+    <kbd><img src="./media/paste-payload.PNG" /></kbd>
 
-5. Navigate to the **Azure Iot Hub** tab in Visual Studio >> **Devices** >> **Modules** >> **lvaEdge** right click and select **Invoke Module Direct Method**
+19. Navigate to the Live Video Analytics tab and you should see **InferencingwithOpenVino** under Graph topologies
 
-  ![Invoke Module Direct Method](./media/Invoke-Module-Direct-Method.PNG 'Invoke Module Direct Method')
+    <kbd><img src="./media/LVA-graph-top.PNG" /></kbd>
 
-6. Enter [Method name] as *GraphTopologySet*
+20. Select **+** next to **InferecingwithOpenVino** to create a new graph instance
 
-  ![Graph Topology Set](./media/graph-topology-set.PNG 'Graph Topology Set')
+    <kbd><img src="./media/Create-Instance.PNG" /></kbd>
 
-7. Copy the [lva_graph_topology_track.JSON](https://github.com/fcabrera23/EFLOW_Demo/blob/main/lva_graph_topology_truck.json)
-
-8. Paste the [Payload] (lva_group_topology_track) in Visual Studio (black bar on the top) and hit enter.
-
-  ![Paste Payload](./media/paste-payload.PNG 'Graph Topology Set')
-
-8. Navigate to the Live Video Analytics tab and you should see **InferencingwithOpenVino** under Graph topologies
-
-  ![InferencingwithOpenVino](./media/LVA-graph-top.PNG 'InferencingwithOpenVino')
-
-9. Select **+** next to **InferecingwithOpenVino** to create a new graph instance
-
-  ![Create an Instance](./media/Create-Instance.PNG 'Create an Instance')
-
-10. Input the following parameters:
+21. Input the following parameters:
 
 | Setting | Value |
 |-|-|
 | Instance name | Give your device a name |
 | rtspUrl | **rtsp://rtspsim:554/media/lots_015.mkv** |
 
-  ![Create a New Graph Instance](./media/create-new-graph-instance.PNG 'Create a New Graph Instance')
+    <kbd><img src="./media/create-new-graph-instance.PNG" /></kbd>
 
-11. Select **Save** at the top right corner.
+22. Select **Save** at the top right corner.
 
-10. Under the graph topology, InferecingwithOpenVino, you should see your new instance has been created.
+23. Under the graph topology, InferecingwithOpenVino, you should see your new instance has been created.
 
-![New Instance Created](./media/new-instance-created.PNG 'New Instance Created')
+    <kbd><img src="./media/new-instance-created.PNG" /></kbd>
 
-11. Navigate back to the **Azure IoT Hub** in Visual Studio >> **Device** > **IoT Edge Device** right click and select **Start Monitoring Built-in Event Endpoint**
+24. Navigate back to the **Azure IoT Hub** in Visual Studio >> **Device** > **IoT Edge Device** right click and select **Start Monitoring Built-in Event Endpoint**
 
-  ![Start Monitoring Built-in Event Endpoint](./media/monitoring-built-in-endpoint.PNG 'Start Monitoring Built-in Event Endpoint')
+    <kbd><img src="./media/monitoring-built-in-endpoint.PNG" /></kbd>
 
-12. Navigate aback to the live video analytics tab in visual studio, and right click on your newly created instance and select **Activate Graph Instance**
+25. Navigate back to the live video analytics tab in visual studio, and right click on your newly created instance and select **Activate Graph Instance**
 
-  ![Activate Graph Instance](./media/activate-graph-instance.PNG 'Activate Graph Instance')
+    <kbd><img src="./media/activate-graph-instance.PNG" /></kbd>
 
-13. You should receive a notification that you have successfully activated the instance
+26. You should receive a notification that you have successfully activated the instance
 success-message
 
-  ![Activate Graph Instance](./media/success-message.PNG 'Activate Graph Instance')
+    <kbd><img src="./media/success-message.PNG" /></kbd>
 
-14. In the output window you will now the inferencing occurring for each bounded box of time.
-output
+27. In the output window you will now the inferencing occurring for each bounded box of time.
 
-  ![Output Window](./media/output-message-window.PNG 'Output Window')
+    <kbd><img src="./media/output-message-window.PNG" /></kbd>
 
-15. Right click on the instance and select **Deactivate Graph Instance**
+28. Right click on the instance and select **Deactivate Graph Instance**
 
-  ![Deactivate Graph Instance](./media/deactivate-graph-instance.PNG 'Deactivate Graph Instance')
+    <kbd><img src="./media/deactivate-graph-instance.PNG" /></kbd>
 
 
 ### **Task 8: Connect Windows Video with Linux Inferencing** ###
@@ -738,24 +743,51 @@ Recap:
 
 Next step: Connect the inferences with the Windows hub for a complete tool
 
-1. Navigate to the **publish** folder > select the **EFLOW+LVA** application and run it as an administrator
 
-  ![Run Application as Admin](./media/eflow-lva-run-admin.PNG 'Run Application as Admin')
+1. Navigate back to the **Azure IoT Hub** in Visual Studio >> **Device** > **IoT Edge Device** right click and select **Start Monitoring Built-in Event Endpoint**
 
-2. Select **More info** > **Run anyway** in case Microsoft Defender SmartScreen prevents the app from running.
-  ![Microsoft Defender SmartScreen](./media/ms-defender.PNG 'Microsoft Defender SmartScreen')
+    <kbd><img src="./media/monitoring-built-in-endpoint.PNG" /></kbd>
 
-3. Fill in the remaining parameters:
+2. Navigate back to the live video analytics tab in visual studio, and right click on your newly created instance and select **Activate Graph Instance**
+
+    <kbd><img src="./media/activate-graph-instance.PNG" /></kbd>
+
+3. You should receive a notification that you have successfully activated the instance
+success-message
+
+    <kbd><img src="./media/success-message.PNG" /></kbd>
+
+4. In the output window you will now the inferencing occurring for each bounded box of time.
+output
+
+    <kbd><img src="./media/output-message-window.PNG" /></kbd>
+
+5. Navigate to the **publish** folder > select the **EFLOW+LVA** application and run it as an administrator
+
+    <kbd><img src="./media/eflow-lva-run-admin.PNG" /></kbd>
+
+6. Select **More info** > **Run anyway** in case Microsoft Defender SmartScreen prevents the app from running.
+
+    <kbd><img src="./media/ms-defender.PNG" /></kbd>
+
+7. Fill in the remaining parameters:
 
   | Setting | Value |
   |-|-|
   | IoT Hub Device Connection String | Azure Portal >> IoT Hub >> IoT Device >> Select **Device ID** >> Copy **Primary Connection String** |
-  | EFLOW VM Hostname/IP |  |
-  | Certificate Path (azure-iot-test-only.root.ca.cert.pem) | [Enter the path to the certificates folder] Tip: go to folder, right click and select properties to see file path |
-  | RTSP Connection String | rtsp://[EFLOW VM Hostname/IP]/media/lots_015.mkv |
+  | EFLOW VM Hostname/IP | Insert EFLOW VM IP |
+  | Certificate Path (azure-iot-test-only.root.ca.cert.pem) | [Enter the path to the certificates folder]\azure-iot-test-only.root.ca.cert.pem |
+  | RTSP Connection String | rtsp://[EFLOW VM IP]/media/lots_015.mkv |
 
-4. Select *connect* - if the connection did not work - please see error message.
+8. Select *connect* - if the connection did not work - please see error message.
 
+    <kbd><img src="./media/working-demo.png" /></kbd>
+
+9. When you are done, select *disconnect* on the EFLOW + LVA Application.
+
+10. Navigate back to the live video analytics tab in visual studio, and right click on the instance and select **Deactivate Graph Instance**.
+
+    <kbd><img src="./media/deactivate-graph-instance.PNG" /></kbd>
 
 ## **Exercise 4: Clean Up** ##
 
