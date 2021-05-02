@@ -491,7 +491,7 @@ bash-environment
 
 12. At this point you should sign into your Azure account in Visual Studio if you haven't done so already by selecting the **Azure** icon on the left hand panel.
 
-  <kbd><img src="./media/azure-panel.PNG" /></kbd>
+  ![Azure login](./media/azure-panel.png 'Azure Login')
 
 13. Select your IoT Hub under **EndPoints**.
 
@@ -568,7 +568,7 @@ bash-environment
     <kbd><img src="./media/certificate-transfer.PNG" /></kbd>
 
       ```powershell
-      scp -i 'C:\Users\AIOTA\Desktop\certs'  .\certs\* iotedge-user@<eflowvm-ip>:~/certs/​
+      scp -i 'C:\Program Files\Azure IoT Edge\id_rsa'  .\certs\* iotedge-user@<eflowvm-ip>:~/certs/​
       ```
 > [!NOTE] Don't forget to replace **eflowvm-ip** in the command above with **your EFLOW VM's IP address** found above in **step 12 or 13**.
 
@@ -619,7 +619,7 @@ bash-environment
   rtsp://<EFLOW VM IP>:554/media/lots_015.mkv
   ```
 
-    <kbd><img src="./media/open-media.PNG" /></kbd>
+  <kbd><img src="./media/open-media.PNG" /></kbd>
 
 4. Select play to view the video stream
 
