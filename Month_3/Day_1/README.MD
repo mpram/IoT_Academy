@@ -612,6 +612,19 @@ bash-environment
     ```
 
 ### **Task 6: Test Video Stream** ###
+
+Make sure your iotedge is running before continue, rhn the following command inside your edge machine
+
+  ```powershell
+  sudo iotedge list
+  ```
+
+Your edge status should be running before continuing:
+
+  ![Edge Status](./media/sudo-edge-status.png 'Edge Status')
+
+  
+
 1. Open VLC media player
 2. Navigate to **Media** >> **Open Network Stream**
 3. Input the following as the **network URL**
