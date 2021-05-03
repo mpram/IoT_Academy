@@ -63,9 +63,12 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
 
   >[!NOTE] You can ignore the warning as we are not intending to peer virtual networks.
 
-8. Select the **Security** tab, or select the **Next: Security** button at the bottom of the page.
+8. Select **Next: Security** button at the bottom of the page. Under **BastionHost**, select **Enable**.
 
-9. Under **BastionHost**, select **Enable**. Enter this information:
+    <kbd><img src="./media/enable-bastion-security.PNG " /></kbd>
+
+
+9. Enter this information for the **BastionHost**:
 
     | Setting            | Value                      |
     |--------------------|----------------------------|
