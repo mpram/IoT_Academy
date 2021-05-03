@@ -491,7 +491,7 @@ bash-environment
 
 12. At this point you should sign into your Azure account in Visual Studio if you haven't done so already by selecting the **Azure** icon on the left hand panel.
 
-  ![Azure login](./media/azure-panel.png 'Azure Login')
+ ![Azure login](./media/azure-panel.png 'Azure Login')
 
 13. Select your IoT Hub under **EndPoints**.
 
