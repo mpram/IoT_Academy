@@ -149,7 +149,7 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
 
 2. Make sure you that you start your Virtual Machine and that the status is **Running**.
 
-    <kbd><img src="./media/vm-status-running.PNG" /></kbd>
+    <kbd><img src="./media/VM-status-running.PNG" /></kbd>
 
 
 >[!TIP]
