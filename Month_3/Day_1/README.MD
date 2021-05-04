@@ -600,9 +600,9 @@ bash-environment
 
     ```yaml
     certificates:
-        device_ca_cert: "/home/iotedge-user/certs/new-edge-device-full-chain.cert.pem"
-        device_ca_pk: "/home/iotedge-user/certs/new-edge-device.key.pem"
-        trusted_ca_certs: "/home/iotedge-user/certs/azure-iot-test-only.root.ca.cert.pem"
+      device_ca_cert: "/home/iotedge-user/certs/new-edge-device-full-chain.cert.pem"
+      device_ca_pk: "/home/iotedge-user/certs/new-edge-device.key.pem"
+      trusted_ca_certs: "/home/iotedge-user/certs/azure-iot-test-only.root.ca.cert.pem"
     ```
 
       <kbd><img src="./media/certificates.PNG" /></kbd>
