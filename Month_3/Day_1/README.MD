@@ -106,13 +106,13 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
     | Virtual machine name | Enter **myVM1** |
     | Region | Select **(US) East US** |
     | Availability Options | Select **No infrastructure redundancy required** |
-    | Image | Select **Windows 10 Pro, vNext - Gen1** |
+    | Image | Select **Windows 10 Pro, Version 2004 - Gen2** |
     | Azure Spot instance | Select **No** |
     | Size | **Standard_D4s_v3 - 4 vcpus, 16 GiB memory** |
     | **Administrator Account** | **Use the following Credentials** |
-    | Username | AIOTA |
-    | Password | iotacademyDay3! |
-    | Confirm password | Reenter password |
+    | Username | **AIOTA** |
+    | Password | **Password123!** |
+    | Confirm password | **Password123!** |
     | **Inbound port rules** |    |
     | Public inbound ports | Select **None**. |
 
@@ -149,6 +149,9 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
 
 2. Make sure you that you start your Virtual Machine and that the status is **Running**.
 
+    <kbd><img src="./media/vm-status-running.PNG" /></kbd>
+
+
 >[!TIP]
 > You will not be able to start the Bastion connection if the VM has not been started and is running. So give it a minute or two to finish updating and wait for the status to say "Running".
 
@@ -165,7 +168,7 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
     | Field | Enter |
     |-------|-------|
     | **Username** | *AIOTA* |
-    | **Password** | *iotacademyDay3!* |
+    | **Password** | *Password123!* |
 
 6. Select **Connect**.
 
@@ -421,7 +424,7 @@ Unzip the following folders and **move to your Azure VM's Desktop**:
 3. In the drop-down menu on the left side of the Cloud Shell window, select **Bash** as your environment.
 bash-environment
 
-  
+
     ![Bash](./media/bash-environment.png 'Bash')
 
 4. Run the following command.
@@ -494,11 +497,11 @@ bash-environment
 
 12. At this point you should sign into your Azure account in Visual Studio if you haven't done so already by selecting the **Azure** icon on the left hand panel.
 
- ![Azure login](./media/azure-panel.png 'Azure Login')
+    <kbd><img src="./media/Azure-Panel.PNG" /></kbd>
 
 13. Select your IoT Hub under **EndPoints**.
 
-  <kbd><img src="./media/Endpoints.PNG" /></kbd>
+    <kbd><img src="./media/Endpoints.PNG" /></kbd>
 
 
 ### **Task 4: Deploy Modules on Windows Host** ###
@@ -558,13 +561,15 @@ bash-environment
 
     Run: `sudo sh prep_device.sh`
 
-13. In a new PowerShell Windows (representing the Windows host) input the following command to get the EFLOW VM IP address.  
+13. In a **NEW** PowerShell Windows (representing the **Windows host**) input the following command to get the EFLOW VM IP address.  
 
       ```powershell
       Get-EflowVmAddr
       ```
+    <kbd><img src="./media/windows-host-eflow-vm.PNG" /></kbd>
 
-> [!NOTE] This should be identical to what you found in step 12 above.
+> [!NOTE]
+> This should be identical to what you found in step 12 above.
 
 14. Next, copy certificates to the EFLOW VM environment from the Windows host. Use SCP to copy the certificates downloaded. Make sure to navigate to your Desktop. See the picture below for commands on how to do that.
 
@@ -585,7 +590,17 @@ bash-environment
     ```bash
     sudo nano /etc/iotedge/config.yaml
     ```    
-3. Scroll down to **Certificates** section and update the file paths with what's below and don't forget to **UNCOMMENT** (remove hashes):
+
+3. Scroll down to **Certificates** section
+
+    <kbd><img src="./media/certifcates-config.PNG" /></kbd>
+
+
+4. **Uncomment** the following sections
+    <kbd><img src="./media/uncomment.PNG" /></kbd>
+
+5. Update the file paths with what's below
+
     ```yaml
     certificates:
         device_ca_cert: "/home/iotedge-user/certs/new-edge-device-full-chain.cert.pem"
@@ -599,7 +614,7 @@ bash-environment
 >
 > Make sure there are **no whitespaces** before certificates paths and two spaces indenting each sub part.
 
-4. Scroll down a little further and update the **Host IP address** with the EFLOW VM's IP address.
+6. Scroll down a little further and update the **Host IP address** with the EFLOW VM's IP address.
 
     <kbd><img src="./media/update-hostname.PNG" /></kbd>
 
@@ -608,7 +623,7 @@ bash-environment
 > To save the file and exit nano, press <kbd>CTRL</kbd>+<kbd>x</kbd>, confirm save and exit with <kbd>Y</kbd> and press <kbd>Enter</kbd>. This concludes the provisioning and configuration.
 
 
-5. Restart IoT Edge by running the following command.
+7. Restart IoT Edge by running the following command.
 
     ```base
     sudo systemctl restart iotedge
@@ -626,7 +641,6 @@ Your edge status should be running before continuing:
 
   ![Edge Status](./media/sudo-edge-status.png 'Edge Status')
 
-  
 
 1. Open VLC media player
 2. Navigate to **Media** >> **Open Network Stream**
@@ -638,6 +652,9 @@ Your edge status should be running before continuing:
   <kbd><img src="./media/open-media.PNG" /></kbd>
 
 4. Select play to view the video stream
+
+  <kbd><img src="./media/video-stream.png" /></kbd>
+
 
 ### **Task 7: Enable Live Video Analytics: Inferencing** ###
 
@@ -657,13 +674,14 @@ Your edge status should be running before continuing:
     <kbd><img src="./media/new-child-device.PNG" /></kbd>
 
 6. Fill in the following parameters for your new device:
+
   | Setting | Value |
-  |-|-|
+  |---------|-------|
   | Device ID | Give your device a name |
   | Authentication type | **Symmetric key** |
   | Autogenerate | Default - Keep Selected |
   | Connect this device to an IoT Hub | **Enable** |
-  | IoT Hub to Use | Select your Parent IoT Edge Device |
+  | IoT Hub to Use | Select your **Parent IoT Edge Device** |
 
     <kbd><img src="./media/create-azure-child-device.PNG" /></kbd>
 
@@ -720,10 +738,10 @@ Your edge status should be running before continuing:
 
 | Setting | Value |
 |-|-|
-| Instance name | Give your device a name |
+| Instance name | Give your instance a name |
 | rtspUrl | **rtsp://rtspsim:554/media/lots_015.mkv** |
 
-    <kbd><img src="./media/create-new-graph-instance.PNG" /></kbd>
+  <kbd><img src="./media/create-new-graph-instance.PNG" /></kbd>
 
 22. Select **Save** at the top right corner.
 
@@ -761,43 +779,46 @@ Recap:
 
 Next step: Connect the inferences with the Windows hub for a complete tool
 
-
-1. Navigate back to the **Azure IoT Hub** in Visual Studio >> **Device** > **IoT Edge Device** right click and select **Start Monitoring Built-in Event Endpoint**
-
-    <kbd><img src="./media/monitoring-built-in-endpoint.PNG" /></kbd>
-
-2. Navigate back to the live video analytics tab in visual studio, and right click on your newly created instance and select **Activate Graph Instance**
-
-    <kbd><img src="./media/activate-graph-instance.PNG" /></kbd>
-
-3. You should receive a notification that you have successfully activated the instance
-success-message
-
-    <kbd><img src="./media/success-message.PNG" /></kbd>
-
-4. In the output window you will now the inferencing occurring for each bounded box of time.
-output
-
-    <kbd><img src="./media/output-message-window.PNG" /></kbd>
-
-5. Navigate to the **publish** folder > select the **EFLOW+LVA** application and run it as an administrator
+1. Navigate to the **publish** folder > select the **EFLOW+LVA** application and run it as an administrator
 
     <kbd><img src="./media/eflow-lva-run-admin.PNG" /></kbd>
 
-6. Select **More info** > **Run anyway** in case Microsoft Defender SmartScreen prevents the app from running.
+2. Select **More info** > **Run anyway** in case Microsoft Defender SmartScreen prevents the app from running.
 
-    <kbd><img src="./media/ms-defender.PNG" /></kbd>
+    **DO NOT HIT CONNECT YET**
 
-7. Fill in the remaining parameters:
+3. Fill in the parameters:
 
   | Setting | Value |
   |-|-|
-  | IoT Hub Device Connection String | Azure Portal >> IoT Hub >> IoT Device >> Select **Device ID** >> Copy **Primary Connection String** |
+  | IoT Hub Device Connection String | Azure Portal >> IoT Hub >> IoT Edge >> Select **Device ID** >> Copy **Primary Connection String** |
   | EFLOW VM Hostname/IP | Insert EFLOW VM IP |
   | Certificate Path (azure-iot-test-only.root.ca.cert.pem) | [Enter the path to the certificates folder]\azure-iot-test-only.root.ca.cert.pem |
   | RTSP Connection String | rtsp://[EFLOW VM IP]/media/lots_015.mkv |
 
-8. Select *connect* - if the connection did not work - please see error message.
+    <kbd><img src="./media/before-connect.PNG" /></kbd>
+
+**DO NOT HIT CONNECT YET**
+
+4. Navigate back to the **Azure IoT Hub** in Visual Studio >> **Device** > **IoT Edge Device** right click and select **Start Monitoring Built-in Event Endpoint**
+
+    <kbd><img src="./media/monitoring-built-in-endpoint.PNG" /></kbd>
+
+5. Navigate back to the live video analytics tab in visual studio, and right click on your newly created instance and select **Activate Graph Instance**
+
+    <kbd><img src="./media/activate-graph-instance.PNG" /></kbd>
+
+6. You should receive a notification that you have successfully activated the instance
+success-message
+
+    <kbd><img src="./media/success-message.PNG" /></kbd>
+
+7. In the output window you will now the inferencing occurring for each bounded box of time.
+output
+
+    <kbd><img src="./media/output-message-window.PNG" /></kbd>
+
+8. Return to the Windows Application and select *connect* - if the connection did not work - please see error message.
 
     <kbd><img src="./media/working-demo.png" /></kbd>
 
