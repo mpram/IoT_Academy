@@ -103,7 +103,7 @@ During this exercise you will be setting up your Windows 10 IoT Enterprise envir
     | Virtual machine name | Enter **myVM1** |
     | Region | Select **(US) East US** |
     | Availability Options | Select **No infrastructure redundancy required** |
-    | Image | Select **Windows 10 Pro, Version 2004 - Gen2** |
+    | Image | Select **Windows 10 Pro, Vnext - Gen1** |
     | Azure Spot instance | Select **No** |
     | Size | **Standard_D4s_v3 - 4 vcpus, 16 GiB memory** |
     | **Administrator Account** | **Use the following Credentials** |
