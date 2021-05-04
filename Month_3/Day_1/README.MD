@@ -597,6 +597,7 @@ bash-environment
 
 
 4. **Uncomment** the following sections
+    
     <kbd><img src="./media/uncomment.PNG" /></kbd>
 
 5. Update the file paths with what's below
