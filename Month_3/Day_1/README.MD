@@ -1,6 +1,6 @@
 # Azure IoT Academy: Windows IoT Lab
 
-In this lab we will be setting up Azure IoT Edge for Linux on Windows (EFLOW) with a Live Video Analytics module to showcase how to Windows IoT OS enables various retail and safety scenarios.  
+In this lab we will be setting up Azure IoT Edge for Linux on Windows (EFLOW) with a Live Video Analytics module to showcase how Windows IoT OS enables various retail and safety scenarios.  
 
 ## **Content:** ##
 
