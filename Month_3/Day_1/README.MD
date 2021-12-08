@@ -410,8 +410,8 @@ In your **Azure Virtual Machine** install the following tools:
 * Download VLC media player: https://www.videolan.org/
 
 Unzip the following folders and **move to your Azure VM's Desktop**:
-* Windows Application: https://microsoft-my.sharepoint-df.com/:u:/p/fcabrera/EUvyooP-wZxMn4L1Hzjy8K4By7bDvrsLiV6EF-LZGGsOfw?e=SXZ3MD
-* Certificates: https://microsoft-my.sharepoint-df.com/:u:/p/fcabrera/EdBZVhNFfpJLro5h7hJ8pjgBLl5qaXZ7fE8gn8GwsBbtTw?e=GEns2F
+* Windows Application: https://aka.ms/IoT_Academy_Windows_Application
+* Certificates: https://aka.ms/IoT_Academy_Certificates
 
 ### **Task 2: Create Azure Resources** ###
 1. Go to [Azure portal](https://portal.azure.com) and select the Cloud Shell icon.
@@ -515,7 +515,7 @@ bash-environment
 
     <kbd><img src="./media/Folder.PNG" /></kbd>
 
-5. In a browser window, navigate to the deployment.JSON file: https://github.com/fcabrera23/EFLOW_Demo/blob/main/deployment.eflow_demo.amd64.json
+5. In a browser window, navigate to the deployment.JSON file: https://github.com/mpram/IoT_Academy/tree/master/Month_3/Day_1/deployment/deployment.eflow_demo.amd64.json
 
 6. Select "Raw"
 
@@ -715,7 +715,7 @@ Your edge status should be running before continuing:
     <kbd><img src="./media/graph-topology-set.PNG" /></kbd>
 
 
-15. In a browser window, navigate to the **lva_graph_topology_track.JSON:** https://github.com/fcabrera23/EFLOW_Demo/blob/main/lva_graph_topology_truck.json
+15. In a browser window, navigate to the **lva_graph_topology_track.JSON:** https://github.com/mpram/IoT_Academy/tree/master/Month_3/Day_1/deployment/lva_graph_topology_truck.json 
 
 16. Select "Raw"
 
